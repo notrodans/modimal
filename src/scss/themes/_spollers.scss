@@ -1,0 +1,139 @@
+@use "../abstracts/base" as *;
+@use "../abstracts/mixins" as *;
+
+.spollers {
+}
+.spollers__item {
+}
+[data-spoller-close] {
+	position: relative;
+	list-style: none;
+	&::marker,
+	&::-webkit-details-marker {
+		display: none;
+	}
+}
+// Контент спойлера
+.spollers__body {
+	padding: toRem(20);
+}
+
+.header-spollers {
+	display: flex;
+	@include adaptiveValue("gap", 30, 10);
+
+	&__item {
+	}
+
+	&__spoller {
+	}
+
+	&__title {
+		@include adaptiveValue("font-size", 18, 16);
+		line-height: 180%;
+		text-transform: capitalize;
+		cursor: pointer;
+		@extend .transition-colors;
+
+		@media (any-hover: hover) {
+			&:hover,
+			&:focus {
+				color: oklch(var(--text-secondary));
+			}
+		}
+
+		&._spoller-active {
+			color: oklch(var(--text-secondary));
+		}
+	}
+
+	&__body {
+		@include adaptiveValue("padding-block", 48, 26);
+		position: fixed;
+		width: 100%;
+		left: 0;
+		right: 0;
+		top: var(--header-height);
+		z-index: 1;
+		max-height: calc(100% - var(--header-height));
+		background-color: oklch(var(--bg-tertiary));
+		overflow: auto;
+	}
+
+	&__content {
+	}
+}
+
+.body-spollers-header {
+	&__container {
+		display: grid;
+		grid-template-columns: 46.56% 49.01%;
+		@include adaptiveValue("column-gap", 54, 12);
+	}
+
+	&__lists {
+		display: flex;
+		line-height: 180%;
+		@include adaptiveValue("gap", 24, 18);
+		@include adaptiveValue("font-size", 18, 16);
+	}
+
+	&__block {
+	}
+
+	&__category {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-block-end", 24, 16);
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(8);
+	}
+
+	&__item {
+	}
+
+	&__link {
+		@extend .transition-colors;
+		width: 100%;
+		@media (any-hover: hover) {
+			&:hover {
+				color: oklch(var(--text-secondary));
+			}
+		}
+	}
+
+	&__images {
+		display: flex;
+		@include adaptiveValue("column-gap", 24, 16);
+
+		.body-spollers-header__image--3col {
+			aspect-ratio: 208 / 420;
+		}
+	}
+
+	&__block--image {
+		@media (any-hover: hover) {
+			&:hover {
+				p {
+					color: oklch(var(--text-secondary));
+				}
+			}
+		}
+	}
+
+	&__image {
+		aspect-ratio: 288 / 420;
+
+		&:not(:last-child) {
+			margin-block-end: toRem(12);
+		}
+
+		p {
+			@extend .transition-colors;
+		}
+	}
+}

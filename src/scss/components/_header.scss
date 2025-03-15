@@ -1,0 +1,94 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/base" as *;
+
+.header {
+	&__top {
+	}
+
+	&__main {
+	}
+
+	&__logo {
+	}
+
+	&__menu {
+	}
+
+	&__actions {
+	}
+}
+.header-top {
+	background-color: oklch(var(--bg-secondary));
+	color: oklch(var(--text-tertiary));
+
+	&__container {
+		padding-block: toRem(8);
+	}
+
+	p {
+		font-weight: 600;
+		font-size: toRem(12);
+		text-align: center;
+		letter-spacing: toRem(0.8);
+	}
+}
+.header-main {
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@include adaptiveValue("gap", 16, 10);
+		@include adaptiveValue("padding-block", 16, 10);
+
+		> * {
+			&:not(.header-main__menu) {
+				position: relative;
+				z-index: 9999;
+			}
+		}
+	}
+
+	&__menu {
+	}
+}
+.logo {
+}
+.menu {
+	position: relative;
+
+	&:has(.header-spollers__spoller[open]) {
+		&::before {
+			content: "";
+			position: fixed;
+			width: 100%;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			top: var(--header-height);
+			backdrop-filter: blur(toRem(7.5));
+			background-color: rgba(0, 0, 0, 0.48);
+		}
+	}
+
+	&__icon {
+	}
+
+	&__body {
+	}
+
+	&__list {
+	}
+}
+
+.icon-menu {
+}
+.header-actions {
+	display: flex;
+	@include adaptiveValue("gap", 38, 10);
+
+	&__item {
+	}
+
+	&__link {
+	}
+}

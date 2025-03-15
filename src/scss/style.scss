@@ -1,0 +1,28 @@
+@use "base";
+@use "abstracts";
+@use "themes";
+@use "layout";
+@use "components";
+
+body {
+	// scrollbar-gutter: stable;
+	.lock & {
+		overflow: hidden;
+		touch-action: none;
+		overscroll-behavior: none;
+	}
+	.loaded & {
+	}
+}
+
+.visibility-hidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: auto;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	white-space: nowrap;
+}
