@@ -1,0 +1,93 @@
+@use "../../abstracts/mixins" as *;
+@use "../../abstracts/base" as *;
+
+.product-card {
+	position: relative;
+	&__header {
+		@include adaptiveValue("padding", 24, 12);
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		display: flex;
+		justify-content: space-between;
+		column-gap: toRem(12);
+		pointer-events: none;
+
+		> * {
+			pointer-events: all;
+		}
+	}
+	&__label {
+	}
+	&__wishlist {
+		@extend .transition-colors;
+		color: oklch(var(--tertiary));
+
+		@media (any-hover: hover) {
+			&:hover,
+			&:focus-visible {
+				color: red;
+			}
+		}
+	}
+	&__image {
+		display: block;
+		aspect-ratio: 392 / 438;
+
+		.product-card--modiweek & {
+			aspect-ratio: 288 / 426;
+
+			&:not(:last-child) {
+				margin-block-end: toRem(38);
+			}
+		}
+
+		&:not(:last-child) {
+			margin-block-end: toRem(5.5);
+		}
+	}
+	&__body {
+	}
+	&__head-title {
+		display: block;
+		font-weight: 700;
+		line-height: 140%;
+		@extend .transition-colors;
+
+		&:not(:last-child) {
+			margin-block-end: toRem(8);
+		}
+
+		.product-card:has(.product-card__image:hover) & {
+			color: oklch(var(--text-secondary));
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: oklch(var(--text-secondary));
+			}
+		}
+	}
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		&:not(:last-child) {
+			margin-block-end: toRem(8);
+		}
+	}
+	&__text {
+		line-height: 180%;
+	}
+	&__price {
+		font-weight: 700;
+		line-height: 140%;
+	}
+	&__colors {
+		display: flex;
+		column-gap: toRem(8);
+		flex-wrap: wrap;
+	}
+}

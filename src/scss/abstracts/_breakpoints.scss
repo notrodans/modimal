@@ -1,0 +1,7 @@
+@use "mixins-settings" as *;
+@use "mixins" as *;
+
+$pc: toEm($containerWidth);
+$tablet: toEm(991.98);
+$mobile: toEm(767.98);
+$mobileSmall: toEm(479.98);

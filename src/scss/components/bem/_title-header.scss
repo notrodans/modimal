@@ -1,0 +1,7 @@
+@use "../../abstracts/mixins" as *;
+
+.title-header {
+	@include adaptiveValue("font-size", 32, 20);
+	font-weight: 600;
+	line-height: 140%;
+}

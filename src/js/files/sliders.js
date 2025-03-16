@@ -1,111 +1,90 @@
-/*
-Документація по роботі у шаблоні: 
-Документація слайдера: https://swiperjs.com/
-Сніппет(HTML): swiper
-*/
-
-// Підключаємо слайдер Swiper з node_modules
-// При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
-// Приклад: { Navigation, Autoplay }
 import Swiper from "swiper";
-import { Navigation } from "swiper/modules";
-/*
-Основні модулі слайдера:
-Navigation, Pagination, Autoplay, 
-EffectFade, Lazy, Manipulation
-Детальніше дивись https://swiperjs.com/
-*/
+import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
 
-// Стилі Swiper
-// Базові стилі
-import "../../scss/base/swiper.scss";
-// Повний набір стилів з scss/libs/swiper.scss
-// import "../../scss/libs/swiper.scss";
-// Повний набір стилів з node_modules
-// import 'swiper/css';
+function makeSliderOptions(params) {
+  if(!params.paginationElement) throw "Pagination element not defined"
 
-// Ініціалізація слайдерів
+  return {
+    modules: [Navigation, Autoplay, EffectFade, Pagination],
+    observer: true,
+    observeParents: true,
+    slidesPerView: 3,
+    spaceBetween: 24,
+    //simulateTouch: false,
+    //autoHeight: true,
+    speed: 800,
+
+    //touchRatio: 0,
+    //simulateTouch: false,
+    //loop: true,
+    //preloadImages: false,
+    //lazy: true,
+    pagination: {
+      el: params.paginationElement,
+      clickable: true,
+    },
+
+    //effect: 'fade',
+    autoplay: {
+      delay: 1000,
+      disableOnInteraction: true,
+    },
+
+    // Скроллбар
+    /*
+    scrollbar: {
+      el: '.swiper-scrollbar',
+      draggable: true,
+    },
+    */
+
+    // Кнопки "вліво/вправо"
+    //navigation: {
+    //	prevEl: ".swiper-button-prev",
+    //	nextEl: ".swiper-button-next"
+    //},
+    // Брейкпоінти
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        spaceBetween: 16,
+        autoHeight: true,
+      },
+      490: {
+        slidesPerView: 2,
+        spaceBetween: 16,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 16,
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      1224: {
+        slidesPerView: 3,
+        spaceBetween: 24,
+      },
+    },
+  }
+}
+
 function initSliders() {
-	// Список слайдерів
-	// Перевіряємо, чи є слайдер на сторінці
-	if (document.querySelector(".swiper")) {
-		// Вказуємо склас потрібного слайдера
-		// Створюємо слайдер
-		new Swiper(".swiper", {
-			// Вказуємо склас потрібного слайдера
-			// Підключаємо модулі слайдера
-			// для конкретного випадку
-			modules: [Navigation],
-			observer: true,
-			observeParents: true,
-			slidesPerView: 1,
-			spaceBetween: 0,
-			//autoHeight: true,
-			speed: 800,
+	if (document.querySelector(".best-sellers__slider")) {
+		new Swiper(".best-sellers__slider", {
+       ...makeSliderOptions({paginationElement: ".best-sellers__pagination"})
+		});
+	}
 
-			//touchRatio: 0,
-			//simulateTouch: false,
-			//loop: true,
-			//preloadImages: false,
-			//lazy: true,
-
-			/*
-			// Ефекти
-			effect: 'fade',
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
-			*/
-
-			// Пагінація
-			/*
-			pagination: {
-				el: '.swiper-pagination',
-				clickable: true,
-			},
-			*/
-
-			// Скроллбар
-			/*
-			scrollbar: {
-				el: '.swiper-scrollbar',
-				draggable: true,
-			},
-			*/
-
-			// Кнопки "вліво/вправо"
-			navigation: {
-				prevEl: ".swiper-button-prev",
-				nextEl: ".swiper-button-next"
-			},
-			/*
-			// Брейкпоінти
-			breakpoints: {
-				640: {
-					slidesPerView: 1,
-					spaceBetween: 0,
-					autoHeight: true,
-				},
-				768: {
-					slidesPerView: 2,
-					spaceBetween: 20,
-				},
-				992: {
-					slidesPerView: 3,
-					spaceBetween: 20,
-				},
-				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
-				},
-			},
-			*/
-			// Події
-			on: {}
+	if (document.querySelector(".modiweek__slider")) {
+		new Swiper(".modiweek__slider", {
+       ...makeSliderOptions({paginationElement: ".modiweek__pagination"})
 		});
 	}
 }
+
 // Скролл на базі слайдера (за класом swiper scroll для оболонки слайдера)
 function initSlidersScroll() {
 	let sliderScrollItems = document.querySelectorAll(".swiper_scroll");
@@ -136,8 +115,6 @@ function initSlidersScroll() {
 }
 
 window.addEventListener("load", function (e) {
-	// Запуск ініціалізації слайдерів
 	initSliders();
-	// Запуск ініціалізації скролла на базі слайдера (за класом swiper_scroll)
 	//initSlidersScroll();
 });

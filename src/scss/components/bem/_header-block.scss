@@ -1,0 +1,8 @@
+@use "../../abstracts/mixins" as *;
+
+.header-block {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	column-gap: toRem(16);
+}

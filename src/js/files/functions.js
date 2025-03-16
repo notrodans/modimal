@@ -302,7 +302,6 @@ export function spollers() {
 					}
 				}
 			}
-        console.log(el)
 			// Закриття при кліку поза спойлером
 			if (!el.closest("[data-spollers]")) {
 				const spollersClose = document.querySelectorAll("[data-spoller-close]");

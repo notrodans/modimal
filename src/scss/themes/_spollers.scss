@@ -1,5 +1,7 @@
 @use "../abstracts/base" as *;
 @use "../abstracts/mixins" as *;
+@use "../abstracts/mixins-settings" as *;
+@use "../abstracts/breakpoints" as *;
 
 .spollers {
 }
@@ -19,9 +21,6 @@
 }
 
 .header-spollers {
-	display: flex;
-	@include adaptiveValue("gap", 30, 10);
-
 	&__item {
 	}
 
@@ -67,18 +66,35 @@
 .body-spollers-header {
 	&__container {
 		display: grid;
-		grid-template-columns: 46.56% 49.01%;
-		@include adaptiveValue("column-gap", 54, 12);
+		// grid-template-columns: minmax(46.56%, toRem(570)) 1fr;
+		grid-template-columns: minmax(toRem(280), 1fr) minmax(53.43%, toRem(654));
+
+		&--secondary {
+			grid-template-columns: minmax(53.43, toRem(654)) 1fr;
+		}
+
+		@media (max-width: $mobile) {
+			grid-template-columns: 1fr;
+		}
+		row-gap: toRem(30);
+		align-items: flex-start;
 	}
 
 	&__lists {
 		display: flex;
 		line-height: 180%;
-		@include adaptiveValue("gap", 24, 18);
+		flex-wrap: wrap;
+		gap: toRem(24);
 		@include adaptiveValue("font-size", 18, 16);
+		@media (min-width: $mobile) {
+			@include adaptiveValue("padding-inline-end", 54, 12);
+		}
 	}
 
 	&__block {
+		&:not(&--image) {
+			flex: 1 0 auto;
+		}
 	}
 
 	&__category {
@@ -99,6 +115,7 @@
 	&__link {
 		@extend .transition-colors;
 		width: 100%;
+		color: #404040;
 		@media (any-hover: hover) {
 			&:hover {
 				color: oklch(var(--text-secondary));
@@ -107,15 +124,16 @@
 	}
 
 	&__images {
-		display: flex;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(toRem(182), 1fr));
+		row-gap: toRem(20);
 		@include adaptiveValue("column-gap", 24, 16);
-
-		.body-spollers-header__image--3col {
-			aspect-ratio: 208 / 420;
-		}
 	}
 
 	&__block--image {
+		@media (max-width: $mobile) {
+			flex-grow: 1;
+		}
 		@media (any-hover: hover) {
 			&:hover {
 				p {
@@ -127,6 +145,10 @@
 
 	&__image {
 		aspect-ratio: 288 / 420;
+
+		.body-spollers-header__container--secondary & {
+			aspect-ratio: 208 / 420;
+		}
 
 		&:not(:last-child) {
 			margin-block-end: toRem(12);

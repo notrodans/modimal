@@ -1,13 +1,30 @@
-//<BUTTONS (a.btn+tab)>
-// Сніппет (HTML): btn
+@use "sass:math";
+@use "../../abstracts/mixins" as *;
+@use "../../abstracts/base" as *;
 
 .button {
 	display: inline-flex;
-	padding: 0px 0px;
+	align-items: center;
+	justify-content: center;
+	column-gap: toRem(10);
+	padding-block: toRem(8);
+	padding-inline: toRem(44);
+	background-color: oklch(var(--bg-tertiary));
+	min-width: toRem(184);
+
+	@extend .transition-colors;
+
+	span {
+		font-size: toRem(14);
+		line-height: math.div(24, 14);
+	}
+
 	@media (any-hover: hover) {
 		&:hover {
+			background-color: oklch(var(--bg-tertiary) / 90%);
 		}
 	}
+
 	&--fw {
 		width: 100%;
 	}

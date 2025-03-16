@@ -1,7 +1,13 @@
 @use "../abstracts/mixins" as *;
 @use "../abstracts/base" as *;
+@use "../abstracts/mixins-settings" as *;
 
 .header {
+	position: sticky;
+	top: 0;
+	z-index: 9999;
+	background-color: oklch(var(--bg-tertiary));
+
 	&__top {
 	}
 
@@ -17,6 +23,7 @@
 	&__actions {
 	}
 }
+
 .header-top {
 	background-color: oklch(var(--bg-secondary));
 	color: oklch(var(--text-tertiary));
@@ -77,6 +84,9 @@
 	}
 
 	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		@include adaptiveValue("column-gap", 30, 10);
 	}
 }
 
@@ -84,7 +94,7 @@
 }
 .header-actions {
 	display: flex;
-	@include adaptiveValue("gap", 38, 10);
+	@include adaptiveValue("gap", 38, 10, 0, $maxWidth, $minWidth);
 
 	&__item {
 	}
