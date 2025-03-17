@@ -12,25 +12,28 @@
 			position: fixed;
 			width: 100%;
 			height: 100%;
-			left: -100%;
+			top: 0;
+			left: 0;
+			opacity: 0;
 			overflow: auto;
-			padding: toRem(50) toRem(15) toRem(15) toRem(30);
-			transition: left 0.3s;
+			padding: var(--header-height) toRem(15) toRem(30) toRem(15);
+			transition: opacity 0.3s;
 			background-color: oklch(var(--bg-tertiary));
 
 			&::before {
 				content: "";
 				position: fixed;
 				width: 100%;
-				height: toRem(70);
-				left: -100%;
+				left: 0;
+				height: var(--header-height);
 				top: 0;
 				transition: left 0.3s;
 				z-index: 2;
+				background-color: oklch(var(--bg-tertiary));
 			}
 
 			.menu-open & {
-				inset: 0;
+				opacity: 1;
 			}
 		}
 	}
@@ -55,7 +58,7 @@
 	@media (max-width: $mobile) {
 		display: block;
 		position: relative;
-		width: toRem(30);
+		width: toRem(20);
 		height: toRem(18);
 		z-index: 5;
 		@media (any-hover: none) {

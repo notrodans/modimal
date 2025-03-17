@@ -2,9 +2,11 @@
 @use "../abstracts/mixins" as *;
 @use "../vendor/swiper";
 @use "../abstracts/breakpoints" as *;
+@use "../abstracts/base" as *;
 
 .page {
 	&__hero {
+		@include adaptiveValue("margin-block-end", 88, 44);
 	}
 	&__best-sellers {
 		@include adaptiveValue("margin-block", 88, 44);
@@ -13,6 +15,12 @@
 		@include adaptiveValue("margin-block", 88, 44);
 	}
 	&__modiweek {
+		@include adaptiveValue("margin-block", 88, 44);
+	}
+	&__sustainability {
+		@include adaptiveValue("margin-block", 88, 44);
+	}
+	&__instagram {
 		@include adaptiveValue("margin-block", 88, 44);
 	}
 }
@@ -96,12 +104,12 @@
 	}
 
 	&__image {
+		display: block;
 		position: relative;
 		aspect-ratio: 600 / 837;
-		overflow: hidden;
 
 		&:not(:last-child) {
-			@include adaptiveValue("margin-block-end", 64, 24);
+			@include adaptiveValue("margin-block-end", 64, 12);
 		}
 
 		&--small {
@@ -113,27 +121,21 @@
 		}
 
 		@media (any-hover: hover) {
+			overflow: hidden;
 			&:hover {
 				img {
-					transform: scale(1.02) rotate(1deg);
+					transform: scale(1.01);
 				}
 			}
 		}
 	}
 
 	&__name {
-		font-size: toRem(14);
 		@media (min-width: toEm(600)) {
 			position: absolute;
-			display: flex;
-			align-items: center;
-			justify-content: center;
 			max-width: toRem(185);
 			inset: toRem(16);
 			top: auto;
-			background-color: oklch(var(--tertiary));
-			padding: toRem(8);
-			line-height: math.div(24, 14);
 
 			&:not(&--right) {
 				margin-left: auto;
@@ -190,5 +192,30 @@
 		}
 	}
 	&__button {
+	}
+}
+
+.instagram {
+	&__header {
+		&:not(:last-child) {
+			margin-block-end: toRem(24);
+		}
+	}
+
+	&__body {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+
+		@media (max-width: $mobile) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	&__image {
+		&:nth-child(1) {
+			grid-area: span 2 / span 2;
+		}
+
+		@extend %grayfilter;
 	}
 }

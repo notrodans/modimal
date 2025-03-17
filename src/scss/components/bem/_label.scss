@@ -1,0 +1,12 @@
+@use "sass:math";
+@use "../../abstracts/mixins" as *;
+
+.label {
+	font-size: toRem(14);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: oklch(var(--tertiary));
+	line-height: math.div(24, 14);
+	padding: toRem(8);
+}

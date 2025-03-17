@@ -6,8 +6,18 @@
 	</div>
 	<div class="header__main header-main">
 		<div class="header-main__container">
-			<a href="home.html" class="header__logo logo">
-				<svg width="184" height="46" viewBox="0 0 184 46" xmlns="http://www.w3.org/2000/svg">
+			<ul data-spollers class="header-main__actions header-actions header-actions--left">
+				<li class="header-actions__item">
+					<button type="button" class="header-actions__menu icon-menu"><span></span></button>
+				</li>
+			</ul>
+			<a href="home.html" class="header-main__logo logo">
+				<svg
+					width="11.5rem"
+					height="2.875rem"
+					viewBox="0 0 184 46"
+					xmlns="http://www.w3.org/2000/svg"
+				>
 					<path
 						d="M35.9486 12.48C36.9406 12.48 37.8153 12.688 38.5726 13.104C39.33 13.5093 39.922 14.1387 40.3486 14.992C40.786 15.8453 41.0046 16.944 41.0046 18.288V26H36.2206V19.024C36.2206 18.1067 36.082 17.3653 35.8046 16.8C35.5273 16.2347 34.978 15.952 34.1566 15.952C33.666 15.952 33.234 16.08 32.8606 16.336C32.4873 16.592 32.1993 16.9493 31.9966 17.408C31.794 17.856 31.6926 18.3947 31.6926 19.024V26H27.2286V19.024C27.2286 18.1067 27.074 17.3653 26.7646 16.8C26.466 16.2347 25.9326 15.952 25.1646 15.952C24.674 15.952 24.242 16.08 23.8686 16.336C23.4953 16.5813 23.2073 16.9333 23.0046 17.392C22.8126 17.84 22.7166 18.384 22.7166 19.024V26H17.8846V12.864H22.7166V14.736C22.8446 14.4053 23.122 14.0693 23.5486 13.728C23.986 13.376 24.5246 13.0827 25.1646 12.848C25.8046 12.6027 26.482 12.48 27.1966 12.48C27.9753 12.48 28.626 12.5973 29.1486 12.832C29.6713 13.056 30.098 13.36 30.4286 13.744C30.77 14.128 31.042 14.544 31.2446 14.992C31.394 14.608 31.6873 14.224 32.1246 13.84C32.5726 13.4453 33.1273 13.12 33.7886 12.864C34.4606 12.608 35.1806 12.48 35.9486 12.48ZM53.7101 26.384C52.2701 26.384 50.9901 26.0907 49.8701 25.504C48.7608 24.9067 47.8861 24.0907 47.2461 23.056C46.6168 22.0107 46.3021 20.816 46.3021 19.472C46.3021 18.128 46.6168 16.9333 47.2461 15.888C47.8861 14.832 48.7608 14 49.8701 13.392C50.9901 12.784 52.2701 12.48 53.7101 12.48C55.1501 12.48 56.4195 12.784 57.5181 13.392C58.6168 14 59.4755 14.832 60.0941 15.888C60.7128 16.9333 61.0221 18.128 61.0221 19.472C61.0221 20.816 60.7128 22.0107 60.0941 23.056C59.4755 24.0907 58.6168 24.9067 57.5181 25.504C56.4195 26.0907 55.1501 26.384 53.7101 26.384ZM53.7101 22.384C54.2648 22.384 54.7448 22.2613 55.1501 22.016C55.5555 21.7707 55.8701 21.424 56.0941 20.976C56.3181 20.528 56.4301 20.0213 56.4301 19.456C56.4301 18.88 56.3181 18.368 56.0941 17.92C55.8701 17.472 55.5555 17.12 55.1501 16.864C54.7448 16.608 54.2648 16.48 53.7101 16.48C53.1555 16.48 52.6701 16.608 52.2541 16.864C51.8488 17.12 51.5288 17.472 51.2941 17.92C51.0701 18.368 50.9581 18.88 50.9581 19.456C50.9581 20.0213 51.0701 20.528 51.2941 20.976C51.5288 21.424 51.8488 21.7707 52.2541 22.016C52.6701 22.2613 53.1555 22.384 53.7101 22.384ZM72.3854 26.384C71.116 26.384 70.012 26.0747 69.0734 25.456C68.1347 24.8267 67.404 23.9893 66.8814 22.944C66.3694 21.888 66.1134 20.72 66.1134 19.44C66.1134 18.16 66.3694 16.9973 66.8814 15.952C67.404 14.896 68.1347 14.0533 69.0734 13.424C70.012 12.7947 71.116 12.48 72.3854 12.48C73.228 12.48 73.9747 12.6133 74.6254 12.88C75.276 13.136 75.804 13.4453 76.2094 13.808C76.6147 14.16 76.86 14.4853 76.9454 14.784V3.984H81.8094V26H76.9934V23.872C76.7907 24.2667 76.46 24.6613 76.0014 25.056C75.5427 25.44 75.004 25.7547 74.3854 26C73.7667 26.256 73.1 26.384 72.3854 26.384ZM73.8734 22.56C74.46 22.56 74.9827 22.4267 75.4414 22.16C75.9107 21.8933 76.2787 21.5253 76.5454 21.056C76.812 20.576 76.9454 20.0373 76.9454 19.44C76.9454 18.8427 76.812 18.3093 76.5454 17.84C76.2787 17.36 75.9107 16.9867 75.4414 16.72C74.9827 16.4427 74.46 16.304 73.8734 16.304C73.308 16.304 72.796 16.4427 72.3374 16.72C71.8894 16.9867 71.532 17.36 71.2654 17.84C71.0094 18.3093 70.8814 18.8427 70.8814 19.44C70.8814 20.0373 71.0094 20.576 71.2654 21.056C71.532 21.5253 71.8894 21.8933 72.3374 22.16C72.796 22.4267 73.308 22.56 73.8734 22.56ZM87.9884 26V12.864H92.8524V26H87.9884ZM90.4844 10.16C89.7164 10.16 89.0657 9.89333 88.5324 9.36C87.999 8.816 87.7324 8.17067 87.7324 7.424C87.7324 6.67733 87.999 6.032 88.5324 5.488C89.0764 4.93333 89.727 4.656 90.4844 4.656C90.9857 4.656 91.4444 4.784 91.8604 5.04C92.2764 5.28533 92.6124 5.616 92.8684 6.032C93.1244 6.448 93.2524 6.912 93.2524 7.424C93.2524 8.17067 92.9804 8.816 92.4364 9.36C91.8924 9.89333 91.2417 10.16 90.4844 10.16ZM117.467 12.48C118.459 12.48 119.334 12.688 120.091 13.104C120.849 13.5093 121.441 14.1387 121.867 14.992C122.305 15.8453 122.523 16.944 122.523 18.288V26H117.739V19.024C117.739 18.1067 117.601 17.3653 117.323 16.8C117.046 16.2347 116.497 15.952 115.675 15.952C115.185 15.952 114.753 16.08 114.379 16.336C114.006 16.592 113.718 16.9493 113.515 17.408C113.313 17.856 113.211 18.3947 113.211 19.024V26H108.747V19.024C108.747 18.1067 108.593 17.3653 108.283 16.8C107.985 16.2347 107.451 15.952 106.683 15.952C106.193 15.952 105.761 16.08 105.387 16.336C105.014 16.5813 104.726 16.9333 104.523 17.392C104.331 17.84 104.235 18.384 104.235 19.024V26H99.4034V12.864H104.235V14.736C104.363 14.4053 104.641 14.0693 105.067 13.728C105.505 13.376 106.043 13.0827 106.683 12.848C107.323 12.6027 108.001 12.48 108.715 12.48C109.494 12.48 110.145 12.5973 110.667 12.832C111.19 13.056 111.617 13.36 111.947 13.744C112.289 14.128 112.561 14.544 112.763 14.992C112.913 14.608 113.206 14.224 113.643 13.84C114.091 13.4453 114.646 13.12 115.307 12.864C115.979 12.608 116.699 12.48 117.467 12.48ZM138.733 26V23.872C138.637 24.0853 138.392 24.3947 137.997 24.8C137.613 25.2053 137.101 25.5733 136.461 25.904C135.821 26.224 135.074 26.384 134.221 26.384C132.941 26.384 131.821 26.0747 130.861 25.456C129.901 24.8267 129.154 23.9893 128.621 22.944C128.088 21.888 127.821 20.72 127.821 19.44C127.821 18.16 128.088 16.9973 128.621 15.952C129.154 14.896 129.901 14.0533 130.861 13.424C131.821 12.7947 132.941 12.48 134.221 12.48C135.042 12.48 135.762 12.6133 136.381 12.88C137 13.136 137.501 13.4453 137.885 13.808C138.269 14.16 138.536 14.4853 138.685 14.784V12.864H143.517V26H138.733ZM132.589 19.44C132.589 20.0373 132.728 20.576 133.005 21.056C133.282 21.5253 133.65 21.8933 134.109 22.16C134.578 22.4267 135.096 22.56 135.661 22.56C136.248 22.56 136.765 22.4267 137.213 22.16C137.661 21.8933 138.013 21.5253 138.269 21.056C138.536 20.576 138.669 20.0373 138.669 19.44C138.669 18.8427 138.536 18.3093 138.269 17.84C138.013 17.36 137.661 16.9867 137.213 16.72C136.765 16.4427 136.248 16.304 135.661 16.304C135.096 16.304 134.578 16.4427 134.109 16.72C133.65 16.9867 133.282 17.36 133.005 17.84C132.728 18.3093 132.589 18.8427 132.589 19.44ZM154.667 26H149.787V3.984H154.667V26Z"
 						fill="oklch(var(--primary))"
@@ -37,18 +47,23 @@
 				</svg>
 			</a>
 			<div class="header-main__menu menu">
-				<button type="button" class="menu__icon icon-menu"><span></span></button>
 				<nav class="menu__body">
-					<ul
-						data-spollers
-						data-one-spoller
-						data-spollers-speed="0"
-						class="menu__list header-spollers"
-					>
+					<ul data-spollers data-one-spoller class="menu__list header-spollers">
 						<li class="header-spollers__item">
 							<details class="header-spollers__spoller">
-								<summary id="collection" data-spoller-close class="header-spollers__title">
-									Collection
+								<summary data-spoller-close class="header-spollers__title">
+									<span>Collection</span>
+									<svg
+										width="0.75rem"
+										height="0.5rem"
+										viewBox="0 0 12 8"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M1.41 0.294922L6 4.87492L10.59 0.294922L12 1.70492L6 7.70492L0 1.70492L1.41 0.294922Z"
+											fill="oklch(var(--primary))"
+										/>
+									</svg>
 								</summary>
 								<div class="header-spollers__body body-spollers-header">
 									<div class="body-spollers-header__container">
@@ -144,8 +159,21 @@
 						</li>
 						<li class="header-spollers__item">
 							<details class="header-spollers__spoller">
-								<summary data-spoller-close class="header-spollers__title">New In</summary>
-								<div class="header-spollers__body">
+								<summary data-spoller-close class="header-spollers__title">
+									<span>New In</span>
+									<svg
+										width="0.75rem"
+										height="0.5rem"
+										viewBox="0 0 12 8"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M1.41 0.294922L6 4.87492L10.59 0.294922L12 1.70492L6 7.70492L0 1.70492L1.41 0.294922Z"
+											fill="oklch(var(--primary))"
+										/>
+									</svg>
+								</summary>
+								<div class="header-spollers__body body-spollers-header">
 									<div
 										class="body-spollers-header__container body-spollers-header__container--secondary"
 									>
@@ -232,16 +260,42 @@
 						</li>
 						<li class="header-spollers__item">
 							<details class="header-spollers__spoller">
-								<summary data-spoller-close class="header-spollers__title">Modiweek</summary>
-								<div class="header-spollers__body">
+								<summary data-spoller-close class="header-spollers__title">
+									<span>Modiweek</span>
+									<svg
+										width="0.75rem"
+										height="0.5rem"
+										viewBox="0 0 12 8"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M1.41 0.294922L6 4.87492L10.59 0.294922L12 1.70492L6 7.70492L0 1.70492L1.41 0.294922Z"
+											fill="oklch(var(--primary))"
+										/>
+									</svg>
+								</summary>
+								<div class="header-spollers__body body-spollers-header">
 									<div class="body-spollers-header__container">Content 4</div>
 								</div>
 							</details>
 						</li>
 						<li class="header-spollers__item">
 							<details class="header-spollers__spoller">
-								<summary data-spoller-close class="header-spollers__title">Plus Size</summary>
-								<div class="header-spollers__body">
+								<summary data-spoller-close class="header-spollers__title">
+									<span>Plus Size</span>
+									<svg
+										width="0.75rem"
+										height="0.5rem"
+										viewBox="0 0 12 8"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M1.41 0.294922L6 4.87492L10.59 0.294922L12 1.70492L6 7.70492L0 1.70492L1.41 0.294922Z"
+											fill="oklch(var(--primary))"
+										/>
+									</svg>
+								</summary>
+								<div class="header-spollers__body body-spollers-header">
 									<div
 										class="body-spollers-header__container body-spollers-header__container--secondary"
 									>
@@ -314,8 +368,21 @@
 						</li>
 						<li class="header-spollers__item">
 							<details class="header-spollers__spoller">
-								<summary data-spoller-close class="header-spollers__title">Sustainability</summary>
-								<div class="header-spollers__body">
+								<summary data-spoller-close class="header-spollers__title">
+									<span>Sustainability</span>
+									<svg
+										width="0.75rem"
+										height="0.5rem"
+										viewBox="0 0 12 8"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M1.41 0.294922L6 4.87492L10.59 0.294922L12 1.70492L6 7.70492L0 1.70492L1.41 0.294922Z"
+											fill="oklch(var(--primary))"
+										/>
+									</svg>
+								</summary>
+								<div class="header-spollers__body body-spollers-header">
 									<div
 										class="body-spollers-header__container body-spollers-header__container--secondary"
 									>
@@ -386,20 +453,75 @@
 							</details>
 						</li>
 					</ul>
+					<ul class="menu__actions actions-menu">
+						<li class="actions-menu__item">
+							<a href="#" class="actions-menu__link">
+								<svg
+									width="1rem"
+									height="1.125rem"
+									viewBox="0 0 16 18"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M14.39 11.5776C12.71 10.7176 10.53 10.0176 8 10.0176C5.47 10.0176 3.29 10.7176 1.61 11.5776C0.61 12.0876 0 13.1176 0 14.2376V17.0176H16V14.2376C16 13.1176 15.39 12.0876 14.39 11.5776ZM14 15.0176H2V14.2376C2 13.8576 2.2 13.5176 2.52 13.3576C3.71 12.7476 5.63 12.0176 8 12.0176C10.37 12.0176 12.29 12.7476 13.48 13.3576C13.8 13.5176 14 13.8576 14 14.2376V15.0176Z"
+										fill="#202020"
+									/>
+									<path
+										d="M8 9.01758C10.21 9.01758 12 7.22758 12 5.01758C12 3.64758 12 1.51758 12 1.51758C12 0.687578 11.33 0.0175781 10.5 0.0175781C9.98 0.0175781 9.52 0.287578 9.25 0.687578C8.98 0.287578 8.52 0.0175781 8 0.0175781C7.48 0.0175781 7.02 0.287578 6.75 0.687578C6.48 0.287578 6.02 0.0175781 5.5 0.0175781C4.67 0.0175781 4 0.687578 4 1.51758C4 1.51758 4 3.63758 4 5.01758C4 7.22758 5.79 9.01758 8 9.01758ZM6 2.51758H10V5.01758C10 6.11758 9.1 7.01758 8 7.01758C6.9 7.01758 6 6.11758 6 5.01758V2.51758Z"
+										fill="#202020"
+									/>
+								</svg>
+								<span>Log in</span>
+							</a>
+						</li>
+						<li class="actions-menu__item">
+							<a href="#" class="actions-menu__link">
+								<span>Create Account</span>
+							</a>
+						</li>
+					</ul>
 				</nav>
 			</div>
-			<ul class="header__actions header-actions">
-				<li class="header-actions__item">
-					<a aria-label="Open search" href="#" class="header-actions__link">
-						<svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-							<path
-								d="M12.755 11.2549H11.965L11.685 10.9849C12.665 9.84488 13.255 8.36488 13.255 6.75488C13.255 3.16488 10.345 0.254883 6.755 0.254883C3.165 0.254883 0.255005 3.16488 0.255005 6.75488C0.255005 10.3449 3.165 13.2549 6.755 13.2549C8.365 13.2549 9.845 12.6649 10.985 11.6849L11.255 11.9649V12.7549L16.255 17.7449L17.745 16.2549L12.755 11.2549ZM6.755 11.2549C4.26501 11.2549 2.255 9.24488 2.255 6.75488C2.255 4.26488 4.26501 2.25488 6.755 2.25488C9.245 2.25488 11.255 4.26488 11.255 6.75488C11.255 9.24488 9.245 11.2549 6.755 11.2549Z"
-								fill="currentColor"
-							/>
-						</svg>
-					</a>
+			<ul data-spollers class="header__actions header-actions header-actions--right">
+				<li data-da=".header-actions--left,767.98" class="header-actions__item">
+					<details class="header-spollers__spoller">
+						<summary aria-label="Open search" data-spoller-close class="header-spollers__title">
+							<svg
+								class="header-spollers__search"
+								width="1.125rem"
+								height="1.125rem"
+								viewBox="0 0 18 18"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M12.755 11.2549H11.965L11.685 10.9849C12.665 9.84488 13.255 8.36488 13.255 6.75488C13.255 3.16488 10.345 0.254883 6.755 0.254883C3.165 0.254883 0.255005 3.16488 0.255005 6.75488C0.255005 10.3449 3.165 13.2549 6.755 13.2549C8.365 13.2549 9.845 12.6649 10.985 11.6849L11.255 11.9649V12.7549L16.255 17.7449L17.745 16.2549L12.755 11.2549ZM6.755 11.2549C4.26501 11.2549 2.255 9.24488 2.255 6.75488C2.255 4.26488 4.26501 2.25488 6.755 2.25488C9.245 2.25488 11.255 4.26488 11.255 6.75488C11.255 9.24488 9.245 11.2549 6.755 11.2549Z"
+									fill="currentColor"
+								/>
+							</svg>
+						</summary>
+						<div class="header-spollers__body body-spollers-header body-spollers-header--form">
+							<div class="body-spollers-header__container body-spollers-header__container--form">
+								<form method="GET" class="body-spollers-header__form">
+									<label class="body-spollers-header__label">
+										<svg
+											width="1.125rem"
+											height="1.125rem"
+											viewBox="0 0 18 18"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<path
+												d="M12.7549 11.2549H11.9649L11.6849 10.9849C12.6649 9.84488 13.2549 8.36488 13.2549 6.75488C13.2549 3.16488 10.3449 0.254883 6.75488 0.254883C3.16488 0.254883 0.254883 3.16488 0.254883 6.75488C0.254883 10.3449 3.16488 13.2549 6.75488 13.2549C8.36488 13.2549 9.84488 12.6649 10.9849 11.6849L11.2549 11.9649V12.7549L16.2549 17.7449L17.7449 16.2549L12.7549 11.2549ZM6.75488 11.2549C4.26488 11.2549 2.25488 9.24488 2.25488 6.75488C2.25488 4.26488 4.26488 2.25488 6.75488 2.25488C9.24488 2.25488 11.2549 4.26488 11.2549 6.75488C11.2549 9.24488 9.24488 11.2549 6.75488 11.2549Z"
+												fill="#ADADAD"
+											/>
+										</svg>
+										<input type="text" placeholder="Search" class="body-spollers-header__input" />
+									</label>
+								</form>
+							</div>
+						</div>
+					</details>
 				</li>
-				<li class="header-actions__item">
+				<li class="header-actions__item header-actions__item--profile">
 					<a aria-label="Open profile" href="#" class="header-actions__link">
 						<svg width="16" height="18" viewBox="0 0 16 18" xmlns="http://www.w3.org/2000/svg">
 							<path

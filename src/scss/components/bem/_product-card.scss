@@ -10,12 +10,16 @@
 		left: 0;
 		right: 0;
 		display: flex;
-		justify-content: space-between;
 		column-gap: toRem(12);
 		pointer-events: none;
+		justify-content: flex-end;
 
 		> * {
 			pointer-events: all;
+		}
+
+		&:has(.product-card__label) {
+			justify-content: space-between;
 		}
 	}
 	&__label {

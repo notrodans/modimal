@@ -21,13 +21,24 @@
 }
 
 .header-spollers {
+	@media (max-width: $mobile) {
+		display: flex;
+		flex-direction: column;
+		row-gap: toRem(32);
+	}
 	&__item {
+		@media (max-width: $mobile) {
+			border-bottom: toRem(1) solid oklch(var(--primary));
+		}
 	}
 
 	&__spoller {
 	}
 
 	&__title {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 		@include adaptiveValue("font-size", 18, 16);
 		line-height: 180%;
 		text-transform: capitalize;
@@ -44,10 +55,25 @@
 		&._spoller-active {
 			color: oklch(var(--text-secondary));
 		}
+
+		@media (min-width: $mobile) {
+			svg:not(.header-spollers__search) {
+				display: none;
+			}
+		}
 	}
 
 	&__body {
-		@include adaptiveValue("padding-block", 48, 26);
+	}
+
+	&__content {
+	}
+}
+
+.body-spollers-header {
+	@include adaptiveValue("padding-block", 48, 24);
+
+	@media (min-width: $mobile) {
 		position: fixed;
 		width: 100%;
 		left: 0;
@@ -59,25 +85,36 @@
 		overflow: auto;
 	}
 
-	&__content {
+	&--form {
+		position: fixed;
+		width: 100%;
+		left: 0;
+		right: 0;
+		top: var(--header-height);
+		z-index: 1;
+		max-height: calc(100% - var(--header-height));
+		background-color: oklch(var(--bg-tertiary));
+		overflow: auto;
 	}
-}
 
-.body-spollers-header {
 	&__container {
 		display: grid;
-		// grid-template-columns: minmax(46.56%, toRem(570)) 1fr;
-		grid-template-columns: minmax(toRem(280), 1fr) minmax(53.43%, toRem(654));
+		grid-template-columns: 1fr;
 
 		&--secondary {
-			grid-template-columns: minmax(53.43, toRem(654)) 1fr;
+			@media (min-width: $mobile) {
+				grid-template-columns: minmax(53.43%, toRem(654)) 1fr;
+			}
 		}
 
-		@media (max-width: $mobile) {
-			grid-template-columns: 1fr;
-		}
 		row-gap: toRem(30);
 		align-items: flex-start;
+
+		@media (min-width: $mobile) {
+			&:not(&--form) {
+				grid-template-columns: minmax(toRem(280), 1fr) minmax(53.43%, toRem(654));
+			}
+		}
 	}
 
 	&__lists {
@@ -85,7 +122,9 @@
 		line-height: 180%;
 		flex-wrap: wrap;
 		gap: toRem(24);
+
 		@include adaptiveValue("font-size", 18, 16);
+
 		@media (min-width: $mobile) {
 			@include adaptiveValue("padding-inline-end", 54, 12);
 		}
@@ -156,6 +195,43 @@
 
 		p {
 			@extend .transition-colors;
+		}
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__label {
+		color: #adadad;
+		position: relative;
+		border-bottom: toRem(1) solid currentColor;
+
+		svg {
+			@include adaptiveValue("width", 24, 17.5);
+			@include adaptiveValue("height", 24, 17.5);
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: toRem(19.25);
+		}
+	}
+
+	&__input {
+		width: 100%;
+		padding-block: toRem(11.5);
+		padding-inline: toRem(48) toRem(16);
+		color: oklch(var(--text-primary));
+
+		&,
+		&::placeholder {
+			@include adaptiveValue("font-size", 20, 12);
+			line-height: 140%;
+		}
+
+		&::placeholder {
+			color: #adadad;
 		}
 	}
 }

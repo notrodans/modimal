@@ -1,8 +1,25 @@
+@use "sass:math";
 @use "../../abstracts/mixins" as *;
+@use "../../abstracts/base" as *;
 
 .header-block {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	column-gap: toRem(16);
+
+	&__link {
+		font-size: toRem(14);
+		color: #5a6d57;
+		line-height: math.div(24, 14);
+
+		@extend .transition-colors;
+
+		@media (any-hover: hover) {
+			&:hover,
+			&:focus {
+				color: #242b22;
+			}
+		}
+	}
 }
