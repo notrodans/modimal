@@ -3,19 +3,31 @@ import { isMobile } from "./functions.js";
 // Підключення списку активних модулів
 import { flsModules } from "./modules.js";
 
-const header = document.querySelector('.header');
+const header = document.querySelector(".header");
 
-function updateHeaderHeight() {
-  if (!header) return;
-
-  const height = header.offsetHeight;
-  document.body.style.setProperty('--header-height', `${height}px`);
+function updateHeight() {
+  if(header) {
+    const headerHeight = header.offsetHeight;
+    document.body.style.setProperty("--header-height", `${headerHeight / 16}rem`);
+  }
 }
 
-document.addEventListener('DOMContentLoaded', updateHeaderHeight);
+document.addEventListener("DOMContentLoaded", updateHeight);
 
-const headerObserver = new ResizeObserver(updateHeaderHeight);
+const observer = new ResizeObserver(updateHeight);
 if (header) {
-  headerObserver.observe(header);
+	observer.observe(header);
 }
 
+const queryParams = new URLSearchParams(location.search);
+const searchField = document.querySelector(".search-block__input");
+
+if (searchField) {
+  searchField.value = queryParams.get("search") || "";
+}
+
+for (const checkbox of document.querySelectorAll(".spollers-filters-form__input")) {
+  if (checkbox.name && queryParams.has(checkbox.name)) {
+    checkbox.checked = queryParams.getAll(checkbox.name).includes(checkbox.value);
+  }
+}

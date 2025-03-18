@@ -16,7 +16,7 @@
 	}
 }
 // Контент спойлера
-.spollers__body {
+.spollers__content {
 	padding: toRem(20);
 }
 
@@ -71,8 +71,6 @@
 }
 
 .body-spollers-header {
-	@include adaptiveValue("padding-block", 48, 24);
-
 	@media (min-width: $mobile) {
 		position: fixed;
 		width: 100%;
@@ -97,7 +95,9 @@
 		overflow: auto;
 	}
 
-	&__container {
+	&__content {
+		@include adaptiveValue("padding-block", 48, 24);
+
 		display: grid;
 		grid-template-columns: 1fr;
 
@@ -109,12 +109,14 @@
 
 		row-gap: toRem(30);
 		align-items: flex-start;
-
 		@media (min-width: $mobile) {
 			&:not(&--form) {
 				grid-template-columns: minmax(toRem(280), 1fr) minmax(53.43%, toRem(654));
 			}
 		}
+	}
+
+	&__container {
 	}
 
 	&__lists {
@@ -195,43 +197,6 @@
 
 		p {
 			@extend .transition-colors;
-		}
-	}
-
-	&__form {
-		display: flex;
-		flex-direction: column;
-	}
-
-	&__label {
-		color: #adadad;
-		position: relative;
-		border-bottom: toRem(1) solid currentColor;
-
-		svg {
-			@include adaptiveValue("width", 24, 17.5);
-			@include adaptiveValue("height", 24, 17.5);
-			position: absolute;
-			top: 50%;
-			transform: translateY(-50%);
-			left: toRem(19.25);
-		}
-	}
-
-	&__input {
-		width: 100%;
-		padding-block: toRem(11.5);
-		padding-inline: toRem(48) toRem(16);
-		color: oklch(var(--text-primary));
-
-		&,
-		&::placeholder {
-			@include adaptiveValue("font-size", 20, 12);
-			line-height: 140%;
-		}
-
-		&::placeholder {
-			color: #adadad;
 		}
 	}
 }

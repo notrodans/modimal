@@ -36,8 +36,8 @@ export default defineConfig(({ command, mode }) => {
 			devSourcemap: true,
 			postcss: {
 				plugins: [autoprefixer()]
-			}
-		},
+			},
+    },
 
 		build: {
 			outDir: `../${BUILD_FOLDER}`,

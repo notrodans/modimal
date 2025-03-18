@@ -50,9 +50,10 @@ export default function webpHtmlPlugin() {
 
 			// Create picture tag with WebP source
 			return `<picture>
-        <source srcset="${webpSrc}" type="image/webp">
-        <img${classAttr} ${imgAttrs} src="${src}">
-      </picture>`;
+                <source srcset="${webpSrc}" type="image/webp">
+                <img${classAttr} ${imgAttrs} src="${src}">
+              </picture>
+             `;
 		});
 	}
 }

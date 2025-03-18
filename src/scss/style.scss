@@ -1,8 +1,13 @@
 @use "base";
 @use "abstracts";
+@use "abstracts/mixins" as *;
 @use "themes";
 @use "layout";
 @use "components";
+
+.page {
+	@include adaptiveValue("margin-block-end", 44, 24);
+}
 
 body {
 	// scrollbar-gutter: stable;

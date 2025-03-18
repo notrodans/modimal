@@ -131,7 +131,7 @@
 .actions-menu {
 	display: flex;
 	padding-block-start: toRem(15);
-	padding-inline: toRem(12);
+	@include adaptiveValue("padding-inline", 12, 4, 360, $minWidth);
 	border-top: toRem(1) solid #cbcbcb;
 	column-gap: toRem(4);
 	@media (min-width: $mobile) {
@@ -156,6 +156,7 @@
 		padding-block: toRem(8);
 		padding-inline: toRem(10);
 		column-gap: toRem(8);
+		@include adaptiveValue("font-size", 14, 12, 0, 360, $minWidth);
 
 		span {
 			line-height: math.div(24, 14);
