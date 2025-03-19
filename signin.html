@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-	<title>Home</title>
+	<title>Sign In</title>
 <meta charset="UTF-8">
 <meta name="format-detection" content="telephone=no">
 <style></style>
@@ -11,10 +11,10 @@
 <link as="font" rel="preload" href="./fonts/Montserrat-Bold.woff2" type="font/woff2">
 <link as="font" rel="preload" href="./fonts/Montserrat-SemiBold.woff2" type="font/woff2">
 <link as="font" rel="preload" href="./fonts/GillSansC-Italic.woff2" type="font/woff2">
-
+
 	<script defer src="./js/app.BHs9c0jT.minify.js"></script>
 	<link rel="stylesheet" href="./css/app.DtjYs_ZA.minify.css">
-	<link rel="stylesheet" href="./css/home.DzcPhphC.minify.css">
+	<link rel="stylesheet" href="./css/signin.DB4-QCHl.minify.css">
 
 	<body>
 		<div class="wrapper">
@@ -651,740 +651,115 @@
 </header>
 
 			<main class="page">
-				<section class="page__hero hero">
-					<picture>
-                <source srcset="img/hero.webp" type="image/webp">
-                <img class="hero__image ibg"    alt="Hero image"  src="img/hero.png">
+				<section class="page__signin sign">
+					<div class="sign__container">
+						<div class="sign__image">
+							<picture>
+                <source srcset="img/sign.webp" type="image/webp">
+                <img class="ibg"    alt="Sign Image"  src="img/sign.png">
               </picture>
              
-					<div class="hero__container">
-						<h1 class="hero__title title">
-							Elegance in simplicity, <br>
-							Earth’s harmony
-						</h1>
-						<a class="hero__button button button--icon" href="#">
-							<span>New in</span>
-							<svg 
-								width="0.875rem"
-								height="0.875rem"
-								viewBox="0 0 14 14"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<path d="M14 8H8V14H6V8H0V6H6V0H8V6H14V8Z" fill="oklch(var(--primary))" ></path>
-							</svg>
-						</a>
-					</div>
-				</section>
-
-				<section class="page__best-sellers best-sellers">
-					<div class="best-sellers__container">
-						<div class="best-sellers__header header-block">
-							<h2 class="header-block__title title-header">Best Sellers</h2>
-							<a href="#" class="header-block__link">View All</a>
 						</div>
-						<div class="best-sellers__slider swiper">
-							<div class="best-sellers__wrapper swiper-wrapper">
-								<div class="best-sellers__slide product-card swiper-slide">
-									<div class="product-card__header">
-										<button class="product-card__wishlist">
-											<svg 
-												width="1.25rem"
-												height="1.25rem"
-												viewBox="0 0 20 20"
+						<div class="sign__body">
+							<h2 class="sign__title title-header">Log In</h2>
+							<form method="POST" class="sign__form">
+								<div class="sign__inputs">
+									<label class="sign__label">
+										<input 											required
+											type="email"
+											placeholder="Email"
+											class="sign__input input-field"
+										>
+									</label>
+									<label class="sign__label password-block">
+										<input 											required
+											type="password"
+											placeholder="Password"
+											class="password-block__input input-field input-field--icon"
+										>
+										<button type="button" class="password-block__unhide">
+											<svg 												width="1rem"
+												height="0.875rem"
+												viewBox="0 0 16 14"
 												xmlns="http://www.w3.org/2000/svg"
 											>
-												<path 
-													d="M9.22318 17.1147L9.22174 17.1134C6.62662 14.7602 4.55384 12.878 3.1178 11.1223C1.69324 9.38069 1 7.88574 1 6.32422C1 3.7965 2.97228 1.82422 5.5 1.82422C6.93721 1.82422 8.33224 2.49815 9.23865 3.56256L10 4.45662L10.7614 3.56256C11.6678 2.49815 13.0628 1.82422 14.5 1.82422C17.0277 1.82422 19 3.7965 19 6.32422C19 7.88575 18.3068 9.38075 16.882 11.1239C15.4459 12.8808 13.3734 14.7651 10.7786 17.1232C10.7782 17.1235 10.7778 17.1238 10.7775 17.1241L10.0026 17.8242L9.22318 17.1147Z"
+												<path 													d="M7.99935 2.98288C10.526 2.98288 12.7793 4.40288 13.8793 6.64954C13.486 7.46288 12.9327 8.16288 12.2727 8.72954L13.2127 9.66955C14.1393 8.84955 14.8727 7.82288 15.3327 6.64954C14.1793 3.72288 11.3327 1.64954 7.99935 1.64954C7.15268 1.64954 6.33935 1.78288 5.57268 2.02954L6.67268 3.12954C7.10602 3.04288 7.54602 2.98288 7.99935 2.98288ZM7.28602 3.74288L8.66602 5.12288C9.04602 5.28954 9.35268 5.59621 9.51935 5.97621L10.8993 7.35621C10.9527 7.12954 10.9927 6.88954 10.9927 6.64288C10.9993 4.98954 9.65268 3.64954 7.99935 3.64954C7.75268 3.64954 7.51935 3.68288 7.28602 3.74288ZM1.33935 1.56288L3.12602 3.34954C2.03935 4.20288 1.17935 5.33621 0.666016 6.64954C1.81935 9.57621 4.66602 11.6495 7.99935 11.6495C9.01268 11.6495 9.98601 11.4562 10.8793 11.1029L13.1593 13.3829L14.0993 12.4429L2.27935 0.616211L1.33935 1.56288ZM6.33935 6.56288L8.07935 8.30288C8.05268 8.30954 8.02602 8.31621 7.99935 8.31621C7.07935 8.31621 6.33268 7.56954 6.33268 6.64954C6.33268 6.61621 6.33935 6.59621 6.33935 6.56288ZM4.07268 4.29621L5.23935 5.46288C5.08602 5.82954 4.99935 6.22954 4.99935 6.64954C4.99935 8.30288 6.34602 9.64954 7.99935 9.64954C8.41935 9.64954 8.81935 9.56288 9.17935 9.40954L9.83268 10.0629C9.24602 10.2229 8.63268 10.3162 7.99935 10.3162C5.47268 10.3162 3.21935 8.89621 2.11935 6.64954C2.58602 5.69621 3.26602 4.90954 4.07268 4.29621Z"
 													fill="currentColor"
-													stroke="oklch(var(--primary))"
-													stroke-width="2"
 												></path>
 											</svg>
 										</button>
-									</div>
-									<a href="#" class="product-card__image">
-										<picture>
-                <source srcset="img/best-sellers/Image-3.webp" type="image/webp">
-                <img class="ibg"    alt="Product image"  src="img/best-sellers/Image-3.png">
-              </picture>
-             
-									</a>
-									<div class="product-card__body">
-										<a href="#" class="product-card__head-title">Tailored Stretch</a>
-										<div class="product-card__content">
-											<div class="product-card__text">Turn It Up Pants</div>
-											<div class="product-card__price">$180</div>
-										</div>
-										<ul class="product-card__colors">
-											<li>
-												<svg 
-													width="1.5rem"
-													height="1.5rem"
-													viewBox="0 0 24 25"
-													fill="none"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#0C0C0C" ></rect>
-												</svg>
-											</li>
-											<li>
-												<svg 
-													width="1.5rem"
-													height="1.5rem"
-													viewBox="0 0 24 25"
-													fill="none"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#7DC3EB" ></rect>
-												</svg>
-											</li>
-											<li>
-												<svg 
-													width="1.5rem"
-													height="1.5rem"
-													viewBox="0 0 24 25"
-													fill="none"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#748C70" ></rect>
-												</svg>
-											</li>
-										</ul>
-									</div>
+									</label>
 								</div>
-								<div class="best-sellers__slide product-card swiper-slide">
-									<div class="product-card__header">
-										<button class="product-card__wishlist">
-											<svg 
-												width="1.25rem"
-												height="1.25rem"
-												viewBox="0 0 20 20"
+								<a href="#" class="sign__link">Forgot Your Password</a>
+								<button type="submit" class="sign__button">
+									<span>Log In</span>
+								</button>
+								<div class="sign__exist">
+									<p class="sign__text">Or</p>
+								</div>
+								<ul class="sign__providers providers-sign">
+									<li class="providers-sign__item">
+										<a aria-label="Sign in using Apple" href="#" class="socials-sign__provider">
+											<svg 												width="2.1875rem"
+												height="2.1875rem"
+												viewBox="0 0 35 35"
 												xmlns="http://www.w3.org/2000/svg"
 											>
-												<path 
-													d="M9.22318 17.1147L9.22174 17.1134C6.62662 14.7602 4.55384 12.878 3.1178 11.1223C1.69324 9.38069 1 7.88574 1 6.32422C1 3.7965 2.97228 1.82422 5.5 1.82422C6.93721 1.82422 8.33224 2.49815 9.23865 3.56256L10 4.45662L10.7614 3.56256C11.6678 2.49815 13.0628 1.82422 14.5 1.82422C17.0277 1.82422 19 3.7965 19 6.32422C19 7.88575 18.3068 9.38075 16.882 11.1239C15.4459 12.8808 13.3734 14.7651 10.7786 17.1232C10.7782 17.1235 10.7778 17.1238 10.7775 17.1241L10.0026 17.8242L9.22318 17.1147Z"
-													fill="currentColor"
-													stroke="oklch(var(--primary))"
-													stroke-width="2"
+												<path 													d="M35 17.5C35 27.16 27.1687 35 17.5 35C7.83125 35 0 27.16 0 17.5C0 7.83125 7.83125 0 17.5 0C27.1687 0 35 7.83125 35 17.5Z"
+													fill="#202020"
+												></path>
+												<path 													d="M25.4996 13.0717C25.4122 13.1274 23.3338 14.3031 23.3338 16.9098C23.4318 19.8826 25.9567 20.9252 26 20.9252C25.9567 20.9809 25.6188 22.3454 24.6179 23.7757C23.8236 25.0078 22.942 26.25 21.6032 26.25C20.3297 26.25 19.8726 25.4289 18.4032 25.4289C16.8252 25.4289 16.3787 26.25 15.1705 26.25C13.8317 26.25 12.8848 24.9412 12.0472 23.7207C10.959 22.1233 10.034 19.6164 10.0014 17.2093C9.97937 15.9338 10.2193 14.68 10.8284 13.6151C11.688 12.1283 13.2227 11.1191 14.8986 11.0858C16.1828 11.0416 17.3256 11.9843 18.1093 11.9843C18.8603 11.9843 20.2644 11.0858 21.853 11.0858C22.5388 11.0865 24.3673 11.297 25.4996 13.0717ZM18.0007 10.8311C17.7721 9.66629 18.4032 8.50148 18.9909 7.75847C19.742 6.8599 20.9281 6.25 21.951 6.25C22.0163 7.41481 21.6025 8.55719 20.8628 9.3892C20.1991 10.2878 19.0562 10.9642 18.0007 10.8311Z"
+													fill="white"
 												></path>
 											</svg>
-										</button>
-									</div>
-									<a href="#" class="product-card__image">
-										<picture>
-                <source srcset="img/best-sellers/Image-1.webp" type="image/webp">
-                <img class="ibg"    alt="Product image"  src="img/best-sellers/Image-1.png">
-              </picture>
-             
-									</a>
-									<div class="product-card__body">
-										<a href="#" class="product-card__head-title">Technical Silk</a>
-										<div class="product-card__content">
-											<div class="product-card__text">Make A Splash</div>
-											<div class="product-card__price">$120</div>
-										</div>
-										<ul class="product-card__colors">
-											<li>
-												<svg 
-													width="1.5rem"
-													height="1.5rem"
-													viewBox="0 0 24 25"
-													fill="none"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#909225" ></rect>
-												</svg>
-											</li>
-											<li>
-												<svg 
-													width="1.5rem"
-													height="1.5rem"
-													viewBox="0 0 24 25"
-													fill="none"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#19418E" ></rect>
-												</svg>
-											</li>
-											<li>
-												<svg 
-													width="1.5rem"
-													height="1.5rem"
-													viewBox="0 0 24 25"
-													fill="none"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#0C0C0C" ></rect>
-												</svg>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div class="best-sellers__slide product-card swiper-slide">
-									<div class="product-card__header">
-										<button class="product-card__wishlist">
-											<svg 
-												width="1.25rem"
-												height="1.25rem"
-												viewBox="0 0 20 20"
+											<span class="visibility-hidden">Sign in using Apple</span>
+										</a>
+									</li>
+									<li class="providers-sign__item">
+										<a aria-label="Sign in using Google" href="#" class="socials-sign__provider">
+											<svg 												width="2.1875rem"
+												height="2.1875rem"
+												viewBox="0 0 35 35"
 												xmlns="http://www.w3.org/2000/svg"
 											>
-												<path 
-													d="M9.22318 17.1147L9.22174 17.1134C6.62662 14.7602 4.55384 12.878 3.1178 11.1223C1.69324 9.38069 1 7.88574 1 6.32422C1 3.7965 2.97228 1.82422 5.5 1.82422C6.93721 1.82422 8.33224 2.49815 9.23865 3.56256L10 4.45662L10.7614 3.56256C11.6678 2.49815 13.0628 1.82422 14.5 1.82422C17.0277 1.82422 19 3.7965 19 6.32422C19 7.88575 18.3068 9.38075 16.882 11.1239C15.4459 12.8808 13.3734 14.7651 10.7786 17.1232C10.7782 17.1235 10.7778 17.1238 10.7775 17.1241L10.0026 17.8242L9.22318 17.1147Z"
-													fill="currentColor"
-													stroke="oklch(var(--primary))"
-													stroke-width="2"
+												<rect width="2.1875rem" height="2.1875rem" fill="white" ></rect>
+												<path 													d="M17.8574 14.3164V21.0937H27.4679C27.0459 23.2732 25.7795 25.1187 23.8801 26.3596L29.6756 30.7665C33.0523 27.712 35.0004 23.2256 35.0004 17.8961C35.0004 16.6552 34.8867 15.4619 34.6756 14.3166L17.8574 14.3164Z"
+													fill="#4285F4"
+												></path>
+												<path 													d="M7.84986 20.832L6.54276 21.8126L1.91602 25.3443C4.85435 31.0556 10.8767 35.0011 17.8572 35.0011C22.6786 35.0011 26.7208 33.442 29.6754 30.7694L23.8799 26.3625C22.289 27.4125 20.2598 28.049 17.8572 28.049C13.2143 28.049 9.26962 24.9785 7.85716 20.8421L7.84986 20.832Z"
+													fill="#34A853"
+												></path>
+												<path 													d="M1.91546 9.65625C0.697986 12.0107 0 14.6675 0 17.4993C0 20.3311 0.697986 22.9879 1.91546 25.3424C1.91546 25.3582 7.85718 20.8242 7.85718 20.8242C7.50004 19.7742 7.28894 18.6606 7.28894 17.4991C7.28894 16.3376 7.50004 15.2241 7.85718 14.1741L1.91546 9.65625Z"
+													fill="#FBBC05"
+												></path>
+												<path 													d="M17.8576 6.96816C20.4875 6.96816 22.8252 7.85905 24.6921 9.57725L29.8057 4.56596C26.705 1.7342 22.6791 0 17.8576 0C10.8771 0 4.85435 3.92953 1.91602 9.65681L7.85755 14.175C9.26982 10.0386 13.2147 6.96816 17.8576 6.96816Z"
+													fill="#EA4335"
 												></path>
 											</svg>
-										</button>
-									</div>
-									<a href="#" class="product-card__image">
-										<picture>
-                <source srcset="img/best-sellers/Image-2.webp" type="image/webp">
-                <img class="ibg"    alt="Product image"  src="img/best-sellers/Image-2.png">
-              </picture>
-             
-									</a>
-									<div class="product-card__body">
-										<a href="#" class="product-card__head-title">Cool Weave</a>
-										<div class="product-card__content">
-											<div class="product-card__text">Anywhere Dress</div>
-											<div class="product-card__price">$210</div>
-										</div>
-										<ul class="product-card__colors">
-											<li>
-												<svg 
-													width="1.5rem"
-													height="1.5rem"
-													viewBox="0 0 24 25"
-													fill="none"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#D0A5EA" ></rect>
-												</svg>
-											</li>
-											<li>
-												<svg 
-													width="1.5rem"
-													height="1.5rem"
-													viewBox="0 0 24 25"
-													fill="none"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#909225" ></rect>
-												</svg>
-											</li>
-											<li>
-												<svg 
-													width="1.5rem"
-													height="1.5rem"
-													viewBox="0 0 24 25"
-													fill="none"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#748C70" ></rect>
-												</svg>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div class="best-sellers__slide product-card swiper-slide">
-									<div class="product-card__header">
-										<button class="product-card__wishlist">
-											<svg 
-												width="1.25rem"
-												height="1.25rem"
-												viewBox="0 0 20 20"
+											<span class="visibility-hidden">Sign in using Google</span>
+										</a>
+									</li>
+									<li class="providers-sign__item">
+										<a aria-label="Sign in using Facebook" href="#" class="socials-sign__provider">
+											<svg 												width="2.1875rem"
+												height="2.1875rem"
+												viewBox="0 0 35 35"
 												xmlns="http://www.w3.org/2000/svg"
 											>
-												<path 
-													d="M9.22318 17.1147L9.22174 17.1134C6.62662 14.7602 4.55384 12.878 3.1178 11.1223C1.69324 9.38069 1 7.88574 1 6.32422C1 3.7965 2.97228 1.82422 5.5 1.82422C6.93721 1.82422 8.33224 2.49815 9.23865 3.56256L10 4.45662L10.7614 3.56256C11.6678 2.49815 13.0628 1.82422 14.5 1.82422C17.0277 1.82422 19 3.7965 19 6.32422C19 7.88575 18.3068 9.38075 16.882 11.1239C15.4459 12.8808 13.3734 14.7651 10.7786 17.1232C10.7782 17.1235 10.7778 17.1238 10.7775 17.1241L10.0026 17.8242L9.22318 17.1147Z"
-													fill="currentColor"
-													stroke="oklch(var(--primary))"
-													stroke-width="2"
+												<rect width="2.1875rem" height="2.1875rem" rx="17.5" fill="#1877F2" ></rect>
+												<path 													d="M24.312 22.5586L25.0879 17.5H20.2344V14.2188C20.2344 12.8345 20.9111 11.4844 23.085 11.4844H25.293V7.17773C25.293 7.17773 23.29 6.83594 21.376 6.83594C17.377 6.83594 14.7656 9.25928 14.7656 13.6445V17.5H10.3223V22.5586H14.7656V34.7881C15.6577 34.9282 16.5703 35 17.5 35C18.4297 35 19.3423 34.9282 20.2344 34.7881V22.5586H24.312Z"
+													fill="white"
 												></path>
 											</svg>
-										</button>
-									</div>
-									<a href="#" class="product-card__image">
-										<picture>
-                <source srcset="img/best-sellers/Image-1.webp" type="image/webp">
-                <img class="ibg"    alt="Product image"  src="img/best-sellers/Image-1.png">
-              </picture>
-             
-									</a>
-									<div class="product-card__body">
-										<a href="#" class="product-card__head-title">Tailored Stretch</a>
-										<div class="product-card__content">
-											<div class="product-card__text">Turn It Up Pants</div>
-											<div class="product-card__price">$180</div>
-										</div>
-										<ul class="product-card__colors">
-											<li>
-												<svg 
-													width="1.5rem"
-													height="1.5rem"
-													viewBox="0 0 24 25"
-													fill="none"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#0C0C0C" ></rect>
-												</svg>
-											</li>
-											<li>
-												<svg 
-													width="1.5rem"
-													height="1.5rem"
-													viewBox="0 0 24 25"
-													fill="none"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#7DC3EB" ></rect>
-												</svg>
-											</li>
-											<li>
-												<svg 
-													width="1.5rem"
-													height="1.5rem"
-													viewBox="0 0 24 25"
-													fill="none"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#748C70" ></rect>
-												</svg>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div class="best-sellers__slide product-card swiper-slide">
-									<div class="product-card__header">
-										<button class="product-card__wishlist">
-											<svg 
-												width="1.25rem"
-												height="1.25rem"
-												viewBox="0 0 20 20"
-												xmlns="http://www.w3.org/2000/svg"
-											>
-												<path 
-													d="M9.22318 17.1147L9.22174 17.1134C6.62662 14.7602 4.55384 12.878 3.1178 11.1223C1.69324 9.38069 1 7.88574 1 6.32422C1 3.7965 2.97228 1.82422 5.5 1.82422C6.93721 1.82422 8.33224 2.49815 9.23865 3.56256L10 4.45662L10.7614 3.56256C11.6678 2.49815 13.0628 1.82422 14.5 1.82422C17.0277 1.82422 19 3.7965 19 6.32422C19 7.88575 18.3068 9.38075 16.882 11.1239C15.4459 12.8808 13.3734 14.7651 10.7786 17.1232C10.7782 17.1235 10.7778 17.1238 10.7775 17.1241L10.0026 17.8242L9.22318 17.1147Z"
-													fill="currentColor"
-													stroke="oklch(var(--primary))"
-													stroke-width="2"
-												></path>
-											</svg>
-										</button>
-									</div>
-									<a href="#" class="product-card__image">
-										<picture>
-                <source srcset="img/best-sellers/Image-1.webp" type="image/webp">
-                <img class="ibg"    alt="Product image"  src="img/best-sellers/Image-1.png">
-              </picture>
-             
-									</a>
-									<div class="product-card__body">
-										<a href="#" class="product-card__head-title">Tailored Stretch</a>
-										<div class="product-card__content">
-											<div class="product-card__text">Turn It Up Pants</div>
-											<div class="product-card__price">$180</div>
-										</div>
-										<ul class="product-card__colors">
-											<li>
-												<svg 
-													width="1.5rem"
-													height="1.5rem"
-													viewBox="0 0 24 25"
-													fill="none"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#0C0C0C" ></rect>
-												</svg>
-											</li>
-											<li>
-												<svg 
-													width="1.5rem"
-													height="1.5rem"
-													viewBox="0 0 24 25"
-													fill="none"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#7DC3EB" ></rect>
-												</svg>
-											</li>
-											<li>
-												<svg 
-													width="1.5rem"
-													height="1.5rem"
-													viewBox="0 0 24 25"
-													fill="none"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#748C70" ></rect>
-												</svg>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="best-sellers__pagination swiper-pagination"></div>
-						</div>
-					</div>
-				</section>
-
-				<section class="page__collection collection">
-					<div class="collection__container">
-						<div class="collection__header header-block">
-							<h2 class="header-block__title title-header">Collection</h2>
-						</div>
-						<div class="collection__body">
-							<div class="collection__block">
-								<a href="#" class="collection__image collection__image--small">
-									<picture>
-                <source srcset="img/collection/Image-4.webp" type="image/webp">
-                <img class="ibg"    alt="Image"  src="img/collection/Image-4.png">
-              </picture>
-             
-									<div class="collection__name label">Bluses</div>
-								</a>
-								<a href="#" class="collection__image">
-									<picture>
-                <source srcset="img/collection/Image-2.webp" type="image/webp">
-                <img class="ibg"    alt="Image"  src="img/collection/Image-2.png">
-              </picture>
-             
-									<div class="collection__name label">Dresses</div>
-								</a>
-							</div>
-							<div class="collection__block">
-								<a href="#" class="collection__image">
-									<picture>
-                <source srcset="img/collection/Image-3.webp" type="image/webp">
-                <img class="ibg"    alt="Image"  src="img/collection/Image-3.png">
-              </picture>
-             
-									<div class="collection__name label collection__name--right">Pants</div>
-								</a>
-								<a href="#" class="collection__image collection__image--small">
-									<picture>
-                <source srcset="img/collection/Image-1.webp" type="image/webp">
-                <img class="ibg"    alt="Image"  src="img/collection/Image-1.png">
-              </picture>
-             
-									<div class="collection__name label">Outwear</div>
-								</a>
-							</div>
-						</div>
-					</div>
-				</section>
-
-				<section class="page__modiweek modiweek">
-					<div class="modiweek__container">
-						<div class="modiweek__header header-block">
-							<h2 class="header-block__title title-header">Modiweek</h2>
-						</div>
-						<div class="modiweek__slider swiper">
-							<div class="modiweek__wrapper swiper-wrapper">
-								<div class="modiweek__slide product-card product-card--modiweek swiper-slide">
-									<div class="product-card__header">
-										<button class="product-card__wishlist">
-											<svg 
-												width="1.25rem"
-												height="1.25rem"
-												viewBox="0 0 20 20"
-												xmlns="http://www.w3.org/2000/svg"
-											>
-												<path 
-													d="M9.22318 17.1147L9.22174 17.1134C6.62662 14.7602 4.55384 12.878 3.1178 11.1223C1.69324 9.38069 1 7.88574 1 6.32422C1 3.7965 2.97228 1.82422 5.5 1.82422C6.93721 1.82422 8.33224 2.49815 9.23865 3.56256L10 4.45662L10.7614 3.56256C11.6678 2.49815 13.0628 1.82422 14.5 1.82422C17.0277 1.82422 19 3.7965 19 6.32422C19 7.88575 18.3068 9.38075 16.882 11.1239C15.4459 12.8808 13.3734 14.7651 10.7786 17.1232C10.7782 17.1235 10.7778 17.1238 10.7775 17.1241L10.0026 17.8242L9.22318 17.1147Z"
-													fill="currentColor"
-													stroke="oklch(var(--primary))"
-													stroke-width="2"
-												></path>
-											</svg>
-										</button>
-									</div>
-									<a href="#" class="product-card__image">
-										<picture>
-                <source srcset="img/modiweek/Image-1.webp" type="image/webp">
-                <img class="ibg"    alt="Product image"  src="img/modiweek/Image-1.png">
-              </picture>
-             
-									</a>
-									<div class="product-card__body">
-										<a href="#" class="product-card__head-title">Sunday</a>
-									</div>
-								</div>
-
-								<div class="modiweek__slide product-card product-card--modiweek swiper-slide">
-									<div class="product-card__header">
-										<button class="product-card__wishlist">
-											<svg 
-												width="1.25rem"
-												height="1.25rem"
-												viewBox="0 0 20 20"
-												xmlns="http://www.w3.org/2000/svg"
-											>
-												<path 
-													d="M9.22318 17.1147L9.22174 17.1134C6.62662 14.7602 4.55384 12.878 3.1178 11.1223C1.69324 9.38069 1 7.88574 1 6.32422C1 3.7965 2.97228 1.82422 5.5 1.82422C6.93721 1.82422 8.33224 2.49815 9.23865 3.56256L10 4.45662L10.7614 3.56256C11.6678 2.49815 13.0628 1.82422 14.5 1.82422C17.0277 1.82422 19 3.7965 19 6.32422C19 7.88575 18.3068 9.38075 16.882 11.1239C15.4459 12.8808 13.3734 14.7651 10.7786 17.1232C10.7782 17.1235 10.7778 17.1238 10.7775 17.1241L10.0026 17.8242L9.22318 17.1147Z"
-													fill="currentColor"
-													stroke="oklch(var(--primary))"
-													stroke-width="2"
-												></path>
-											</svg>
-										</button>
-									</div>
-									<a href="#" class="product-card__image">
-										<picture>
-                <source srcset="img/modiweek/Image-2.webp" type="image/webp">
-                <img class="ibg"    alt="Product image"  src="img/modiweek/Image-2.png">
-              </picture>
-             
-									</a>
-									<div class="product-card__body">
-										<a href="#" class="product-card__head-title">Monday</a>
-									</div>
-								</div>
-								<div class="modiweek__slide product-card product-card--modiweek swiper-slide">
-									<div class="product-card__header">
-										<button class="product-card__wishlist">
-											<svg 
-												width="1.25rem"
-												height="1.25rem"
-												viewBox="0 0 20 20"
-												xmlns="http://www.w3.org/2000/svg"
-											>
-												<path 
-													d="M9.22318 17.1147L9.22174 17.1134C6.62662 14.7602 4.55384 12.878 3.1178 11.1223C1.69324 9.38069 1 7.88574 1 6.32422C1 3.7965 2.97228 1.82422 5.5 1.82422C6.93721 1.82422 8.33224 2.49815 9.23865 3.56256L10 4.45662L10.7614 3.56256C11.6678 2.49815 13.0628 1.82422 14.5 1.82422C17.0277 1.82422 19 3.7965 19 6.32422C19 7.88575 18.3068 9.38075 16.882 11.1239C15.4459 12.8808 13.3734 14.7651 10.7786 17.1232C10.7782 17.1235 10.7778 17.1238 10.7775 17.1241L10.0026 17.8242L9.22318 17.1147Z"
-													fill="currentColor"
-													stroke="oklch(var(--primary))"
-													stroke-width="2"
-												></path>
-											</svg>
-										</button>
-									</div>
-									<a href="#" class="product-card__image">
-										<picture>
-                <source srcset="img/modiweek/Image-3.webp" type="image/webp">
-                <img class="ibg"    alt="Product image"  src="img/modiweek/Image-3.png">
-              </picture>
-             
-									</a>
-									<div class="product-card__body">
-										<a href="#" class="product-card__head-title">Tuesday</a>
-									</div>
-								</div>
-								<div class="modiweek__slide product-card product-card--modiweek swiper-slide">
-									<div class="product-card__header">
-										<button class="product-card__wishlist">
-											<svg 
-												width="1.25rem"
-												height="1.25rem"
-												viewBox="0 0 20 20"
-												xmlns="http://www.w3.org/2000/svg"
-											>
-												<path 
-													d="M9.22318 17.1147L9.22174 17.1134C6.62662 14.7602 4.55384 12.878 3.1178 11.1223C1.69324 9.38069 1 7.88574 1 6.32422C1 3.7965 2.97228 1.82422 5.5 1.82422C6.93721 1.82422 8.33224 2.49815 9.23865 3.56256L10 4.45662L10.7614 3.56256C11.6678 2.49815 13.0628 1.82422 14.5 1.82422C17.0277 1.82422 19 3.7965 19 6.32422C19 7.88575 18.3068 9.38075 16.882 11.1239C15.4459 12.8808 13.3734 14.7651 10.7786 17.1232C10.7782 17.1235 10.7778 17.1238 10.7775 17.1241L10.0026 17.8242L9.22318 17.1147Z"
-													fill="currentColor"
-													stroke="oklch(var(--primary))"
-													stroke-width="2"
-												></path>
-											</svg>
-										</button>
-									</div>
-									<a href="#" class="product-card__image">
-										<picture>
-                <source srcset="img/modiweek/Image-4.webp" type="image/webp">
-                <img class="ibg"    alt="Product image"  src="img/modiweek/Image-4.png">
-              </picture>
-             
-									</a>
-									<div class="product-card__body">
-										<a href="#" class="product-card__head-title">Wednesday</a>
-									</div>
-								</div>
-								<div class="modiweek__slide product-card product-card--modiweek swiper-slide">
-									<div class="product-card__header">
-										<button class="product-card__wishlist">
-											<svg 
-												width="1.25rem"
-												height="1.25rem"
-												viewBox="0 0 20 20"
-												xmlns="http://www.w3.org/2000/svg"
-											>
-												<path 
-													d="M9.22318 17.1147L9.22174 17.1134C6.62662 14.7602 4.55384 12.878 3.1178 11.1223C1.69324 9.38069 1 7.88574 1 6.32422C1 3.7965 2.97228 1.82422 5.5 1.82422C6.93721 1.82422 8.33224 2.49815 9.23865 3.56256L10 4.45662L10.7614 3.56256C11.6678 2.49815 13.0628 1.82422 14.5 1.82422C17.0277 1.82422 19 3.7965 19 6.32422C19 7.88575 18.3068 9.38075 16.882 11.1239C15.4459 12.8808 13.3734 14.7651 10.7786 17.1232C10.7782 17.1235 10.7778 17.1238 10.7775 17.1241L10.0026 17.8242L9.22318 17.1147Z"
-													fill="currentColor"
-													stroke="oklch(var(--primary))"
-													stroke-width="2"
-												></path>
-											</svg>
-										</button>
-									</div>
-									<a href="#" class="product-card__image">
-										<picture>
-                <source srcset="img/modiweek/Image-5.webp" type="image/webp">
-                <img class="ibg"    alt="Product image"  src="img/modiweek/Image-5.png">
-              </picture>
-             
-									</a>
-									<div class="product-card__body">
-										<a href="#" class="product-card__head-title">Thursday</a>
-									</div>
-								</div>
-								<div class="modiweek__slide product-card product-card--modiweek swiper-slide">
-									<div class="product-card__header">
-										<button class="product-card__wishlist">
-											<svg 
-												width="1.25rem"
-												height="1.25rem"
-												viewBox="0 0 20 20"
-												xmlns="http://www.w3.org/2000/svg"
-											>
-												<path 
-													d="M9.22318 17.1147L9.22174 17.1134C6.62662 14.7602 4.55384 12.878 3.1178 11.1223C1.69324 9.38069 1 7.88574 1 6.32422C1 3.7965 2.97228 1.82422 5.5 1.82422C6.93721 1.82422 8.33224 2.49815 9.23865 3.56256L10 4.45662L10.7614 3.56256C11.6678 2.49815 13.0628 1.82422 14.5 1.82422C17.0277 1.82422 19 3.7965 19 6.32422C19 7.88575 18.3068 9.38075 16.882 11.1239C15.4459 12.8808 13.3734 14.7651 10.7786 17.1232C10.7782 17.1235 10.7778 17.1238 10.7775 17.1241L10.0026 17.8242L9.22318 17.1147Z"
-													fill="currentColor"
-													stroke="oklch(var(--primary))"
-													stroke-width="2"
-												></path>
-											</svg>
-										</button>
-									</div>
-									<a href="#" class="product-card__image">
-										<picture>
-                <source srcset="img/modiweek/Image-5.webp" type="image/webp">
-                <img class="ibg"    alt="Product image"  src="img/modiweek/Image-5.png">
-              </picture>
-             
-									</a>
-									<div class="product-card__body">
-										<a href="#" class="product-card__head-title">Friday</a>
-									</div>
-								</div>
-								<div class="modiweek__slide product-card product-card--modiweek swiper-slide">
-									<div class="product-card__header">
-										<button class="product-card__wishlist">
-											<svg 
-												width="1.25rem"
-												height="1.25rem"
-												viewBox="0 0 20 20"
-												xmlns="http://www.w3.org/2000/svg"
-											>
-												<path 
-													d="M9.22318 17.1147L9.22174 17.1134C6.62662 14.7602 4.55384 12.878 3.1178 11.1223C1.69324 9.38069 1 7.88574 1 6.32422C1 3.7965 2.97228 1.82422 5.5 1.82422C6.93721 1.82422 8.33224 2.49815 9.23865 3.56256L10 4.45662L10.7614 3.56256C11.6678 2.49815 13.0628 1.82422 14.5 1.82422C17.0277 1.82422 19 3.7965 19 6.32422C19 7.88575 18.3068 9.38075 16.882 11.1239C15.4459 12.8808 13.3734 14.7651 10.7786 17.1232C10.7782 17.1235 10.7778 17.1238 10.7775 17.1241L10.0026 17.8242L9.22318 17.1147Z"
-													fill="currentColor"
-													stroke="oklch(var(--primary))"
-													stroke-width="2"
-												></path>
-											</svg>
-										</button>
-									</div>
-									<a href="#" class="product-card__image">
-										<picture>
-                <source srcset="img/modiweek/Image-5.webp" type="image/webp">
-                <img class="ibg"    alt="Product image"  src="img/modiweek/Image-5.png">
-              </picture>
-             
-									</a>
-									<div class="product-card__body">
-										<a href="#" class="product-card__head-title">Saturday</a>
-									</div>
-								</div>
-								<div class="modiweek__slide product-card product-card--modiweek swiper-slide">
-									<div class="product-card__header">
-										<button class="product-card__wishlist">
-											<svg 
-												width="1.25rem"
-												height="1.25rem"
-												viewBox="0 0 20 20"
-												xmlns="http://www.w3.org/2000/svg"
-											>
-												<path 
-													d="M9.22318 17.1147L9.22174 17.1134C6.62662 14.7602 4.55384 12.878 3.1178 11.1223C1.69324 9.38069 1 7.88574 1 6.32422C1 3.7965 2.97228 1.82422 5.5 1.82422C6.93721 1.82422 8.33224 2.49815 9.23865 3.56256L10 4.45662L10.7614 3.56256C11.6678 2.49815 13.0628 1.82422 14.5 1.82422C17.0277 1.82422 19 3.7965 19 6.32422C19 7.88575 18.3068 9.38075 16.882 11.1239C15.4459 12.8808 13.3734 14.7651 10.7786 17.1232C10.7782 17.1235 10.7778 17.1238 10.7775 17.1241L10.0026 17.8242L9.22318 17.1147Z"
-													fill="currentColor"
-													stroke="oklch(var(--primary))"
-													stroke-width="2"
-												></path>
-											</svg>
-										</button>
-									</div>
-									<a href="#" class="product-card__image">
-										<picture>
-                <source srcset="img/modiweek/Image-5.webp" type="image/webp">
-                <img class="ibg"    alt="Product image"  src="img/modiweek/Image-5.png">
-              </picture>
-             
-									</a>
-									<div class="product-card__body">
-										<a href="#" class="product-card__head-title">Sunday</a>
-									</div>
-								</div>
-							</div>
-							<div class="modiweek__pagination swiper-pagination"></div>
-						</div>
-					</div>
-				</section>
-
-				<section class="page__sustainability sustainability">
-					<picture>
-                <source srcset="img/sustainability.webp" type="image/webp">
-                <img class="sustainability__image ibg"  
-						
-						
-						alt="sustainability"
-					 src="img/sustainability.png">
-              </picture>
-             
-					<div class="sustainability__container">
-						<div class="sustainability__text">
-							<p>
-								Stylish sustainability in clothing promotes eco-friendly choices for a greater
-								future
-							</p>
-						</div>
-						<a class="sustainability__button button" href="#">
-							<span>Sustainability</span>
-						</a>
-					</div>
-				</section>
-				<section class="page__instagram instagram">
-					<div class="instagram__container">
-						<div class="instagram__header header-block">
-							<h2 class="header-block__title title-header">Follow Us @Modimal</h2>
-						</div>
-						<div class="instagram__body">
-							<a href="#" target="_blank" class="instagram__image">
-								<picture>
-                <source srcset="img/instagram/Image-1.webp" type="image/webp">
-                <img class="ibg"   alt="Image 1"   src="img/instagram/Image-1.png">
-              </picture>
-             
-							</a>
-							<a href="#" target="_blank" class="instagram__image">
-								<picture>
-                <source srcset="img/instagram/Image-2.webp" type="image/webp">
-                <img class="ibg"   alt="Image 2"   src="img/instagram/Image-2.png">
-              </picture>
-             
-							</a>
-							<a href="#" target="_blank" class="instagram__image">
-								<picture>
-                <source srcset="img/instagram/Image-3.webp" type="image/webp">
-                <img class="ibg"   alt="Image 3"   src="img/instagram/Image-3.png">
-              </picture>
-             
-							</a>
-							<a href="#" target="_blank" class="instagram__image">
-								<picture>
-                <source srcset="img/instagram/Image-4.webp" type="image/webp">
-                <img class="ibg"   alt="Image 4"   src="img/instagram/Image-4.png">
-              </picture>
-             
-							</a>
-							<a href="#" target="_blank" class="instagram__image">
-								<picture>
-                <source srcset="img/instagram/Image-5.webp" type="image/webp">
-                <img class="ibg"   alt="Image 5"   src="img/instagram/Image-5.png">
-              </picture>
-             
-							</a>
+											<span class="visibility-hidden">Sign in using Facebook</span>
+										</a>
+									</li>
+								</ul>
+								<p class="sign__text">
+									New To Modimal?
+									<a href="signup.html" class="sign__link">Create An Account</a>
+								</p>
+							</form>
 						</div>
 					</div>
 				</section>
