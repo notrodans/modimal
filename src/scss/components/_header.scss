@@ -185,5 +185,12 @@
 	}
 
 	&__link {
+		@extend .transition-colors;
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: oklch(var(--text-secondary));
+			}
+		}
 	}
 }

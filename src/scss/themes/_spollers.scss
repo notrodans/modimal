@@ -109,6 +109,7 @@
 
 		row-gap: toRem(30);
 		align-items: flex-start;
+
 		@media (min-width: $mobile) {
 			&:not(&--form) {
 				grid-template-columns: minmax(toRem(280), 1fr) minmax(53.43%, toRem(654));

@@ -23,7 +23,7 @@ const queryParams = new URLSearchParams(location.search);
 const searchField = document.querySelector(".search-block__input");
 
 if (searchField) {
-  searchField.value = queryParams.get("search") || "";
+  searchField.value = queryParams.get("q") || "";
 }
 
 for (const checkbox of document.querySelectorAll(".spollers-filters-form__input")) {
@@ -31,3 +31,10 @@ for (const checkbox of document.querySelectorAll(".spollers-filters-form__input"
     checkbox.checked = queryParams.getAll(checkbox.name).includes(checkbox.value);
   }
 }
+
+document.addEventListener('click', ({ target }) => {
+  if (target.matches('[class*="__unhide"]')) {
+    const input = target.closest('.password-block').querySelector('.password-block__input');
+    input.type = input.type === "password" ? 'text' : 'password';
+  }
+});

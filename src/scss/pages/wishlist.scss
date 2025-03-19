@@ -1,0 +1,37 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/breakpoints" as *;
+
+.page {
+	&__wishlist {
+		@include adaptiveValue("margin-block-start", 80, 24);
+		@include adaptiveValue("margin-block-end", 44, 24);
+	}
+}
+
+.wishlist {
+	&__header {
+		text-align: center;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-block-end", 56, 24);
+		}
+	}
+
+	&__title {
+		@include adaptiveValue("font-size", 20, 16);
+		line-height: 140%;
+		font-weight: 700;
+		&:not(:last-child) {
+			margin-block-end: toRem(16);
+		}
+	}
+
+	&__body {
+		--min-width: #{toRem(320)};
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(var(--min-width), 1fr));
+
+		@media (max-width: $mobile) {
+			--min-width: #{toRem(280)};
+		}
+	}
+}

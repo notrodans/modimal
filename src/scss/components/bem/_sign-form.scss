@@ -1,0 +1,123 @@
+@use "sass:math";
+@use "../../abstracts/mixins" as *;
+@use "../../abstracts/mixins-settings" as *;
+@use "../../abstracts/breakpoints" as *;
+@use "../../abstracts/base" as *;
+
+.sign {
+	&__container {
+		display: grid;
+		@include adaptiveValue("gap", 128, 24, 0, $containerWidth, 495.98);
+
+		@media (min-width: $mobileSmall) {
+			grid-template-columns: 49.019% 1fr;
+		}
+	}
+
+	&__image {
+		height: 100%;
+		@media (min-width: $mobile) {
+			aspect-ratio: 600 / 837;
+		}
+
+		@media (max-width: $mobileSmall) {
+			margin-inline: toRem(-15);
+			aspect-ratio: 360 / 218;
+		}
+	}
+
+	&__body {
+	}
+
+	&__title {
+		text-align: center;
+		@include adaptiveValue("font-size", 32, 16);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-block-end", 32, 16);
+		}
+	}
+
+	&__form {
+	}
+
+	&__inputs {
+		display: flex;
+		flex-direction: column;
+		row-gap: toRem(8);
+		&:not(:last-child) {
+			margin-block-end: toRem(16);
+		}
+	}
+
+	input {
+		width: 100%;
+	}
+
+	&__text {
+		text-align: center;
+		font-size: toRem(12);
+		line-height: 140%;
+		&:not(:last-child) {
+			margin-block-end: toRem(27);
+		}
+		&--secondary {
+			font-size: toRem(10);
+			line-height: 140%;
+		}
+	}
+
+	&__exist {
+		&:not(:last-child) {
+			margin-block-end: toRem(16);
+		}
+	}
+
+	&__link {
+		color: #5a6d57;
+		text-transform: capitalize;
+
+		&:not(:last-child) {
+			margin-block-end: toRem(24);
+		}
+	}
+
+	&__providers {
+		&:not(:last-child) {
+			margin-block-end: toRem(16);
+		}
+	}
+
+	&__button {
+		width: 100%;
+		color: oklch(var(--text-tertiary));
+		background-color: oklch(var(--bg-secondary));
+		padding-block: toRem(8);
+		padding-inline: toRem(16);
+
+		&:not(:last-child) {
+			margin-block-end: toRem(16);
+		}
+
+		@extend .transition-colors;
+
+		@media (any-hover: hover) {
+			&:hover,
+			&:focus {
+				background-color: oklch(var(--bg-secondary) / 90%);
+			}
+		}
+
+		span {
+			font-size: toRem(14);
+			line-height: math.div(24, 14);
+		}
+	}
+}
+
+.providers-sign {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: toRem(17);
+	flex-wrap: wrap;
+}

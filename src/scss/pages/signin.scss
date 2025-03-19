@@ -1,0 +1,7 @@
+@use "../abstracts/mixins" as *;
+
+.page {
+	&__signin {
+		@include adaptiveValue("margin-block", 32, 24);
+	}
+}

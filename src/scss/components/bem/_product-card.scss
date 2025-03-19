@@ -3,6 +3,9 @@
 
 .product-card {
 	position: relative;
+	display: flex;
+	flex-direction: column;
+
 	&__header {
 		@include adaptiveValue("padding", 24, 12);
 		position: absolute;
@@ -28,10 +31,21 @@
 		@extend .transition-colors;
 		color: oklch(var(--tertiary));
 
-		@media (any-hover: hover) {
-			&:hover,
-			&:focus-visible {
-				color: red;
+		&:not(&--active) {
+			@media (any-hover: hover) {
+				&:hover,
+				&:focus-visible {
+					color: red;
+				}
+			}
+		}
+
+		&--active {
+			color: red;
+			svg {
+				path {
+					stroke: none;
+				}
 			}
 		}
 	}
@@ -52,11 +66,15 @@
 		}
 	}
 	&__body {
+		display: flex;
+		flex-direction: column;
+		flex: 1;
 	}
 	&__head-title {
 		display: block;
 		font-weight: 700;
 		line-height: 140%;
+		flex: 1;
 		@extend .transition-colors;
 
 		&:not(:last-child) {
