@@ -29,6 +29,7 @@
 		--min-width: #{toRem(320)};
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(var(--min-width), 1fr));
+		@include adaptiveValue("gap", 32, 16);
 
 		@media (max-width: $mobile) {
 			--min-width: #{toRem(280)};
