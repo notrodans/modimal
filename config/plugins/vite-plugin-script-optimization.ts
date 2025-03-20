@@ -9,13 +9,12 @@ export default function scriptOptimization() {
 			order: "post",
 			handler(html: string) {
 				if (process.argv.includes("--local")) {
-					return html.replace(/\s+type="module"/g, "").replace(/<script /g, "<script defer ");
+					return html
+						.replace(/\s+crossorigin(=["'][^"']*["'])?/g, "")
+						.replace(/\s+type="module"/g, "")
+						.replace(/<script /g, "<script defer ");
 				}
-
-				return html
-					.replace(/\s+crossorigin(=["'][^"']*["'])?/g, "")
-					.replace(/\s+type="module"/g, "")
-					.replace(/<script /g, "<script defer ");
+				return html.replace(/\s+type="module"/g, "").replace(/<script /g, "<script defer ");
 			}
 		}
 	};

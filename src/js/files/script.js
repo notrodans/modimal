@@ -43,7 +43,7 @@ const welcomePopup = new Popup("welcome-popup", {
 		popup: "welcome-popup",
 		wrapper: "welcome-popup__wrapper",
 		container: "welcome-popup__container",
-		content: "welcome-popup__content",
+		content: "welcome-popup__content"
 	}
 });
 
@@ -52,6 +52,6 @@ const verifyPopup = new Popup("verify-popup", {
 		popup: "verify-popup",
 		wrapper: "verify-popup__wrapper",
 		container: "verify-popup__container",
-		content: "verify-popup__content",
+		content: "verify-popup__content"
 	}
 });
