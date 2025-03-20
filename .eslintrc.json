@@ -1,0 +1,42 @@
+{
+	"root": true,
+	"parser": "@typescript-eslint/parser",
+	"plugins": ["@typescript-eslint"],
+	"extends": [
+		"eslint:recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:prettier/recommended"
+	],
+	"overrides": [
+		{
+			"files": ["**/*.ts", "**/*.tsx"],
+			"parserOptions": {
+				"project": "./tsconfig.json"
+			},
+			"rules": {
+				"@typescript-eslint/no-unused-vars": ["error"]
+			}
+		},
+		{
+			"files": ["**/*.js", "**/*.jsx"],
+			"rules": {
+				"no-unused-vars": ["error"]
+			}
+		}
+	],
+	"ignorePatterns": [
+		"phpmailer/",
+		"flsStartTemplate/",
+		"node_modules/",
+		"dist/",
+		"Source/",
+		"version.json",
+		"**/*.zip",
+		"**/*.rar"
+	],
+	"env": {
+		"browser": true,
+		"node": true,
+		"es6": true
+	}
+}
