@@ -1,10 +1,9 @@
-/* Маски для полів (у роботі) */
+/* Input masks (in progress) */
 
-// Підключення функціоналу "Чертоги Фрілансера"
-// Підключення списку активних модулів
+// Connecting the list of active modules
 import { flsModules } from "../modules.js";
 
-// Підключення модуля
+// Connecting the module
 import "inputmask/dist/inputmask.min.js";
 
 const inputMasks = document.querySelectorAll("input");

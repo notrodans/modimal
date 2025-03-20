@@ -1,23 +1,22 @@
-// Підключення функціоналу "Чертоги Фрілансера"
 import { isMobile, getHash, menuClose, getDigFormat } from "../functions.js";
 import { flsModules } from "../../files/modules.js";
-// Модуль прокручування до блоку
+// Scroll to block module
 import { gotoBlock } from "./gotoblock.js";
-// Змінна контролю додавання події window scroll.
+// Variable controlling window scroll event addition
 let addWindowScrollEvent = false;
 
 //====================================================================================================================================================================================================================================================================================================
-// Плавна навігація по сторінці
+// Smooth page navigation
 export function pageNavigation() {
-	// data-goto - вказати ID блоку
-	// data-goto-header - враховувати header
-	// data-goto-top - недокрутити на вказаний розмір
-	// data-goto-speed - швидкість (тільки якщо використовується додатковий плагін)
-	// Працюємо при натисканні на пункт
+	// data-goto - specify block ID
+	// data-goto-header - account for header
+	// data-goto-top - offset by specified size
+	// data-goto-speed - speed (only if using additional plugin)
+	// Works on menu item click
 	document.addEventListener("click", pageNavigationAction);
-	// Якщо підключено scrollWatcher, підсвічуємо поточний пункт меню
+	// If scrollWatcher is connected, highlight current menu item
 	document.addEventListener("watcherCallback", pageNavigationAction);
-	// Основна функція
+	// Main function
 	function pageNavigationAction(e) {
 		if (e.type === "click") {
 			const targetElement = e.target;
@@ -44,7 +43,7 @@ export function pageNavigation() {
 		} else if (e.type === "watcherCallback" && e.detail) {
 			const entry = e.detail.entry;
 			const targetElement = entry.target;
-			// Обробка пунктів навігації, якщо вказано значення navigator, підсвічуємо поточний пункт меню
+			// Process navigation items, if navigator value is specified, highlight current menu item
 			if (targetElement.dataset.watch === "navigator") {
 				const navigatorActiveItem = document.querySelector(`[data-goto]._navigator-active`);
 				let navigatorCurrentItem;
@@ -60,20 +59,20 @@ export function pageNavigation() {
 					}
 				}
 				if (entry.isIntersecting) {
-					// Бачимо об'єкт
+					// Object is visible
 					// navigatorActiveItem ? navigatorActiveItem.classList.remove('_navigator-active') : null;
 					navigatorCurrentItem ? navigatorCurrentItem.classList.add("_navigator-active") : null;
 					//const activeItems = document.querySelectorAll('._navigator-active');
 					//activeItems.length > 1 ? chooseOne(activeItems) : null
 				} else {
-					// Не бачимо об'єкт
+					// Object is not visible
 					navigatorCurrentItem ? navigatorCurrentItem.classList.remove("_navigator-active") : null;
 				}
 			}
 		}
 	}
 	function chooseOne(activeItems) {}
-	// Прокручування по хешу
+	// Scroll by hash
 	if (getHash()) {
 		let goToHash;
 		if (document.querySelector(`#${getHash()}`)) {
@@ -84,7 +83,7 @@ export function pageNavigation() {
 		goToHash ? gotoBlock(goToHash, true, 500, 20) : null;
 	}
 }
-// Робота з шапкою при скролі
+// Header handling on scroll
 export function headerScroll() {
 	addWindowScrollEvent = true;
 	const header = document.querySelector("header.header");
@@ -123,26 +122,26 @@ export function headerScroll() {
 		scrollDirection = scrollTop <= 0 ? 0 : scrollTop;
 	});
 }
-// Модуль анімація цифрового лічильника
+// Digital counter animation module
 export function digitsCounter() {
-	// Функція ініціалізації
+	// Initialization function
 	function digitsCountersInit(digitsCountersItems) {
 		let digitsCounters = digitsCountersItems
 			? digitsCountersItems
 			: document.querySelectorAll("[data-digits-counter]");
 		if (digitsCounters.length) {
 			digitsCounters.forEach(digitsCounter => {
-				// Обнулення
+				// Reset
 				if (digitsCounter.hasAttribute("data-go")) return;
 				digitsCounter.setAttribute("data-go", "");
 				digitsCounter.dataset.digitsCounter = digitsCounter.innerHTML;
 				digitsCounter.innerHTML = `0`;
-				// Анімація
+				// Animation
 				digitsCountersAnimate(digitsCounter);
 			});
 		}
 	}
-	// Функція анімації
+	// Animation function
 	function digitsCountersAnimate(digitsCounter) {
 		let startTimestamp = null;
 		const duration = parseFloat(digitsCounter.dataset.digitsCounterSpeed)
@@ -179,7 +178,7 @@ export function digitsCounter() {
 
 	document.addEventListener("watcherCallback", digitsCounterAction);
 }
-// При підключенні модуля обробник події запуститься автоматично
+// Event handler runs automatically when module is connected
 setTimeout(() => {
 	if (addWindowScrollEvent) {
 		let windowScroll = new Event("windowScroll");

@@ -1,11 +1,11 @@
-// Підключення плагіна з node_modules
+// Connecting plugin from node_modules
 import SimpleBar from "simplebar";
-// Підключення стилів з node_modules
+// Connecting styles from node_modules
 import "simplebar/dist/simplebar.css";
 
-// Додаємо до блоку атрибут data-simplebar
+// Add data-simplebar attribute to block
 
-// Також можна ініціалізувати наступним кодом, застосовуючи налаштування
+// Can also be initialized with the following code, applying settings
 /*
 if (document.querySelectorAll('[data-simplebar]').length) {
 	document.querySelectorAll('[data-simplebar]').forEach(scrollBlock => {

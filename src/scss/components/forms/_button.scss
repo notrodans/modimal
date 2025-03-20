@@ -9,6 +9,7 @@
 	column-gap: toRem(10);
 	padding-block: toRem(8);
 	padding-inline: toRem(44);
+	color: oklch(var(--text-primary));
 	background-color: oklch(var(--bg-tertiary));
 	min-width: toRem(184);
 
@@ -22,6 +23,17 @@
 	@media (any-hover: hover) {
 		&:hover {
 			background-color: oklch(var(--bg-tertiary) / 90%);
+		}
+	}
+
+	&--secondary {
+		color: oklch(var(--text-tertiary));
+		background-color: oklch(var(--bg-secondary));
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: oklch(var(--bg-secondary) / 90%);
+			}
 		}
 	}
 

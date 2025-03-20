@@ -17,7 +17,7 @@
 
 		@media (any-hover: hover) {
 			&:hover,
-			&:focus {
+			&:focus-visible {
 				color: #242b22;
 			}
 		}

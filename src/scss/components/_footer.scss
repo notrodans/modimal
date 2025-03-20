@@ -57,7 +57,7 @@
 
 		@media (any-hover: hover) {
 			&:hover,
-			&:focus {
+			&:focus-visible {
 				color: oklch(var(--text-secondary));
 			}
 		}
@@ -141,7 +141,7 @@
 
 		@media (any-hover: hover) {
 			&:hover,
-			&:focus {
+			&:focus-visible {
 				color: oklch(var(--secondary));
 			}
 		}
@@ -192,7 +192,7 @@
 
 		@media (any-hover: hover) {
 			&:hover,
-			&:focus {
+			&:focus-visible {
 				background-color: #475644;
 			}
 		}

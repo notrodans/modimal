@@ -3,8 +3,21 @@
 
 .product-card {
 	position: relative;
-	display: flex;
-	flex-direction: column;
+
+	&:not(&--modiweek) {
+		display: flex;
+		flex-direction: column;
+
+		.product-card__body {
+			display: flex;
+			flex-direction: column;
+			flex: 1;
+		}
+
+		.product-card__head-title {
+			flex: 1;
+		}
+	}
 
 	&__header {
 		@include adaptiveValue("padding", 24, 12);
@@ -65,16 +78,10 @@
 			margin-block-end: toRem(5.5);
 		}
 	}
-	&__body {
-		display: flex;
-		flex-direction: column;
-		flex: 1;
-	}
 	&__head-title {
 		display: block;
 		font-weight: 700;
 		line-height: 140%;
-		flex: 1;
 		@extend .transition-colors;
 
 		&:not(:last-child) {

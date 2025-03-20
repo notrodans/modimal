@@ -1,17 +1,16 @@
-// Підключення функціоналу "Чертоги Фрілансера"
-// Підключення списку активних модулів
+// Connecting the list of active modules
 import { flsModules } from "../modules.js";
-// Допоміжні функції
+// Helper functions
 import { isMobile, _slideUp, _slideDown, _slideToggle, FLS } from "../functions.js";
-// Модуль прокручування до блоку
+// Scroll to block module
 import { gotoBlock } from "../scroll/gotoblock.js";
 //================================================================================================================================================================================================================================================================================================================================
 
 /*
-Документація: https://template.fls.guru/template-docs/rabota-s-formami.html
+Documentation: https://template.fls.guru/template-docs/form-work.html
 */
 
-// Робота із полями форми.
+// Working with form fields.
 export function formFieldsInit(options = { viewPass: false, autoHeight: false }) {
 	document.body.addEventListener("focusin", function (e) {
 		const targetElement = e.target;
@@ -31,13 +30,13 @@ export function formFieldsInit(options = { viewPass: false, autoHeight: false })
 				targetElement.classList.remove("_form-focus");
 				targetElement.parentElement.classList.remove("_form-focus");
 			}
-			// Миттєва валідація
+			// Instant validation
 			targetElement.hasAttribute("data-validate")
 				? formValidate.validateInput(targetElement)
 				: null;
 		}
 	});
-	// Якщо увімкнено, додаємо функціонал "Показати пароль"
+	// If enabled, add 'Show password' functionality
 	if (options.viewPass) {
 		document.addEventListener("click", function (e) {
 			let targetElement = e.target;
@@ -48,7 +47,7 @@ export function formFieldsInit(options = { viewPass: false, autoHeight: false })
 			}
 		});
 	}
-	// Якщо увімкнено, додаємо функціонал "Автовисота"
+	// If enabled, add 'Auto height' functionality
 	if (options.autoHeight) {
 		const textareas = document.querySelectorAll("textarea[data-autoheight]");
 		if (textareas.length) {
@@ -73,7 +72,7 @@ export function formFieldsInit(options = { viewPass: false, autoHeight: false })
 		}
 	}
 }
-// Валідація форм
+// Form validation
 export let formValidate = {
 	getErrors(form) {
 		let error = 0;
@@ -179,7 +178,7 @@ export let formValidate = {
 		return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(formRequiredItem.value);
 	}
 };
-/* Відправлення форм */
+/* Form submission */
 export function formSubmit() {
 	const forms = document.forms;
 	if (forms.length) {
@@ -199,7 +198,7 @@ export function formSubmit() {
 		if (error === 0) {
 			const ajax = form.hasAttribute("data-ajax");
 			if (ajax) {
-				// Якщо режим ajax
+				// If ajax mode
 				e.preventDefault();
 				const formAction = form.getAttribute("action") ? form.getAttribute("action").trim() : "#";
 				const formMethod = form.getAttribute("method") ? form.getAttribute("method").trim() : "GET";
@@ -215,11 +214,11 @@ export function formSubmit() {
 					form.classList.remove("_sending");
 					formSent(form, responseResult);
 				} else {
-					alert("Помилка");
+					alert("Error");
 					form.classList.remove("_sending");
 				}
 			} else if (form.hasAttribute("data-dev")) {
-				// Якщо режим розробки
+				// If development mode
 				e.preventDefault();
 				formSent(form);
 			}
@@ -231,9 +230,9 @@ export function formSubmit() {
 			}
 		}
 	}
-	// Дії після надсилання форми
+	// Actions after form submission
 	function formSent(form, responseResult = ``) {
-		// Створюємо подію відправлення форми
+		// Create form submission event
 		document.dispatchEvent(
 			new CustomEvent("formSent", {
 				detail: {
@@ -241,24 +240,24 @@ export function formSubmit() {
 				}
 			})
 		);
-		// Показуємо попап, якщо підключено модуль попапів
-		// та для форми вказано налаштування
+		// Show popup if popup module is connected
+		// and form has specified settings
 		setTimeout(() => {
 			if (flsModules.popup) {
 				const popup = form.dataset.popupMessage;
 				popup ? flsModules.popup.open(popup) : null;
 			}
 		}, 0);
-		// Очищуємо форму
+		// Clear form
 		formValidate.formClean(form);
-		// Повідомляємо до консолі
-		formLogging(`Форму відправлено!`);
+		// Log to console
+		formLogging("Form submitted!");
 	}
 	function formLogging(message) {
-		FLS(`[Форми]: ${message}`);
+		FLS("[Forms]: " + message);
 	}
 }
-/* Модуль форми "кількість" */
+/* Quantity form module */
 export function formQuantity() {
 	document.addEventListener("click", function (e) {
 		let targetElement = e.target;
@@ -296,15 +295,15 @@ export function formRating() {
 	if (ratings.length > 0) {
 		initRatings();
 	}
-	// Основна функція
+	// Main function
 	function initRatings() {
 		let ratingActive, ratingValue;
-		// "Бігаємо" по всіх рейтингах на сторінці
+		// Iterate through all ratings on page
 		for (let index = 0; index < ratings.length; index++) {
 			const rating = ratings[index];
 			initRating(rating);
 		}
-		// Ініціалізуємо конкретний рейтинг
+		// Initialize specific rating
 		function initRating(rating) {
 			initRatingVars(rating);
 
@@ -314,40 +313,40 @@ export function formRating() {
 				setRating(rating);
 			}
 		}
-		// Ініціалізація змінних
+		// Initialize variables
 		function initRatingVars(rating) {
 			ratingActive = rating.querySelector('.rating__active');
 			ratingValue = rating.querySelector('.rating__value');
 		}
-		// Змінюємо ширину активних зірок
+		// Update active stars width
 		function setRatingActiveWidth(index = ratingValue.innerHTML) {
 			const ratingActiveWidth = index / 0.05;
 			ratingActive.style.width = `${ratingActiveWidth}%`;
 		}
-		// Можливість вказати оцінку
+		// Ability to specify rating
 		function setRating(rating) {
 			const ratingItems = rating.querySelectorAll('.rating__item');
 			for (let index = 0; index < ratingItems.length; index++) {
 				const ratingItem = ratingItems[index];
 				ratingItem.addEventListener("mouseenter", function (e) {
-					// Оновлення змінних
+					// Update variables
 					initRatingVars(rating);
-					// Оновлення активних зірок
+					// Update active stars
 					setRatingActiveWidth(ratingItem.value);
 				});
 				ratingItem.addEventListener("mouseleave", function (e) {
-					// Оновлення активних зірок
+					// Update active stars
 					setRatingActiveWidth();
 				});
 				ratingItem.addEventListener("click", function (e) {
-					// Оновлення змінних
+					// Update variables
 					initRatingVars(rating);
 
 					if (rating.dataset.ajax) {
-						// "Надіслати" на сервер
+						// 'Submit' to server
 						setRatingValue(ratingItem.value, rating);
 					} else {
-						// Відобразити вказану оцінку
+						// Display specified rating
 						ratingValue.innerHTML = index + 1;
 						setRatingActiveWidth();
 					}
@@ -358,7 +357,7 @@ export function formRating() {
 			if (!rating.classList.contains('rating_sending')) {
 				rating.classList.add('rating_sending');
 
-				// Надсилання даних (value) на сервер
+				// Send data (value) to server
 				let response = await fetch('rating.json', {
 					method: 'GET',
 
@@ -373,18 +372,18 @@ export function formRating() {
 				if (response.ok) {
 					const result = await response.json();
 
-					// Отримуємо новий рейтинг
+					// Get new rating
 					const newRating = result.newRating;
 
-					// Виведення нового середнього результату
+					// Display new average result
 					ratingValue.innerHTML = newRating;
 
-					// Оновлення активних зірок
+					// Update active stars
 					setRatingActiveWidth();
 
 					rating.classList.remove('rating_sending');
 				} else {
-					alert("Помилка");
+					alert("Error");
 
 					rating.classList.remove('rating_sending');
 				}
@@ -394,7 +393,7 @@ export function formRating() {
 }
 */
 
-/* Модуль зіркового рейтингу */
+/* Star rating module */
 export function formRating() {
 	// Rating
 	const ratings = document.querySelectorAll("[data-rating]");
@@ -430,9 +429,9 @@ export function formRating() {
 		rating.insertAdjacentHTML("beforeend", ratingItems);
 	}
 	function formRatingGet(rating, ratingValue) {
-		// Тут відправка оцінки (ratingValue) на бекенд...
-		// Отримуємо нову седню оцінку formRatingSend()
-		// Або виводимо ту яку вказав користувач
+		// Here rating (ratingValue) is sent to backend...
+		// Get new average rating formRatingSend()
+		// Or display the one specified by user
 		const resultRating = ratingValue;
 		formRatingSet(rating, resultRating);
 	}
@@ -441,7 +440,9 @@ export function formRating() {
 		const resultFullItems = parseInt(value);
 		const resultPartItem = value - resultFullItems;
 
-		rating.hasAttribute("data-rating-title") ? (rating.title = value) : null;
+		if (rating.hasAttribute("data-rating-title")) {
+			rating.title = value;
+		}
 
 		ratingItems.forEach((ratingItem, index) => {
 			ratingItem.classList.remove("rating__item--active");

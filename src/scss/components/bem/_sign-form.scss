@@ -102,7 +102,7 @@
 
 		@media (any-hover: hover) {
 			&:hover,
-			&:focus {
+			&:focus-visible {
 				background-color: oklch(var(--bg-secondary) / 90%);
 			}
 		}

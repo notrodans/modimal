@@ -1,0 +1,10 @@
+@use "../abstracts/mixins" as *;
+
+.popups {
+	padding-block: toRem(20);
+	&__block {
+		&:not(:last-child) {
+			margin-block-end: toRem(16);
+		}
+	}
+}

@@ -5,7 +5,7 @@ import { MAP_STYLES, BREAKPOINTS } from "../utils/constants.js";
 
 (() => {
 	/*
-		Структура в HTML:
+		Structure in HTML:
 		<section class="js-map-section">
 			...
 			<div class="js-map-marker" data-lat="-36.84716497397779" data-lng="174.7686136240803" data-icon="img/marker.svg"></div>
@@ -61,7 +61,7 @@ import { MAP_STYLES, BREAKPOINTS } from "../utils/constants.js";
 
 		const markerDesktopSize = { width: 40, height: 57 };
 		const markerMobileSize = { width: 30, height: 42 };
-		// Розмір маркерів
+		// Marker size
 		const markerSize =
 			window.innerWidth < BREAKPOINTS.tablet ? markerMobileSize : markerDesktopSize;
 

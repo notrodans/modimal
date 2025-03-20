@@ -1,11 +1,11 @@
 import LazyLoad from "vanilla-lazyload";
 
-// Працює з об'єктами з класом ._lazy
+// Works with objects with ._lazy class
 const lazyMedia = new LazyLoad({
 	elements_selector: "[data-src],[data-srcset]",
 	class_loaded: "_lazy-loaded",
 	use_native: true
 });
 
-// Оновити модуль
+// Update module
 //lazyMedia.update();

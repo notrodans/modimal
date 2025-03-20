@@ -75,7 +75,7 @@
 		width: 12px;
 
 		&:hover,
-		&:focus {
+		&:focus-visible {
 			box-shadow: 0 0 0 8px white inset;
 		}
 	}

@@ -1,11 +1,10 @@
-// Підключення функціоналу "Чертоги Фрілансера"
 import { isMobile, menuClose, getHash, FLS } from "../functions.js";
-// Підключення доповнення для збільшення можливостей
-// Документація: https://github.com/cferdinandi/smooth-scroll
+// Connecting the extension to enhance capabilities
+// Documentation: https://github.com/cferdinandi/smooth-scroll
 // import SmoothScroll from 'smooth-scroll';
 //==============================================================================================================================================================================================================================================================================================================================
 
-// Модуль плавної проктутки до блоку
+// Smooth scrolling to block module
 export let gotoBlock = (targetBlock, noHeader = false, speed = 500, offsetTop = 0) => {
 	const targetBlockElement = document.querySelector(targetBlock);
 	if (targetBlockElement) {
@@ -33,14 +32,14 @@ export let gotoBlock = (targetBlock, noHeader = false, speed = 500, offsetTop = 
 			offset: offsetTop,
 			easing: "easeOutQuad"
 		};
-		// Закриваємо меню, якщо воно відкрите
+		// Close the menu if it's open
 		document.documentElement.classList.contains("menu-open") ? menuClose() : null;
 
 		if (typeof SmoothScroll !== "undefined") {
-			// Прокручування з використанням доповнення
+			// Scrolling using the extension
 			new SmoothScroll().animateScroll(targetBlockElement, "", options);
 		} else {
-			// Прокручування стандартними засобами
+			// Scrolling using standard methods
 			let targetBlockElementPosition = targetBlockElement.getBoundingClientRect().top + scrollY;
 			targetBlockElementPosition = headerItemHeight
 				? targetBlockElementPosition - headerItemHeight
@@ -53,8 +52,8 @@ export let gotoBlock = (targetBlock, noHeader = false, speed = 500, offsetTop = 
 				behavior: "smooth"
 			});
 		}
-		FLS(`[gotoBlock]: Юхуу...їдемо до ${targetBlock}`);
+		FLS(`[gotoBlock]: Yay...we're going to ${targetBlock}`);
 	} else {
-		FLS(`[gotoBlock]: Йой... Такого блоку немає на сторінці: ${targetBlock}`);
+		FLS(`[gotoBlock]: Oops...Block not found on the page: ${targetBlock}`);
 	}
 };

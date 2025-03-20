@@ -47,7 +47,7 @@
 
 		@media (any-hover: hover) {
 			&:hover,
-			&:focus {
+			&:focus-visible {
 				color: oklch(var(--text-secondary));
 			}
 		}

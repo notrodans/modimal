@@ -30,7 +30,7 @@ function makeSliderOptions(params) {
 			disableOnInteraction: true
 		},
 
-		// Скроллбар
+		// Scrollbar
 		/*
     scrollbar: {
       el: '.swiper-scrollbar',
@@ -38,12 +38,12 @@ function makeSliderOptions(params) {
     },
     */
 
-		// Кнопки "вліво/вправо"
+		// Buttons "left/right"
 		//navigation: {
 		//	prevEl: ".swiper-button-prev",
 		//	nextEl: ".swiper-button-next"
 		//},
-		// Брейкпоінти
+		// Breakpoints
 		breakpoints: {
 			320: {
 				slidesPerView: 1,
@@ -85,7 +85,7 @@ function initSliders() {
 	}
 }
 
-// Скролл на базі слайдера (за класом swiper scroll для оболонки слайдера)
+// Scroll on the basis of a slider (by class swiper scroll for the slider wrapper)
 function initSlidersScroll() {
 	let sliderScrollItems = document.querySelectorAll(".swiper_scroll");
 	if (sliderScrollItems.length > 0) {
