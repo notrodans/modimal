@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-	<title>Search</title>
+	<title>Shop All Page</title>
 <meta charset="UTF-8">
 <meta name="format-detection" content="telephone=no">
 <style></style>
@@ -14,7 +14,7 @@
 
 	<script defer crossorigin src="./js/app.B0GBdvXF.minify.js"></script>
 	<link rel="stylesheet" crossorigin href="./css/app.BuJY45mb.minify.css">
-	<link rel="stylesheet" crossorigin href="./css/search.8pXI0GpA.minify.css">
+	<link rel="stylesheet" crossorigin href="./css/shop-all.BD9d9iRh.minify.css">
 
 	<body>
 		<div class="wrapper">
@@ -560,6 +560,54 @@
 				<li data-da=".header-actions--left,767.98" class="header-actions__item">
 					
 					
+						<details class="header-spollers__spoller">
+							<summary aria-label="Open search" data-spoller-close class="header-spollers__title">
+								<svg 
+									class="header-spollers__search"
+									width="1.125rem"
+									height="1.125rem"
+									viewBox="0 0 18 18"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path 
+										d="M12.755 11.2549H11.965L11.685 10.9849C12.665 9.84488 13.255 8.36488 13.255 6.75488C13.255 3.16488 10.345 0.254883 6.755 0.254883C3.165 0.254883 0.255005 3.16488 0.255005 6.75488C0.255005 10.3449 3.165 13.2549 6.755 13.2549C8.365 13.2549 9.845 12.6649 10.985 11.6849L11.255 11.9649V12.7549L16.255 17.7449L17.745 16.2549L12.755 11.2549ZM6.755 11.2549C4.26501 11.2549 2.255 9.24488 2.255 6.75488C2.255 4.26488 4.26501 2.25488 6.755 2.25488C9.245 2.25488 11.255 4.26488 11.255 6.75488C11.255 9.24488 9.245 11.2549 6.755 11.2549Z"
+										fill="currentColor"
+									></path>
+								</svg>
+							</summary>
+							<div class="header-spollers__body body-spollers-header body-spollers-header--form">
+								<div class="body-spollers-header__container">
+									<div class="body-spollers-header__content body-spollers-header__content--form">
+										<form 
+											action="search.html"
+											method="GET"
+											class="body-spollers-header__form search-block"
+										>
+											<label class="search-block__label">
+												<svg 
+													width="1.125rem"
+													height="1.125rem"
+													viewBox="0 0 18 18"
+													xmlns="http://www.w3.org/2000/svg"
+												>
+													<path 
+														d="M12.7549 11.2549H11.9649L11.6849 10.9849C12.6649 9.84488 13.2549 8.36488 13.2549 6.75488C13.2549 3.16488 10.3449 0.254883 6.75488 0.254883C3.16488 0.254883 0.254883 3.16488 0.254883 6.75488C0.254883 10.3449 3.16488 13.2549 6.75488 13.2549C8.36488 13.2549 9.84488 12.6649 10.9849 11.6849L11.2549 11.9649V12.7549L16.2549 17.7449L17.7449 16.2549L12.7549 11.2549ZM6.75488 11.2549C4.26488 11.2549 2.25488 9.24488 2.25488 6.75488C2.25488 4.26488 4.26488 2.25488 6.75488 2.25488C9.24488 2.25488 11.2549 4.26488 11.2549 6.75488C11.2549 9.24488 9.24488 11.2549 6.75488 11.2549Z"
+														fill="#ADADAD"
+													></path>
+												</svg>
+												<input 
+													name="search"
+													type="text"
+													placeholder="Search"
+													class="search-block__input"
+												>
+											</label>
+										</form>
+									</div>
+								</div>
+							</div>
+						</details>
+					
 				</li>
 				<li class="header-actions__item header-actions__item--profile">
 					<a aria-label="Open profile" href="#" class="header-actions__link">
@@ -603,31 +651,45 @@
 </header>
 
 			<main class="page">
+				<nav class="page__breadcrumbs breadcrumbs" aria-label="Breadcrumb">
+					<div class="breadcrumbs__container">
+						<ul class="breadcrumbs__list">
+							<li class="breadcrumbs__item">
+								<a href="home.html" class="breadcrumbs__link">Home</a>
+								<span>/</span>
+							</li>
+							<li class="breadcrumbs__item _active">
+								<a href="shop-all" class="breadcrumbs__link" aria-current="page">Shop All</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+				<div class="page__hero hero">
+					<div id="product-hero-slider" class="hero__slider swiper">
+						<div class="hero__wrapper swiper-wrapper">
+							<div class="hero__slide swiper-slide">
+								<picture>
+                <source srcset="img/product-hero.webp" type="image/webp">
+                <img class="ibg"    alt="Hero Image 1"  src="img/product-hero.png">
+              </picture>
+             
+							</div>
+							<div class="hero__slide swiper-slide">
+								<picture>
+                <source srcset="img/hero.webp" type="image/webp">
+                <img class="ibg"    alt="Hero Image 2"  src="img/hero.png">
+              </picture>
+             
+							</div>
+						</div>
+						<div class="hero__container">
+							<div class="hero__pagination swiper-pagination"></div>
+						</div>
+					</div>
+				</div>
 				<section class="page__filters filters">
 					<div class="filters__container">
-						<div method="GET" class="filters__search search-block">
-							<label class="search-block__label">
-								<svg 									width="1.125rem"
-									height="1.125rem"
-									viewBox="0 0 18 18"
-									xmlns="http://www.w3.org/2000/svg"
-								>
-									<path 										d="M12.7549 11.2549H11.9649L11.6849 10.9849C12.6649 9.84488 13.2549 8.36488 13.2549 6.75488C13.2549 3.16488 10.3449 0.254883 6.75488 0.254883C3.16488 0.254883 0.254883 3.16488 0.254883 6.75488C0.254883 10.3449 3.16488 13.2549 6.75488 13.2549C8.36488 13.2549 9.84488 12.6649 10.9849 11.6849L11.2549 11.9649V12.7549L16.2549 17.7449L17.7449 16.2549L12.7549 11.2549ZM6.75488 11.2549C4.26488 11.2549 2.25488 9.24488 2.25488 6.75488C2.25488 4.26488 4.26488 2.25488 6.75488 2.25488C9.24488 2.25488 11.2549 4.26488 11.2549 6.75488C11.2549 9.24488 9.24488 11.2549 6.75488 11.2549Z"
-										fill="#ADADAD"
-									></path>
-								</svg>
-								<input 									form="filters"
-									name="q"
-									type="text"
-									placeholder="Search"
-									class="search-block__input"
-								>
-							</label>
-						</div>
-						<div class="filters__counter">
-							<p>10 Items</p>
-						</div>
-						<div class="filters__body">
+						<div class="filters__layout">
 							<aside class="filters__aside">
 								<h2 class="filters__title title-header">Filters</h2>
 								<form 									id="filters"
@@ -838,384 +900,391 @@
 									</div>
 								</form>
 							</aside>
-							<div class="filters__items">
-								<div class="filters__product-card product-card">
-									<div class="product-card__header">
-										<button class="product-card__wishlist">
-											<svg 												width="1.25rem"
-												height="1.25rem"
-												viewBox="0 0 20 20"
-												xmlns="http://www.w3.org/2000/svg"
-											>
-												<path 													d="M9.22318 17.1147L9.22174 17.1134C6.62662 14.7602 4.55384 12.878 3.1178 11.1223C1.69324 9.38069 1 7.88574 1 6.32422C1 3.7965 2.97228 1.82422 5.5 1.82422C6.93721 1.82422 8.33224 2.49815 9.23865 3.56256L10 4.45662L10.7614 3.56256C11.6678 2.49815 13.0628 1.82422 14.5 1.82422C17.0277 1.82422 19 3.7965 19 6.32422C19 7.88575 18.3068 9.38075 16.882 11.1239C15.4459 12.8808 13.3734 14.7651 10.7786 17.1232C10.7782 17.1235 10.7778 17.1238 10.7775 17.1241L10.0026 17.8242L9.22318 17.1147Z"
-													fill="currentColor"
-													stroke="oklch(var(--primary))"
-													stroke-width="2"
-												></path>
-											</svg>
-										</button>
-									</div>
-									<a href="#" class="product-card__image">
-										<picture>
+							<div class="filters__body">
+								<div class="filters__items">
+									<div class="filters__product-card product-card">
+										<div class="product-card__header">
+											<button class="product-card__wishlist">
+												<svg 													width="1.25rem"
+													height="1.25rem"
+													viewBox="0 0 20 20"
+													xmlns="http://www.w3.org/2000/svg"
+												>
+													<path 														d="M9.22318 17.1147L9.22174 17.1134C6.62662 14.7602 4.55384 12.878 3.1178 11.1223C1.69324 9.38069 1 7.88574 1 6.32422C1 3.7965 2.97228 1.82422 5.5 1.82422C6.93721 1.82422 8.33224 2.49815 9.23865 3.56256L10 4.45662L10.7614 3.56256C11.6678 2.49815 13.0628 1.82422 14.5 1.82422C17.0277 1.82422 19 3.7965 19 6.32422C19 7.88575 18.3068 9.38075 16.882 11.1239C15.4459 12.8808 13.3734 14.7651 10.7786 17.1232C10.7782 17.1235 10.7778 17.1238 10.7775 17.1241L10.0026 17.8242L9.22318 17.1147Z"
+														fill="currentColor"
+														stroke="oklch(var(--primary))"
+														stroke-width="2"
+													></path>
+												</svg>
+											</button>
+										</div>
+										<a href="#" class="product-card__image">
+											<picture>
                 <source srcset="img/best-sellers/Image-3.webp" type="image/webp">
                 <img class="ibg"    alt="Product image"  src="img/best-sellers/Image-3.png">
               </picture>
              
-									</a>
-									<div class="product-card__body">
-										<a href="#" class="product-card__head-title">Tailored Stretch</a>
-										<div class="product-card__content">
-											<div class="product-card__text">Turn It Up Pants</div>
-											<div class="product-card__price">$180</div>
+										</a>
+										<div class="product-card__body">
+											<a href="#" class="product-card__head-title">Tailored Stretch</a>
+											<div class="product-card__content">
+												<div class="product-card__text">Turn It Up Pants</div>
+												<div class="product-card__price">$180</div>
+											</div>
+											<ul class="product-card__colors">
+												<li>
+													<svg 														width="1.5rem"
+														height="1.5rem"
+														viewBox="0 0 24 25"
+														fill="none"
+														xmlns="http://www.w3.org/2000/svg"
+													>
+														<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#0C0C0C" ></rect>
+													</svg>
+												</li>
+												<li>
+													<svg 														width="1.5rem"
+														height="1.5rem"
+														viewBox="0 0 24 25"
+														fill="none"
+														xmlns="http://www.w3.org/2000/svg"
+													>
+														<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#7DC3EB" ></rect>
+													</svg>
+												</li>
+												<li>
+													<svg 														width="1.5rem"
+														height="1.5rem"
+														viewBox="0 0 24 25"
+														fill="none"
+														xmlns="http://www.w3.org/2000/svg"
+													>
+														<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#748C70" ></rect>
+													</svg>
+												</li>
+											</ul>
 										</div>
-										<ul class="product-card__colors">
-											<li>
-												<svg 													width="1.5rem"
-													height="1.5rem"
-													viewBox="0 0 24 25"
-													fill="none"
+									</div>
+									<div class="filters__product-card product-card">
+										<div class="product-card__header">
+											<button class="product-card__wishlist">
+												<svg 													width="1.25rem"
+													height="1.25rem"
+													viewBox="0 0 20 20"
 													xmlns="http://www.w3.org/2000/svg"
 												>
-													<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#0C0C0C" ></rect>
+													<path 														d="M9.22318 17.1147L9.22174 17.1134C6.62662 14.7602 4.55384 12.878 3.1178 11.1223C1.69324 9.38069 1 7.88574 1 6.32422C1 3.7965 2.97228 1.82422 5.5 1.82422C6.93721 1.82422 8.33224 2.49815 9.23865 3.56256L10 4.45662L10.7614 3.56256C11.6678 2.49815 13.0628 1.82422 14.5 1.82422C17.0277 1.82422 19 3.7965 19 6.32422C19 7.88575 18.3068 9.38075 16.882 11.1239C15.4459 12.8808 13.3734 14.7651 10.7786 17.1232C10.7782 17.1235 10.7778 17.1238 10.7775 17.1241L10.0026 17.8242L9.22318 17.1147Z"
+														fill="currentColor"
+														stroke="oklch(var(--primary))"
+														stroke-width="2"
+													></path>
 												</svg>
-											</li>
-											<li>
-												<svg 													width="1.5rem"
-													height="1.5rem"
-													viewBox="0 0 24 25"
-													fill="none"
+											</button>
+										</div>
+										<a href="#" class="product-card__image">
+											<picture>
+                <source srcset="img/best-sellers/Image-3.webp" type="image/webp">
+                <img class="ibg"    alt="Product image"  src="img/best-sellers/Image-3.png">
+              </picture>
+             
+										</a>
+										<div class="product-card__body">
+											<a href="#" class="product-card__head-title">Tailored Stretch</a>
+											<div class="product-card__content">
+												<div class="product-card__text">Turn It Up Pants</div>
+												<div class="product-card__price">$180</div>
+											</div>
+											<ul class="product-card__colors">
+												<li>
+													<svg 														width="1.5rem"
+														height="1.5rem"
+														viewBox="0 0 24 25"
+														fill="none"
+														xmlns="http://www.w3.org/2000/svg"
+													>
+														<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#0C0C0C" ></rect>
+													</svg>
+												</li>
+												<li>
+													<svg 														width="1.5rem"
+														height="1.5rem"
+														viewBox="0 0 24 25"
+														fill="none"
+														xmlns="http://www.w3.org/2000/svg"
+													>
+														<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#7DC3EB" ></rect>
+													</svg>
+												</li>
+												<li>
+													<svg 														width="1.5rem"
+														height="1.5rem"
+														viewBox="0 0 24 25"
+														fill="none"
+														xmlns="http://www.w3.org/2000/svg"
+													>
+														<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#748C70" ></rect>
+													</svg>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="filters__product-card product-card">
+										<div class="product-card__header">
+											<button class="product-card__wishlist">
+												<svg 													width="1.25rem"
+													height="1.25rem"
+													viewBox="0 0 20 20"
 													xmlns="http://www.w3.org/2000/svg"
 												>
-													<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#7DC3EB" ></rect>
+													<path 														d="M9.22318 17.1147L9.22174 17.1134C6.62662 14.7602 4.55384 12.878 3.1178 11.1223C1.69324 9.38069 1 7.88574 1 6.32422C1 3.7965 2.97228 1.82422 5.5 1.82422C6.93721 1.82422 8.33224 2.49815 9.23865 3.56256L10 4.45662L10.7614 3.56256C11.6678 2.49815 13.0628 1.82422 14.5 1.82422C17.0277 1.82422 19 3.7965 19 6.32422C19 7.88575 18.3068 9.38075 16.882 11.1239C15.4459 12.8808 13.3734 14.7651 10.7786 17.1232C10.7782 17.1235 10.7778 17.1238 10.7775 17.1241L10.0026 17.8242L9.22318 17.1147Z"
+														fill="currentColor"
+														stroke="oklch(var(--primary))"
+														stroke-width="2"
+													></path>
 												</svg>
-											</li>
-											<li>
-												<svg 													width="1.5rem"
-													height="1.5rem"
-													viewBox="0 0 24 25"
-													fill="none"
+											</button>
+										</div>
+										<a href="#" class="product-card__image">
+											<picture>
+                <source srcset="img/best-sellers/Image-3.webp" type="image/webp">
+                <img class="ibg"    alt="Product image"  src="img/best-sellers/Image-3.png">
+              </picture>
+             
+										</a>
+										<div class="product-card__body">
+											<a href="#" class="product-card__head-title">Tailored Stretch</a>
+											<div class="product-card__content">
+												<div class="product-card__text">Turn It Up Pants</div>
+												<div class="product-card__price">$180</div>
+											</div>
+											<ul class="product-card__colors">
+												<li>
+													<svg 														width="1.5rem"
+														height="1.5rem"
+														viewBox="0 0 24 25"
+														fill="none"
+														xmlns="http://www.w3.org/2000/svg"
+													>
+														<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#0C0C0C" ></rect>
+													</svg>
+												</li>
+												<li>
+													<svg 														width="1.5rem"
+														height="1.5rem"
+														viewBox="0 0 24 25"
+														fill="none"
+														xmlns="http://www.w3.org/2000/svg"
+													>
+														<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#7DC3EB" ></rect>
+													</svg>
+												</li>
+												<li>
+													<svg 														width="1.5rem"
+														height="1.5rem"
+														viewBox="0 0 24 25"
+														fill="none"
+														xmlns="http://www.w3.org/2000/svg"
+													>
+														<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#748C70" ></rect>
+													</svg>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="filters__product-card product-card">
+										<div class="product-card__header">
+											<button class="product-card__wishlist">
+												<svg 													width="1.25rem"
+													height="1.25rem"
+													viewBox="0 0 20 20"
 													xmlns="http://www.w3.org/2000/svg"
 												>
-													<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#748C70" ></rect>
+													<path 														d="M9.22318 17.1147L9.22174 17.1134C6.62662 14.7602 4.55384 12.878 3.1178 11.1223C1.69324 9.38069 1 7.88574 1 6.32422C1 3.7965 2.97228 1.82422 5.5 1.82422C6.93721 1.82422 8.33224 2.49815 9.23865 3.56256L10 4.45662L10.7614 3.56256C11.6678 2.49815 13.0628 1.82422 14.5 1.82422C17.0277 1.82422 19 3.7965 19 6.32422C19 7.88575 18.3068 9.38075 16.882 11.1239C15.4459 12.8808 13.3734 14.7651 10.7786 17.1232C10.7782 17.1235 10.7778 17.1238 10.7775 17.1241L10.0026 17.8242L9.22318 17.1147Z"
+														fill="currentColor"
+														stroke="oklch(var(--primary))"
+														stroke-width="2"
+													></path>
 												</svg>
-											</li>
-										</ul>
+											</button>
+										</div>
+										<a href="#" class="product-card__image">
+											<picture>
+                <source srcset="img/best-sellers/Image-3.webp" type="image/webp">
+                <img class="ibg"    alt="Product image"  src="img/best-sellers/Image-3.png">
+              </picture>
+             
+										</a>
+										<div class="product-card__body">
+											<a href="#" class="product-card__head-title">Tailored Stretch</a>
+											<div class="product-card__content">
+												<div class="product-card__text">Turn It Up Pants</div>
+												<div class="product-card__price">$180</div>
+											</div>
+											<ul class="product-card__colors">
+												<li>
+													<svg 														width="1.5rem"
+														height="1.5rem"
+														viewBox="0 0 24 25"
+														fill="none"
+														xmlns="http://www.w3.org/2000/svg"
+													>
+														<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#0C0C0C" ></rect>
+													</svg>
+												</li>
+												<li>
+													<svg 														width="1.5rem"
+														height="1.5rem"
+														viewBox="0 0 24 25"
+														fill="none"
+														xmlns="http://www.w3.org/2000/svg"
+													>
+														<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#7DC3EB" ></rect>
+													</svg>
+												</li>
+												<li>
+													<svg 														width="1.5rem"
+														height="1.5rem"
+														viewBox="0 0 24 25"
+														fill="none"
+														xmlns="http://www.w3.org/2000/svg"
+													>
+														<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#748C70" ></rect>
+													</svg>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="filters__product-card product-card">
+										<div class="product-card__header">
+											<button class="product-card__wishlist">
+												<svg 													width="1.25rem"
+													height="1.25rem"
+													viewBox="0 0 20 20"
+													xmlns="http://www.w3.org/2000/svg"
+												>
+													<path 														d="M9.22318 17.1147L9.22174 17.1134C6.62662 14.7602 4.55384 12.878 3.1178 11.1223C1.69324 9.38069 1 7.88574 1 6.32422C1 3.7965 2.97228 1.82422 5.5 1.82422C6.93721 1.82422 8.33224 2.49815 9.23865 3.56256L10 4.45662L10.7614 3.56256C11.6678 2.49815 13.0628 1.82422 14.5 1.82422C17.0277 1.82422 19 3.7965 19 6.32422C19 7.88575 18.3068 9.38075 16.882 11.1239C15.4459 12.8808 13.3734 14.7651 10.7786 17.1232C10.7782 17.1235 10.7778 17.1238 10.7775 17.1241L10.0026 17.8242L9.22318 17.1147Z"
+														fill="currentColor"
+														stroke="oklch(var(--primary))"
+														stroke-width="2"
+													></path>
+												</svg>
+											</button>
+										</div>
+										<a href="#" class="product-card__image">
+											<picture>
+                <source srcset="img/best-sellers/Image-3.webp" type="image/webp">
+                <img class="ibg"    alt="Product image"  src="img/best-sellers/Image-3.png">
+              </picture>
+             
+										</a>
+										<div class="product-card__body">
+											<a href="#" class="product-card__head-title">Tailored Stretch</a>
+											<div class="product-card__content">
+												<div class="product-card__text">Turn It Up Pants</div>
+												<div class="product-card__price">$180</div>
+											</div>
+											<ul class="product-card__colors">
+												<li>
+													<svg 														width="1.5rem"
+														height="1.5rem"
+														viewBox="0 0 24 25"
+														fill="none"
+														xmlns="http://www.w3.org/2000/svg"
+													>
+														<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#0C0C0C" ></rect>
+													</svg>
+												</li>
+												<li>
+													<svg 														width="1.5rem"
+														height="1.5rem"
+														viewBox="0 0 24 25"
+														fill="none"
+														xmlns="http://www.w3.org/2000/svg"
+													>
+														<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#7DC3EB" ></rect>
+													</svg>
+												</li>
+												<li>
+													<svg 														width="1.5rem"
+														height="1.5rem"
+														viewBox="0 0 24 25"
+														fill="none"
+														xmlns="http://www.w3.org/2000/svg"
+													>
+														<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#748C70" ></rect>
+													</svg>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="filters__product-card product-card">
+										<div class="product-card__header">
+											<button class="product-card__wishlist">
+												<svg 													width="1.25rem"
+													height="1.25rem"
+													viewBox="0 0 20 20"
+													xmlns="http://www.w3.org/2000/svg"
+												>
+													<path 														d="M9.22318 17.1147L9.22174 17.1134C6.62662 14.7602 4.55384 12.878 3.1178 11.1223C1.69324 9.38069 1 7.88574 1 6.32422C1 3.7965 2.97228 1.82422 5.5 1.82422C6.93721 1.82422 8.33224 2.49815 9.23865 3.56256L10 4.45662L10.7614 3.56256C11.6678 2.49815 13.0628 1.82422 14.5 1.82422C17.0277 1.82422 19 3.7965 19 6.32422C19 7.88575 18.3068 9.38075 16.882 11.1239C15.4459 12.8808 13.3734 14.7651 10.7786 17.1232C10.7782 17.1235 10.7778 17.1238 10.7775 17.1241L10.0026 17.8242L9.22318 17.1147Z"
+														fill="currentColor"
+														stroke="oklch(var(--primary))"
+														stroke-width="2"
+													></path>
+												</svg>
+											</button>
+										</div>
+										<a href="#" class="product-card__image">
+											<picture>
+                <source srcset="img/best-sellers/Image-3.webp" type="image/webp">
+                <img class="ibg"    alt="Product image"  src="img/best-sellers/Image-3.png">
+              </picture>
+             
+										</a>
+										<div class="product-card__body">
+											<a href="#" class="product-card__head-title">Tailored Stretch</a>
+											<div class="product-card__content">
+												<div class="product-card__text">Turn It Up Pants</div>
+												<div class="product-card__price">$180</div>
+											</div>
+											<ul class="product-card__colors">
+												<li>
+													<svg 														width="1.5rem"
+														height="1.5rem"
+														viewBox="0 0 24 25"
+														fill="none"
+														xmlns="http://www.w3.org/2000/svg"
+													>
+														<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#0C0C0C" ></rect>
+													</svg>
+												</li>
+												<li>
+													<svg 														width="1.5rem"
+														height="1.5rem"
+														viewBox="0 0 24 25"
+														fill="none"
+														xmlns="http://www.w3.org/2000/svg"
+													>
+														<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#7DC3EB" ></rect>
+													</svg>
+												</li>
+												<li>
+													<svg 														width="1.5rem"
+														height="1.5rem"
+														viewBox="0 0 24 25"
+														fill="none"
+														xmlns="http://www.w3.org/2000/svg"
+													>
+														<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#748C70" ></rect>
+													</svg>
+												</li>
+											</ul>
+										</div>
 									</div>
 								</div>
-								<div class="filters__product-card product-card">
-									<div class="product-card__header">
-										<button class="product-card__wishlist">
-											<svg 												width="1.25rem"
-												height="1.25rem"
-												viewBox="0 0 20 20"
-												xmlns="http://www.w3.org/2000/svg"
-											>
-												<path 													d="M9.22318 17.1147L9.22174 17.1134C6.62662 14.7602 4.55384 12.878 3.1178 11.1223C1.69324 9.38069 1 7.88574 1 6.32422C1 3.7965 2.97228 1.82422 5.5 1.82422C6.93721 1.82422 8.33224 2.49815 9.23865 3.56256L10 4.45662L10.7614 3.56256C11.6678 2.49815 13.0628 1.82422 14.5 1.82422C17.0277 1.82422 19 3.7965 19 6.32422C19 7.88575 18.3068 9.38075 16.882 11.1239C15.4459 12.8808 13.3734 14.7651 10.7786 17.1232C10.7782 17.1235 10.7778 17.1238 10.7775 17.1241L10.0026 17.8242L9.22318 17.1147Z"
-													fill="currentColor"
-													stroke="oklch(var(--primary))"
-													stroke-width="2"
-												></path>
-											</svg>
-										</button>
-									</div>
-									<a href="#" class="product-card__image">
-										<picture>
-                <source srcset="img/best-sellers/Image-3.webp" type="image/webp">
-                <img class="ibg"    alt="Product image"  src="img/best-sellers/Image-3.png">
-              </picture>
-             
-									</a>
-									<div class="product-card__body">
-										<a href="#" class="product-card__head-title">Tailored Stretch</a>
-										<div class="product-card__content">
-											<div class="product-card__text">Turn It Up Pants</div>
-											<div class="product-card__price">$180</div>
-										</div>
-										<ul class="product-card__colors">
-											<li>
-												<svg 													width="1.5rem"
-													height="1.5rem"
-													viewBox="0 0 24 25"
-													fill="none"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#0C0C0C" ></rect>
-												</svg>
-											</li>
-											<li>
-												<svg 													width="1.5rem"
-													height="1.5rem"
-													viewBox="0 0 24 25"
-													fill="none"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#7DC3EB" ></rect>
-												</svg>
-											</li>
-											<li>
-												<svg 													width="1.5rem"
-													height="1.5rem"
-													viewBox="0 0 24 25"
-													fill="none"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#748C70" ></rect>
-												</svg>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div class="filters__product-card product-card">
-									<div class="product-card__header">
-										<button class="product-card__wishlist">
-											<svg 												width="1.25rem"
-												height="1.25rem"
-												viewBox="0 0 20 20"
-												xmlns="http://www.w3.org/2000/svg"
-											>
-												<path 													d="M9.22318 17.1147L9.22174 17.1134C6.62662 14.7602 4.55384 12.878 3.1178 11.1223C1.69324 9.38069 1 7.88574 1 6.32422C1 3.7965 2.97228 1.82422 5.5 1.82422C6.93721 1.82422 8.33224 2.49815 9.23865 3.56256L10 4.45662L10.7614 3.56256C11.6678 2.49815 13.0628 1.82422 14.5 1.82422C17.0277 1.82422 19 3.7965 19 6.32422C19 7.88575 18.3068 9.38075 16.882 11.1239C15.4459 12.8808 13.3734 14.7651 10.7786 17.1232C10.7782 17.1235 10.7778 17.1238 10.7775 17.1241L10.0026 17.8242L9.22318 17.1147Z"
-													fill="currentColor"
-													stroke="oklch(var(--primary))"
-													stroke-width="2"
-												></path>
-											</svg>
-										</button>
-									</div>
-									<a href="#" class="product-card__image">
-										<picture>
-                <source srcset="img/best-sellers/Image-3.webp" type="image/webp">
-                <img class="ibg"    alt="Product image"  src="img/best-sellers/Image-3.png">
-              </picture>
-             
-									</a>
-									<div class="product-card__body">
-										<a href="#" class="product-card__head-title">Tailored Stretch</a>
-										<div class="product-card__content">
-											<div class="product-card__text">Turn It Up Pants</div>
-											<div class="product-card__price">$180</div>
-										</div>
-										<ul class="product-card__colors">
-											<li>
-												<svg 													width="1.5rem"
-													height="1.5rem"
-													viewBox="0 0 24 25"
-													fill="none"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#0C0C0C" ></rect>
-												</svg>
-											</li>
-											<li>
-												<svg 													width="1.5rem"
-													height="1.5rem"
-													viewBox="0 0 24 25"
-													fill="none"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#7DC3EB" ></rect>
-												</svg>
-											</li>
-											<li>
-												<svg 													width="1.5rem"
-													height="1.5rem"
-													viewBox="0 0 24 25"
-													fill="none"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#748C70" ></rect>
-												</svg>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div class="filters__product-card product-card">
-									<div class="product-card__header">
-										<button class="product-card__wishlist">
-											<svg 												width="1.25rem"
-												height="1.25rem"
-												viewBox="0 0 20 20"
-												xmlns="http://www.w3.org/2000/svg"
-											>
-												<path 													d="M9.22318 17.1147L9.22174 17.1134C6.62662 14.7602 4.55384 12.878 3.1178 11.1223C1.69324 9.38069 1 7.88574 1 6.32422C1 3.7965 2.97228 1.82422 5.5 1.82422C6.93721 1.82422 8.33224 2.49815 9.23865 3.56256L10 4.45662L10.7614 3.56256C11.6678 2.49815 13.0628 1.82422 14.5 1.82422C17.0277 1.82422 19 3.7965 19 6.32422C19 7.88575 18.3068 9.38075 16.882 11.1239C15.4459 12.8808 13.3734 14.7651 10.7786 17.1232C10.7782 17.1235 10.7778 17.1238 10.7775 17.1241L10.0026 17.8242L9.22318 17.1147Z"
-													fill="currentColor"
-													stroke="oklch(var(--primary))"
-													stroke-width="2"
-												></path>
-											</svg>
-										</button>
-									</div>
-									<a href="#" class="product-card__image">
-										<picture>
-                <source srcset="img/best-sellers/Image-3.webp" type="image/webp">
-                <img class="ibg"    alt="Product image"  src="img/best-sellers/Image-3.png">
-              </picture>
-             
-									</a>
-									<div class="product-card__body">
-										<a href="#" class="product-card__head-title">Tailored Stretch</a>
-										<div class="product-card__content">
-											<div class="product-card__text">Turn It Up Pants</div>
-											<div class="product-card__price">$180</div>
-										</div>
-										<ul class="product-card__colors">
-											<li>
-												<svg 													width="1.5rem"
-													height="1.5rem"
-													viewBox="0 0 24 25"
-													fill="none"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#0C0C0C" ></rect>
-												</svg>
-											</li>
-											<li>
-												<svg 													width="1.5rem"
-													height="1.5rem"
-													viewBox="0 0 24 25"
-													fill="none"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#7DC3EB" ></rect>
-												</svg>
-											</li>
-											<li>
-												<svg 													width="1.5rem"
-													height="1.5rem"
-													viewBox="0 0 24 25"
-													fill="none"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#748C70" ></rect>
-												</svg>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div class="filters__product-card product-card">
-									<div class="product-card__header">
-										<button class="product-card__wishlist">
-											<svg 												width="1.25rem"
-												height="1.25rem"
-												viewBox="0 0 20 20"
-												xmlns="http://www.w3.org/2000/svg"
-											>
-												<path 													d="M9.22318 17.1147L9.22174 17.1134C6.62662 14.7602 4.55384 12.878 3.1178 11.1223C1.69324 9.38069 1 7.88574 1 6.32422C1 3.7965 2.97228 1.82422 5.5 1.82422C6.93721 1.82422 8.33224 2.49815 9.23865 3.56256L10 4.45662L10.7614 3.56256C11.6678 2.49815 13.0628 1.82422 14.5 1.82422C17.0277 1.82422 19 3.7965 19 6.32422C19 7.88575 18.3068 9.38075 16.882 11.1239C15.4459 12.8808 13.3734 14.7651 10.7786 17.1232C10.7782 17.1235 10.7778 17.1238 10.7775 17.1241L10.0026 17.8242L9.22318 17.1147Z"
-													fill="currentColor"
-													stroke="oklch(var(--primary))"
-													stroke-width="2"
-												></path>
-											</svg>
-										</button>
-									</div>
-									<a href="#" class="product-card__image">
-										<picture>
-                <source srcset="img/best-sellers/Image-3.webp" type="image/webp">
-                <img class="ibg"    alt="Product image"  src="img/best-sellers/Image-3.png">
-              </picture>
-             
-									</a>
-									<div class="product-card__body">
-										<a href="#" class="product-card__head-title">Tailored Stretch</a>
-										<div class="product-card__content">
-											<div class="product-card__text">Turn It Up Pants</div>
-											<div class="product-card__price">$180</div>
-										</div>
-										<ul class="product-card__colors">
-											<li>
-												<svg 													width="1.5rem"
-													height="1.5rem"
-													viewBox="0 0 24 25"
-													fill="none"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#0C0C0C" ></rect>
-												</svg>
-											</li>
-											<li>
-												<svg 													width="1.5rem"
-													height="1.5rem"
-													viewBox="0 0 24 25"
-													fill="none"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#7DC3EB" ></rect>
-												</svg>
-											</li>
-											<li>
-												<svg 													width="1.5rem"
-													height="1.5rem"
-													viewBox="0 0 24 25"
-													fill="none"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#748C70" ></rect>
-												</svg>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div class="filters__product-card product-card">
-									<div class="product-card__header">
-										<button class="product-card__wishlist">
-											<svg 												width="1.25rem"
-												height="1.25rem"
-												viewBox="0 0 20 20"
-												xmlns="http://www.w3.org/2000/svg"
-											>
-												<path 													d="M9.22318 17.1147L9.22174 17.1134C6.62662 14.7602 4.55384 12.878 3.1178 11.1223C1.69324 9.38069 1 7.88574 1 6.32422C1 3.7965 2.97228 1.82422 5.5 1.82422C6.93721 1.82422 8.33224 2.49815 9.23865 3.56256L10 4.45662L10.7614 3.56256C11.6678 2.49815 13.0628 1.82422 14.5 1.82422C17.0277 1.82422 19 3.7965 19 6.32422C19 7.88575 18.3068 9.38075 16.882 11.1239C15.4459 12.8808 13.3734 14.7651 10.7786 17.1232C10.7782 17.1235 10.7778 17.1238 10.7775 17.1241L10.0026 17.8242L9.22318 17.1147Z"
-													fill="currentColor"
-													stroke="oklch(var(--primary))"
-													stroke-width="2"
-												></path>
-											</svg>
-										</button>
-									</div>
-									<a href="#" class="product-card__image">
-										<picture>
-                <source srcset="img/best-sellers/Image-3.webp" type="image/webp">
-                <img class="ibg"    alt="Product image"  src="img/best-sellers/Image-3.png">
-              </picture>
-             
-									</a>
-									<div class="product-card__body">
-										<a href="#" class="product-card__head-title">Tailored Stretch</a>
-										<div class="product-card__content">
-											<div class="product-card__text">Turn It Up Pants</div>
-											<div class="product-card__price">$180</div>
-										</div>
-										<ul class="product-card__colors">
-											<li>
-												<svg 													width="1.5rem"
-													height="1.5rem"
-													viewBox="0 0 24 25"
-													fill="none"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#0C0C0C" ></rect>
-												</svg>
-											</li>
-											<li>
-												<svg 													width="1.5rem"
-													height="1.5rem"
-													viewBox="0 0 24 25"
-													fill="none"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#7DC3EB" ></rect>
-												</svg>
-											</li>
-											<li>
-												<svg 													width="1.5rem"
-													height="1.5rem"
-													viewBox="0 0 24 25"
-													fill="none"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#748C70" ></rect>
-												</svg>
-											</li>
-										</ul>
-									</div>
+								<div class="filters__load-more">
+									<button class="filters__button button button--outline" type="button">
+										<span> Load More </span>
+									</button>
 								</div>
 							</div>
 						</div>

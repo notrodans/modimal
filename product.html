@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-	<title>Search</title>
+	<title>Product Page</title>
 <meta charset="UTF-8">
 <meta name="format-detection" content="telephone=no">
 <style></style>
@@ -14,7 +14,7 @@
 
 	<script defer crossorigin src="./js/app.B0GBdvXF.minify.js"></script>
 	<link rel="stylesheet" crossorigin href="./css/app.BuJY45mb.minify.css">
-	<link rel="stylesheet" crossorigin href="./css/search.8pXI0GpA.minify.css">
+	<link rel="stylesheet" crossorigin href="./css/product.Bg6PLf9X.minify.css">
 
 	<body>
 		<div class="wrapper">
@@ -560,6 +560,54 @@
 				<li data-da=".header-actions--left,767.98" class="header-actions__item">
 					
 					
+						<details class="header-spollers__spoller">
+							<summary aria-label="Open search" data-spoller-close class="header-spollers__title">
+								<svg 
+									class="header-spollers__search"
+									width="1.125rem"
+									height="1.125rem"
+									viewBox="0 0 18 18"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path 
+										d="M12.755 11.2549H11.965L11.685 10.9849C12.665 9.84488 13.255 8.36488 13.255 6.75488C13.255 3.16488 10.345 0.254883 6.755 0.254883C3.165 0.254883 0.255005 3.16488 0.255005 6.75488C0.255005 10.3449 3.165 13.2549 6.755 13.2549C8.365 13.2549 9.845 12.6649 10.985 11.6849L11.255 11.9649V12.7549L16.255 17.7449L17.745 16.2549L12.755 11.2549ZM6.755 11.2549C4.26501 11.2549 2.255 9.24488 2.255 6.75488C2.255 4.26488 4.26501 2.25488 6.755 2.25488C9.245 2.25488 11.255 4.26488 11.255 6.75488C11.255 9.24488 9.245 11.2549 6.755 11.2549Z"
+										fill="currentColor"
+									></path>
+								</svg>
+							</summary>
+							<div class="header-spollers__body body-spollers-header body-spollers-header--form">
+								<div class="body-spollers-header__container">
+									<div class="body-spollers-header__content body-spollers-header__content--form">
+										<form 
+											action="search.html"
+											method="GET"
+											class="body-spollers-header__form search-block"
+										>
+											<label class="search-block__label">
+												<svg 
+													width="1.125rem"
+													height="1.125rem"
+													viewBox="0 0 18 18"
+													xmlns="http://www.w3.org/2000/svg"
+												>
+													<path 
+														d="M12.7549 11.2549H11.9649L11.6849 10.9849C12.6649 9.84488 13.2549 8.36488 13.2549 6.75488C13.2549 3.16488 10.3449 0.254883 6.75488 0.254883C3.16488 0.254883 0.254883 3.16488 0.254883 6.75488C0.254883 10.3449 3.16488 13.2549 6.75488 13.2549C8.36488 13.2549 9.84488 12.6649 10.9849 11.6849L11.2549 11.9649V12.7549L16.2549 17.7449L17.7449 16.2549L12.7549 11.2549ZM6.75488 11.2549C4.26488 11.2549 2.25488 9.24488 2.25488 6.75488C2.25488 4.26488 4.26488 2.25488 6.75488 2.25488C9.24488 2.25488 11.2549 4.26488 11.2549 6.75488C11.2549 9.24488 9.24488 11.2549 6.75488 11.2549Z"
+														fill="#ADADAD"
+													></path>
+												</svg>
+												<input 
+													name="search"
+													type="text"
+													placeholder="Search"
+													class="search-block__input"
+												>
+											</label>
+										</form>
+									</div>
+								</div>
+							</div>
+						</details>
+					
 				</li>
 				<li class="header-actions__item header-actions__item--profile">
 					<a aria-label="Open profile" href="#" class="header-actions__link">
@@ -603,621 +651,185 @@
 </header>
 
 			<main class="page">
-				<section class="page__filters filters">
-					<div class="filters__container">
-						<div method="GET" class="filters__search search-block">
-							<label class="search-block__label">
-								<svg 									width="1.125rem"
-									height="1.125rem"
-									viewBox="0 0 18 18"
-									xmlns="http://www.w3.org/2000/svg"
-								>
-									<path 										d="M12.7549 11.2549H11.9649L11.6849 10.9849C12.6649 9.84488 13.2549 8.36488 13.2549 6.75488C13.2549 3.16488 10.3449 0.254883 6.75488 0.254883C3.16488 0.254883 0.254883 3.16488 0.254883 6.75488C0.254883 10.3449 3.16488 13.2549 6.75488 13.2549C8.36488 13.2549 9.84488 12.6649 10.9849 11.6849L11.2549 11.9649V12.7549L16.2549 17.7449L17.7449 16.2549L12.7549 11.2549ZM6.75488 11.2549C4.26488 11.2549 2.25488 9.24488 2.25488 6.75488C2.25488 4.26488 4.26488 2.25488 6.75488 2.25488C9.24488 2.25488 11.2549 4.26488 11.2549 6.75488C11.2549 9.24488 9.24488 11.2549 6.75488 11.2549Z"
-										fill="#ADADAD"
-									></path>
-								</svg>
-								<input 									form="filters"
-									name="q"
-									type="text"
-									placeholder="Search"
-									class="search-block__input"
-								>
-							</label>
-						</div>
-						<div class="filters__counter">
-							<p>10 Items</p>
-						</div>
-						<div class="filters__body">
-							<aside class="filters__aside">
-								<h2 class="filters__title title-header">Filters</h2>
-								<form 									id="filters"
-									method="GET"
-									data-spollers
-									data-spollers-speed="150"
-									class="filters__form filters-form"
-								>
-									<div class="filters-form__actions">
-										<button type="reset" class="filters-form__button filters-form__button--reset">
-											<span> Clear All Filters </span>
-										</button>
-										<button type="submit" class="filters-form__button filters-form__button--submit">
-											<span> Applied Filters </span>
-										</button>
-									</div>
-									<div class="filters-form__spollers spollers-filters-form">
-										<details data-open data-open class="spollers-filters-form__spoller">
-											<summary class="spollers-filters-form__title">
-												Sort By
-												<div class="spollers-filters-form__icon cross">
-													<span></span>
-													<span></span>
-												</div>
-											</summary>
-											<div class="spollers-filters-form__body">
-												<div class="spollers-filters-form__content">
-													<ul class="spollers-filters-form__list">
-														<li class="spollers-filters-form__item">
-															<label class="spollers-filters-form__label">
-																<input 																	class="spollers-filters-form__input"
-																	name="size"
-																	value="xs"
-																	type="checkbox"
-																>
-																<span>XS / US (0-4)</span>
-															</label>
-														</li>
-														<li class="spollers-filters-form__item">
-															<label class="spollers-filters-form__label">
-																<input 																	class="spollers-filters-form__input"
-																	name="size"
-																	value="s"
-																	type="checkbox"
-																>
-																<span>S / US (4-6)</span>
-															</label>
-														</li>
-														<li class="spollers-filters-form__item">
-															<label class="spollers-filters-form__label">
-																<input 																	class="spollers-filters-form__input"
-																	name="size"
-																	value="m"
-																	type="checkbox"
-																>
-																<span>M / US (6-10)</span>
-															</label>
-														</li>
-														<li class="spollers-filters-form__item">
-															<label class="spollers-filters-form__label">
-																<input 																	class="spollers-filters-form__input"
-																	name="size"
-																	value="l"
-																	type="checkbox"
-																>
-																<span>L / US (10-14)</span>
-															</label>
-														</li>
-														<li class="spollers-filters-form__item">
-															<label class="spollers-filters-form__label">
-																<input 																	class="spollers-filters-form__input"
-																	name="size"
-																	value="xl"
-																	type="checkbox"
-																>
-																<span>XL / US (12-16)</span>
-															</label>
-														</li>
-													</ul>
-												</div>
-											</div>
-										</details>
-										<details data-open class="spollers-filters-form__spoller">
-											<summary class="spollers-filters-form__title">
-												Color
-												<div class="spollers-filters-form__icon">
-													<span></span>
-													<span></span>
-												</div>
-											</summary>
-											<div class="spollers-filters-form__body">
-												<div class="spollers-filters-form__content">
-													<ul class="spollers-filters-form__list">
-														<li class="spollers-filters-form__item">
-															<label class="spollers-filters-form__label">
-																<input 																	class="spollers-filters-form__input"
-																	name="color"
-																	value="red"
-																	type="checkbox"
-																>
-																<span>Red</span>
-															</label>
-														</li>
-													</ul>
-												</div>
-											</div>
-										</details>
-										<details data-open class="spollers-filters-form__spoller">
-											<summary class="spollers-filters-form__title">
-												Collection
-												<div class="spollers-filters-form__icon">
-													<span></span>
-													<span></span>
-												</div>
-											</summary>
-											<div class="spollers-filters-form__body">
-												<div class="spollers-filters-form__content">
-													<ul class="spollers-filters-form__list">
-														<li class="spollers-filters-form__item">
-															<label class="spollers-filters-form__label">
-																<input 																	class="spollers-filters-form__input"
-																	name="collection"
-																	value="in-stock"
-																	type="checkbox"
-																>
-																<span>In Stock</span>
-															</label>
-														</li>
-														<li class="spollers-filters-form__item">
-															<label class="spollers-filters-form__label">
-																<input 																	class="spollers-filters-form__input"
-																	name="collection"
-																	value="out-of-stock"
-																	type="checkbox"
-																>
-																<span>Out Of Stock</span>
-															</label>
-														</li>
-													</ul>
-												</div>
-											</div>
-										</details>
-										<details data-open class="spollers-filters-form__spoller">
-											<summary class="spollers-filters-form__title">
-												Fabric
-												<div class="spollers-filters-form__icon">
-													<span></span>
-													<span></span>
-												</div>
-											</summary>
-											<div class="spollers-filters-form__body">
-												<div class="spollers-filters-form__content">
-													<ul class="spollers-filters-form__list">
-														<li class="spollers-filters-form__item">
-															<label class="spollers-filters-form__label">
-																<input 																	class="spollers-filters-form__input"
-																	name="fabric"
-																	value="cotton"
-																	type="checkbox"
-																>
-																<span>Cotton</span>
-															</label>
-														</li>
-														<li class="spollers-filters-form__item">
-															<label class="spollers-filters-form__label">
-																<input 																	class="spollers-filters-form__input"
-																	name="fabric"
-																	value="linen"
-																	type="checkbox"
-																>
-																<span>Linen</span>
-															</label>
-														</li>
-														<li class="spollers-filters-form__item">
-															<label class="spollers-filters-form__label">
-																<input 																	class="spollers-filters-form__input"
-																	name="fabric"
-																	value="wool"
-																	type="checkbox"
-																>
-																<span>Woll</span>
-															</label>
-														</li>
-														<li class="spollers-filters-form__item">
-															<label class="spollers-filters-form__label">
-																<input 																	class="spollers-filters-form__input"
-																	name="fabric"
-																	value="Silk"
-																	type="checkbox"
-																>
-																<span>Silk</span>
-															</label>
-														</li>
-														<li class="spollers-filters-form__item">
-															<label class="spollers-filters-form__label">
-																<input 																	class="spollers-filters-form__input"
-																	name="fabric"
-																	value="cashmere"
-																	type="checkbox"
-																>
-																<span>Cashmere</span>
-															</label>
-														</li>
-													</ul>
-												</div>
-											</div>
-										</details>
-									</div>
-								</form>
-							</aside>
-							<div class="filters__items">
-								<div class="filters__product-card product-card">
-									<div class="product-card__header">
-										<button class="product-card__wishlist">
-											<svg 												width="1.25rem"
-												height="1.25rem"
-												viewBox="0 0 20 20"
-												xmlns="http://www.w3.org/2000/svg"
-											>
-												<path 													d="M9.22318 17.1147L9.22174 17.1134C6.62662 14.7602 4.55384 12.878 3.1178 11.1223C1.69324 9.38069 1 7.88574 1 6.32422C1 3.7965 2.97228 1.82422 5.5 1.82422C6.93721 1.82422 8.33224 2.49815 9.23865 3.56256L10 4.45662L10.7614 3.56256C11.6678 2.49815 13.0628 1.82422 14.5 1.82422C17.0277 1.82422 19 3.7965 19 6.32422C19 7.88575 18.3068 9.38075 16.882 11.1239C15.4459 12.8808 13.3734 14.7651 10.7786 17.1232C10.7782 17.1235 10.7778 17.1238 10.7775 17.1241L10.0026 17.8242L9.22318 17.1147Z"
-													fill="currentColor"
-													stroke="oklch(var(--primary))"
-													stroke-width="2"
-												></path>
-											</svg>
-										</button>
-									</div>
-									<a href="#" class="product-card__image">
-										<picture>
-                <source srcset="img/best-sellers/Image-3.webp" type="image/webp">
-                <img class="ibg"    alt="Product image"  src="img/best-sellers/Image-3.png">
+				<nav class="page__breadcrumbs breadcrumbs" aria-label="Breadcrumb">
+					<div class="breadcrumbs__container">
+						<ul class="breadcrumbs__list">
+							<li class="breadcrumbs__item">
+								<a href="home.html" class="breadcrumbs__link">Home</a>
+								<span>/</span>
+							</li>
+							<li class="breadcrumbs__item">
+								<a href="#" class="breadcrumbs__link">Top + Blouses</a>
+								<span>/</span>
+							</li>
+							<li class="breadcrumbs__item _active">
+								<a href="product.html" class="breadcrumbs__link" aria-current="page">Wrap Top</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+				<section class="page__product product">
+					<div class="product__container">
+						<div class="product__layout">
+							<div tabindex="0" class="product__sliders">
+								<div class="product__thumbnails swiper">
+									<div class="product__wrapper swiper-wrapper">
+										<div class="swiper-slide">
+											<picture>
+                <source srcset="img/product/product-1.webp" type="image/webp">
+                <img class="ibg"    alt="Product Image 1"  src="img/product/product-1.png">
               </picture>
              
-									</a>
-									<div class="product-card__body">
-										<a href="#" class="product-card__head-title">Tailored Stretch</a>
-										<div class="product-card__content">
-											<div class="product-card__text">Turn It Up Pants</div>
-											<div class="product-card__price">$180</div>
 										</div>
-										<ul class="product-card__colors">
-											<li>
-												<svg 													width="1.5rem"
-													height="1.5rem"
-													viewBox="0 0 24 25"
-													fill="none"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#0C0C0C" ></rect>
-												</svg>
-											</li>
-											<li>
-												<svg 													width="1.5rem"
-													height="1.5rem"
-													viewBox="0 0 24 25"
-													fill="none"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#7DC3EB" ></rect>
-												</svg>
-											</li>
-											<li>
-												<svg 													width="1.5rem"
-													height="1.5rem"
-													viewBox="0 0 24 25"
-													fill="none"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#748C70" ></rect>
-												</svg>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div class="filters__product-card product-card">
-									<div class="product-card__header">
-										<button class="product-card__wishlist">
-											<svg 												width="1.25rem"
-												height="1.25rem"
-												viewBox="0 0 20 20"
-												xmlns="http://www.w3.org/2000/svg"
-											>
-												<path 													d="M9.22318 17.1147L9.22174 17.1134C6.62662 14.7602 4.55384 12.878 3.1178 11.1223C1.69324 9.38069 1 7.88574 1 6.32422C1 3.7965 2.97228 1.82422 5.5 1.82422C6.93721 1.82422 8.33224 2.49815 9.23865 3.56256L10 4.45662L10.7614 3.56256C11.6678 2.49815 13.0628 1.82422 14.5 1.82422C17.0277 1.82422 19 3.7965 19 6.32422C19 7.88575 18.3068 9.38075 16.882 11.1239C15.4459 12.8808 13.3734 14.7651 10.7786 17.1232C10.7782 17.1235 10.7778 17.1238 10.7775 17.1241L10.0026 17.8242L9.22318 17.1147Z"
-													fill="currentColor"
-													stroke="oklch(var(--primary))"
-													stroke-width="2"
-												></path>
-											</svg>
-										</button>
-									</div>
-									<a href="#" class="product-card__image">
-										<picture>
-                <source srcset="img/best-sellers/Image-3.webp" type="image/webp">
-                <img class="ibg"    alt="Product image"  src="img/best-sellers/Image-3.png">
+										<div class="swiper-slide">
+											<picture>
+                <source srcset="img/product/product-2.webp" type="image/webp">
+                <img class="ibg"    alt="Product Image 2"  src="img/product/product-2.png">
               </picture>
              
-									</a>
-									<div class="product-card__body">
-										<a href="#" class="product-card__head-title">Tailored Stretch</a>
-										<div class="product-card__content">
-											<div class="product-card__text">Turn It Up Pants</div>
-											<div class="product-card__price">$180</div>
 										</div>
-										<ul class="product-card__colors">
-											<li>
-												<svg 													width="1.5rem"
-													height="1.5rem"
-													viewBox="0 0 24 25"
-													fill="none"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#0C0C0C" ></rect>
-												</svg>
-											</li>
-											<li>
-												<svg 													width="1.5rem"
-													height="1.5rem"
-													viewBox="0 0 24 25"
-													fill="none"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#7DC3EB" ></rect>
-												</svg>
-											</li>
-											<li>
-												<svg 													width="1.5rem"
-													height="1.5rem"
-													viewBox="0 0 24 25"
-													fill="none"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#748C70" ></rect>
-												</svg>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div class="filters__product-card product-card">
-									<div class="product-card__header">
-										<button class="product-card__wishlist">
-											<svg 												width="1.25rem"
-												height="1.25rem"
-												viewBox="0 0 20 20"
-												xmlns="http://www.w3.org/2000/svg"
-											>
-												<path 													d="M9.22318 17.1147L9.22174 17.1134C6.62662 14.7602 4.55384 12.878 3.1178 11.1223C1.69324 9.38069 1 7.88574 1 6.32422C1 3.7965 2.97228 1.82422 5.5 1.82422C6.93721 1.82422 8.33224 2.49815 9.23865 3.56256L10 4.45662L10.7614 3.56256C11.6678 2.49815 13.0628 1.82422 14.5 1.82422C17.0277 1.82422 19 3.7965 19 6.32422C19 7.88575 18.3068 9.38075 16.882 11.1239C15.4459 12.8808 13.3734 14.7651 10.7786 17.1232C10.7782 17.1235 10.7778 17.1238 10.7775 17.1241L10.0026 17.8242L9.22318 17.1147Z"
-													fill="currentColor"
-													stroke="oklch(var(--primary))"
-													stroke-width="2"
-												></path>
-											</svg>
-										</button>
-									</div>
-									<a href="#" class="product-card__image">
-										<picture>
-                <source srcset="img/best-sellers/Image-3.webp" type="image/webp">
-                <img class="ibg"    alt="Product image"  src="img/best-sellers/Image-3.png">
+										<div class="swiper-slide">
+											<picture>
+                <source srcset="img/product/product-3.webp" type="image/webp">
+                <img class="ibg"    alt="Product Image 3"  src="img/product/product-3.png">
               </picture>
              
-									</a>
-									<div class="product-card__body">
-										<a href="#" class="product-card__head-title">Tailored Stretch</a>
-										<div class="product-card__content">
-											<div class="product-card__text">Turn It Up Pants</div>
-											<div class="product-card__price">$180</div>
 										</div>
-										<ul class="product-card__colors">
-											<li>
-												<svg 													width="1.5rem"
-													height="1.5rem"
-													viewBox="0 0 24 25"
-													fill="none"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#0C0C0C" ></rect>
-												</svg>
-											</li>
-											<li>
-												<svg 													width="1.5rem"
-													height="1.5rem"
-													viewBox="0 0 24 25"
-													fill="none"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#7DC3EB" ></rect>
-												</svg>
-											</li>
-											<li>
-												<svg 													width="1.5rem"
-													height="1.5rem"
-													viewBox="0 0 24 25"
-													fill="none"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#748C70" ></rect>
-												</svg>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div class="filters__product-card product-card">
-									<div class="product-card__header">
-										<button class="product-card__wishlist">
-											<svg 												width="1.25rem"
-												height="1.25rem"
-												viewBox="0 0 20 20"
-												xmlns="http://www.w3.org/2000/svg"
-											>
-												<path 													d="M9.22318 17.1147L9.22174 17.1134C6.62662 14.7602 4.55384 12.878 3.1178 11.1223C1.69324 9.38069 1 7.88574 1 6.32422C1 3.7965 2.97228 1.82422 5.5 1.82422C6.93721 1.82422 8.33224 2.49815 9.23865 3.56256L10 4.45662L10.7614 3.56256C11.6678 2.49815 13.0628 1.82422 14.5 1.82422C17.0277 1.82422 19 3.7965 19 6.32422C19 7.88575 18.3068 9.38075 16.882 11.1239C15.4459 12.8808 13.3734 14.7651 10.7786 17.1232C10.7782 17.1235 10.7778 17.1238 10.7775 17.1241L10.0026 17.8242L9.22318 17.1147Z"
-													fill="currentColor"
-													stroke="oklch(var(--primary))"
-													stroke-width="2"
-												></path>
-											</svg>
-										</button>
-									</div>
-									<a href="#" class="product-card__image">
-										<picture>
-                <source srcset="img/best-sellers/Image-3.webp" type="image/webp">
-                <img class="ibg"    alt="Product image"  src="img/best-sellers/Image-3.png">
+										<div class="swiper-slide">
+											<picture>
+                <source srcset="img/product/product-4.webp" type="image/webp">
+                <img class="ibg"    alt="Product Image 4"  src="img/product/product-4.png">
               </picture>
              
-									</a>
-									<div class="product-card__body">
-										<a href="#" class="product-card__head-title">Tailored Stretch</a>
-										<div class="product-card__content">
-											<div class="product-card__text">Turn It Up Pants</div>
-											<div class="product-card__price">$180</div>
 										</div>
-										<ul class="product-card__colors">
-											<li>
-												<svg 													width="1.5rem"
-													height="1.5rem"
-													viewBox="0 0 24 25"
-													fill="none"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#0C0C0C" ></rect>
-												</svg>
-											</li>
-											<li>
-												<svg 													width="1.5rem"
-													height="1.5rem"
-													viewBox="0 0 24 25"
-													fill="none"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#7DC3EB" ></rect>
-												</svg>
-											</li>
-											<li>
-												<svg 													width="1.5rem"
-													height="1.5rem"
-													viewBox="0 0 24 25"
-													fill="none"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#748C70" ></rect>
-												</svg>
-											</li>
-										</ul>
 									</div>
 								</div>
-								<div class="filters__product-card product-card">
-									<div class="product-card__header">
-										<button class="product-card__wishlist">
-											<svg 												width="1.25rem"
-												height="1.25rem"
-												viewBox="0 0 20 20"
-												xmlns="http://www.w3.org/2000/svg"
-											>
-												<path 													d="M9.22318 17.1147L9.22174 17.1134C6.62662 14.7602 4.55384 12.878 3.1178 11.1223C1.69324 9.38069 1 7.88574 1 6.32422C1 3.7965 2.97228 1.82422 5.5 1.82422C6.93721 1.82422 8.33224 2.49815 9.23865 3.56256L10 4.45662L10.7614 3.56256C11.6678 2.49815 13.0628 1.82422 14.5 1.82422C17.0277 1.82422 19 3.7965 19 6.32422C19 7.88575 18.3068 9.38075 16.882 11.1239C15.4459 12.8808 13.3734 14.7651 10.7786 17.1232C10.7782 17.1235 10.7778 17.1238 10.7775 17.1241L10.0026 17.8242L9.22318 17.1147Z"
-													fill="currentColor"
-													stroke="oklch(var(--primary))"
-													stroke-width="2"
-												></path>
-											</svg>
-										</button>
-									</div>
-									<a href="#" class="product-card__image">
-										<picture>
-                <source srcset="img/best-sellers/Image-3.webp" type="image/webp">
-                <img class="ibg"    alt="Product image"  src="img/best-sellers/Image-3.png">
+								<div class="product__slider swiper">
+									<div class="product__wrapper swiper-wrapper">
+										<div class="swiper-slide">
+											<picture>
+                <source srcset="img/product/product-1.webp" type="image/webp">
+                <img class="ibg"    alt="Product Image 1"  src="img/product/product-1.png">
               </picture>
              
-									</a>
-									<div class="product-card__body">
-										<a href="#" class="product-card__head-title">Tailored Stretch</a>
-										<div class="product-card__content">
-											<div class="product-card__text">Turn It Up Pants</div>
-											<div class="product-card__price">$180</div>
 										</div>
-										<ul class="product-card__colors">
-											<li>
-												<svg 													width="1.5rem"
-													height="1.5rem"
-													viewBox="0 0 24 25"
-													fill="none"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#0C0C0C" ></rect>
-												</svg>
-											</li>
-											<li>
-												<svg 													width="1.5rem"
-													height="1.5rem"
-													viewBox="0 0 24 25"
-													fill="none"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#7DC3EB" ></rect>
-												</svg>
-											</li>
-											<li>
-												<svg 													width="1.5rem"
-													height="1.5rem"
-													viewBox="0 0 24 25"
-													fill="none"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#748C70" ></rect>
-												</svg>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div class="filters__product-card product-card">
-									<div class="product-card__header">
-										<button class="product-card__wishlist">
-											<svg 												width="1.25rem"
-												height="1.25rem"
-												viewBox="0 0 20 20"
-												xmlns="http://www.w3.org/2000/svg"
-											>
-												<path 													d="M9.22318 17.1147L9.22174 17.1134C6.62662 14.7602 4.55384 12.878 3.1178 11.1223C1.69324 9.38069 1 7.88574 1 6.32422C1 3.7965 2.97228 1.82422 5.5 1.82422C6.93721 1.82422 8.33224 2.49815 9.23865 3.56256L10 4.45662L10.7614 3.56256C11.6678 2.49815 13.0628 1.82422 14.5 1.82422C17.0277 1.82422 19 3.7965 19 6.32422C19 7.88575 18.3068 9.38075 16.882 11.1239C15.4459 12.8808 13.3734 14.7651 10.7786 17.1232C10.7782 17.1235 10.7778 17.1238 10.7775 17.1241L10.0026 17.8242L9.22318 17.1147Z"
-													fill="currentColor"
-													stroke="oklch(var(--primary))"
-													stroke-width="2"
-												></path>
-											</svg>
-										</button>
-									</div>
-									<a href="#" class="product-card__image">
-										<picture>
-                <source srcset="img/best-sellers/Image-3.webp" type="image/webp">
-                <img class="ibg"    alt="Product image"  src="img/best-sellers/Image-3.png">
+										<div class="swiper-slide">
+											<picture>
+                <source srcset="img/product/product-2.webp" type="image/webp">
+                <img class="ibg"    alt="Product Image 2"  src="img/product/product-2.png">
               </picture>
              
-									</a>
-									<div class="product-card__body">
-										<a href="#" class="product-card__head-title">Tailored Stretch</a>
-										<div class="product-card__content">
-											<div class="product-card__text">Turn It Up Pants</div>
-											<div class="product-card__price">$180</div>
 										</div>
-										<ul class="product-card__colors">
-											<li>
-												<svg 													width="1.5rem"
-													height="1.5rem"
-													viewBox="0 0 24 25"
-													fill="none"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#0C0C0C" ></rect>
-												</svg>
-											</li>
-											<li>
-												<svg 													width="1.5rem"
-													height="1.5rem"
-													viewBox="0 0 24 25"
-													fill="none"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#7DC3EB" ></rect>
-												</svg>
-											</li>
-											<li>
-												<svg 													width="1.5rem"
-													height="1.5rem"
-													viewBox="0 0 24 25"
-													fill="none"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<rect y="0.5" width="1.5rem" height="1.5rem" rx="12" fill="#748C70" ></rect>
-												</svg>
-											</li>
-										</ul>
+										<div class="swiper-slide">
+											<picture>
+                <source srcset="img/product/product-3.webp" type="image/webp">
+                <img class="ibg"    alt="Product Image 3"  src="img/product/product-3.png">
+              </picture>
+             
+										</div>
+										<div class="swiper-slide">
+											<picture>
+                <source srcset="img/product/product-4.webp" type="image/webp">
+                <img class="ibg"    alt="Product Image 4"  src="img/product/product-4.png">
+              </picture>
+             
+										</div>
 									</div>
 								</div>
+								<div class="product__pagination swiper-pagination"></div>
 							</div>
+							<form method="POST" class="body-product__body body-product">
+								<h2 class="body-product__title title-header">Wrap Top</h2>
+								<p class="body-product__text">
+									Versatile and universally flattering, our wrap blouse can be tied, draped, snapped
+									and wrapped multiple ways.
+								</p>
+								<div class="body-product__picker color-picker">
+									<div class="color-picker__title">Colors</div>
+									<div class="color-picker__options">
+										<label class="color-picker__option">
+											<input 												value="red"
+												type="radio"
+												name="color"
+												class="color-picker__input"
+												checked
+											>
+											<span class="color-picker__circle">
+												<svg class="color-picker__fill" viewBox="0 0 24 24">
+													<circle 														x="0.5"
+														y="0.5"
+														cx="12"
+														cy="12"
+														r="11"
+														fill="#CA2929"
+														stroke="#CA2929"
+													></circle>
+												</svg>
+											</span>
+										</label>
+										<label class="color-picker__option">
+											<input value="white" type="radio" name="color" class="color-picker__input" >
+											<span class="color-picker__circle">
+												<svg class="color-picker__fill" viewBox="0 0 24 24">
+													<circle 														x="0.5"
+														y="0.5"
+														cx="12"
+														cy="12"
+														r="11"
+														fill="#ffffff"
+														stroke="#000"
+													></circle>
+												</svg>
+											</span>
+										</label>
+									</div>
+								</div>
+								<button 									class="body-product__size-guide button button--disable"
+									type="button"
+									data-open-popup="size-guide"
+								>
+									<span>Size Guide</span>
+								</button>
+								<select name="size" data-show-selected data-class-modif="size">
+									<option value="xs">XS</option>
+									<option value="s">S</option>
+									<option value="m">M</option>
+								</select>
+								<button 									type="submit"
+									class="body-product__submit button button--fw button--secondary"
+								>
+									<span>Add To Cart</span>
+								</button>
+								<div class="body-product__footer">
+									<a href="#" class="body-product__return button button--disable">
+										<svg 											width="1.5rem"
+											height="1.5rem"
+											viewBox="0 0 24 24"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<path 												d="M20 8H17V4H3C1.9 4 1 4.9 1 6V17H3C3 18.66 4.34 20 6 20C7.66 20 9 18.66 9 17H15C15 18.66 16.34 20 18 20C19.66 20 21 18.66 21 17H23V12L20 8ZM19.5 9.5L21.46 12H17V9.5H19.5ZM6 18C5.45 18 5 17.55 5 17C5 16.45 5.45 16 6 16C6.55 16 7 16.45 7 17C7 17.55 6.55 18 6 18ZM8.22 15C7.67 14.39 6.89 14 6 14C5.11 14 4.33 14.39 3.78 15H3V6H15V15H8.22ZM18 18C17.45 18 17 17.55 17 17C17 16.45 17.45 16 18 16C18.55 16 19 16.45 19 17C19 17.55 18.55 18 18 18Z"
+												fill="#868686"
+											></path>
+										</svg>
+										<span>Easy Return</span>
+									</a>
+									<button type="button" class="body-product__wish-list button button--disable">
+										<svg 											width="1.25rem"
+											height="1.25rem"
+											viewBox="0 0 20 20"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<path 												d="M9.22318 17.1157L9.22174 17.1144C6.62662 14.7612 4.55384 12.879 3.1178 11.1233C1.69324 9.38167 1 7.88671 1 6.3252C1 3.79748 2.97228 1.8252 5.5 1.8252C6.93721 1.8252 8.33224 2.49913 9.23865 3.56353L10 4.4576L10.7614 3.56353C11.6678 2.49913 13.0628 1.8252 14.5 1.8252C17.0277 1.8252 19 3.79748 19 6.3252C19 7.88673 18.3068 9.38173 16.882 11.1248C15.4459 12.8818 13.3734 14.7661 10.7786 17.1241C10.7782 17.1245 10.7778 17.1248 10.7775 17.1251L10.0026 17.8252L9.22318 17.1157Z"
+												fill="oklch(var(--bg-tertiary))"
+												stroke="#404040"
+												stroke-width="2"
+											></path>
+										</svg>
+										<span>Add To Wish List</span>
+									</button>
+								</div>
+							</form>
 						</div>
 					</div>
 				</section>
@@ -1434,6 +1046,28 @@
 	</div>
 </footer>
 
+		</div>
+
+		<div id="size-guide" aria-hidden="true" class="popup size-popup">
+			<div class="size-popup__wrapper">
+				<div class="size-popup__content">
+					<div class="size-popup__header">
+						<button data-close-popup="size-guide" type="button" class="size-popup__close">
+							<svg 								width="0.875rem"
+								height="0.875rem"
+								viewBox="0 0 14 14"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path 									d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z"
+									fill="currentColor"
+								></path>
+							</svg>
+						</button>
+					</div>
+					<div class="size-popup__body">Size Guide</div>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>
