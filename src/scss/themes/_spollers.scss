@@ -52,8 +52,16 @@
 			}
 		}
 
+		svg {
+			transition: transform 150ms;
+		}
+
 		&._spoller-active {
 			color: oklch(var(--text-secondary));
+
+			svg {
+				transform: rotate(180deg);
+			}
 		}
 
 		@media (min-width: $mobile) {

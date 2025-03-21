@@ -65,28 +65,6 @@
 	}
 }
 
-.swiper-pagination {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	column-gap: toRem(2);
-	min-height: toRem(14);
-
-	&-bullet {
-		width: toRem(8);
-		height: toRem(8);
-		margin: 0 !important;
-		background-color: #adadad;
-		opacity: 1;
-
-		&-active {
-			width: toRem(12);
-			height: toRem(12);
-			background-color: #dfdfdf;
-		}
-	}
-}
-
 .collection {
 	&__container {
 	}

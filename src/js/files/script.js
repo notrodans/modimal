@@ -55,3 +55,12 @@ const verifyPopup = new Popup("verify-popup", {
 		content: "verify-popup__content"
 	}
 });
+
+const sizePopup = new Popup("size-guide", {
+	classes: {
+		popup: "size-popup",
+		wrapper: "size-popup__wrapper",
+		container: "size-popup__container",
+		content: "size-popup__content"
+	}
+});

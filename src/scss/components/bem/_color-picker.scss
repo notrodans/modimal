@@ -1,0 +1,74 @@
+@use "../../abstracts/base" as *;
+@use "../../abstracts/mixins" as *;
+@use "../../abstracts/mixins-settings" as *;
+@use "../../abstracts/breakpoints" as *;
+
+.color-picker {
+	&__label {
+		display: block;
+		color: rgba(0, 0, 0, 0.6);
+
+		&:not(:last-child) {
+			margin-bottom: toRem(13);
+		}
+	}
+
+	&:not(&.color-picker--gap-0) &__options {
+		gap: toRem(6);
+	}
+
+	&--between &__options {
+		justify-content: space-between;
+	}
+
+	&__options {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__option {
+		position: relative;
+		display: inline-flex;
+		cursor: pointer;
+		padding: toRem(4);
+		border-radius: toRem(5);
+
+		&:has(.color-picker__input:checked) {
+			background-color: oklch(var(--secondary) / 50%);
+		}
+
+		&:has(.color-picker__input:hover, .color-picker__input:focus-visible) {
+			background-color: oklch(var(--secondary) / 50%);
+			outline: toRem(2) solid oklch(var(--primary));
+		}
+	}
+
+	&__input {
+		position: absolute;
+		opacity: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		cursor: pointer;
+	}
+
+	&__circle {
+		position: relative;
+		width: toRem(23);
+		height: toRem(23);
+		transition: box-shadow 0.2s;
+		border-radius: 50%;
+		border: toRem(1) solid transparent;
+	}
+
+	&__fill {
+	}
+
+	&__title {
+		line-height: 180%;
+
+		&:not(:last-child) {
+			margin-block-end: toRem(12);
+		}
+	}
+}

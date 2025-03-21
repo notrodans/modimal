@@ -1,0 +1,143 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/base" as *;
+@use "../abstracts/breakpoints" as *;
+@use "../vendor/swiper" as *;
+
+.page {
+	@include adaptiveValue("padding-block", 32, 0);
+
+	&__breadcrumbs {
+		@include adaptiveValue("margin-block-end", 50, 24);
+	}
+}
+
+.product {
+	&__layout {
+		display: grid;
+		gap: toRem(24);
+
+		@media (min-width: $mobile) {
+			grid-template-columns: minmax(toRem(450), 49.01%) 1fr;
+		}
+
+		[class*="__wrapper"] {
+			min-width: 0;
+		}
+	}
+
+	&__sliders {
+		@media (max-width: $mobile) {
+			margin-inline: toRem(-15);
+		}
+		@media (min-width: $mobile) {
+			display: grid;
+			grid-template-columns: minmax(toRem(100), 20.16%) 1fr;
+			@include adaptiveValue("gap", 48, 16, 0, 991.98, 767.98);
+		}
+	}
+
+	&__slider {
+		display: grid;
+		background-color: #d9d9d9;
+
+		@media (max-width: $mobile) {
+			&:not(:last-child) {
+				margin-block-end: toRem(8);
+			}
+		}
+
+		.swiper-slide {
+			position: relative;
+			aspect-ratio: 427 / 512;
+
+			@media (max-width: $mobile) {
+				aspect-ratio: 360 / 480;
+			}
+
+			img {
+				position: absolute;
+				inset: 0;
+
+				@media (min-width: $mobile) {
+					object-fit: contain;
+				}
+			}
+		}
+	}
+
+	&__thumbnails {
+		max-height: 100%;
+		overflow: hidden;
+
+		@media (max-width: $mobile) {
+			display: none;
+			visibility: hidden;
+		}
+
+		.swiper-slide {
+			display: block;
+			cursor: pointer;
+			opacity: 0.4;
+			transition: opacity 150ms;
+
+			&-thumb-active {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.body-product {
+	display: flex;
+	flex-direction: column;
+	container-type: inline-size;
+
+	&__title {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-block-end", 32, 16);
+		}
+	}
+
+	&__text {
+		line-height: 180%;
+		@include adaptiveValue("font-size", 18, 12);
+
+		&:not(:last-child) {
+			@include adaptiveValue("margin-block-end", 24, 16);
+		}
+	}
+
+	&__picker {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-block-end", 24, 16);
+		}
+	}
+
+	&__size-guide {
+		align-self: flex-end;
+	}
+
+	.select_size {
+		&:not(:last-child) {
+			margin-block-end: toRem(14);
+		}
+	}
+
+	&__submit {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-block-end", 24, 16);
+		}
+	}
+
+	&__footer {
+		display: flex;
+		justify-content: space-between;
+		gap: toRem(12);
+	}
+
+	@container (max-width: #{toEm(390)}) {
+		.body-product__footer {
+			flex-direction: column;
+		}
+	}
+}

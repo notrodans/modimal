@@ -3,10 +3,6 @@ import { isMobile, _slideUp, _slideDown, _slideToggle, FLS } from "../files/func
 import { flsModules } from "../files/modules.js";
 import { formValidate } from "../files/forms/forms.js";
 
-// Підключення файлу стилів
-// Базові стилі полягають у src/scss/forms.scss
-// Файл базових стилів src/scss/forms/select.scss
-
 /*
 Документація:
 Сніппет (HTML): sel
@@ -722,5 +718,6 @@ class SelectConstructor {
 		this.config.logging ? FLS(`[select]: ${message} `) : null;
 	}
 }
+
 // Запускаємо та додаємо в об'єкт модулів
 flsModules.select = new SelectConstructor({});

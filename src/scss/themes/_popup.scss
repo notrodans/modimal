@@ -170,3 +170,12 @@ body::after {
 		color: oklch(var(--text-secondary));
 	}
 }
+
+.size-popup {
+	padding: toRem(15);
+
+	&__content {
+		max-width: toRem(854);
+		@include adaptiveValue("padding", 32, 12);
+	}
+}

@@ -1,0 +1,38 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/breakpoints" as *;
+@use "../vendor/swiper" as *;
+
+.page {
+	@include adaptiveValue("padding-block", 32, 0);
+
+	&__breadcrumbs {
+		@include adaptiveValue("margin-block-end", 50, 24);
+	}
+
+	&__hero {
+		@include adaptiveValue("margin-block-end", 50, 24);
+	}
+}
+
+.hero {
+	position: relative;
+
+	&__wrapper {
+		&:not(:last-child) {
+			margin-block-end: toRem(8);
+		}
+	}
+
+	&__slide {
+		aspect-ratio: 1440 / 655;
+
+		@media (max-width: $mobile) {
+			aspect-ratio: 720 / 450;
+		}
+
+		img {
+			position: absolute;
+			inset: 0;
+		}
+	}
+}

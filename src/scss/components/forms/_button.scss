@@ -8,10 +8,10 @@
 	justify-content: center;
 	column-gap: toRem(10);
 	padding-block: toRem(8);
-	padding-inline: toRem(44);
+	padding-inline: toRem(27);
 	color: oklch(var(--text-primary));
 	background-color: oklch(var(--bg-tertiary));
-	min-width: toRem(184);
+	border: toRem(1) solid transparent;
 
 	@extend .transition-colors;
 
@@ -35,6 +35,16 @@
 				background-color: oklch(var(--bg-secondary) / 90%);
 			}
 		}
+	}
+
+	&--outline {
+		color: oklch(var(--text-secondary));
+		background-color: transparent;
+		border: toRem(1) solid currentColor;
+	}
+
+	&--disable {
+		color: #868686;
 	}
 
 	&--fw {

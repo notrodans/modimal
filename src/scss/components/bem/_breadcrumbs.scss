@@ -1,0 +1,37 @@
+@use "sass:math";
+@use "../../abstracts/mixins" as *;
+@use "../../abstracts/base" as *;
+@use "../../abstracts/breakpoints" as *;
+
+.breadcrumbs {
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		@include adaptiveValue("column-gap", 24, 12);
+		row-gap: toRem(4);
+	}
+
+	&__item {
+		display: grid;
+		grid-template-columns: auto toRem(7);
+		@include adaptiveValue("column-gap", 24, 12);
+		@include adaptiveValue("font-size", 18, 12);
+		line-height: 180%;
+	}
+
+	&__link {
+		@extend .transition-colors;
+		color: oklch(var(--text-secondary));
+
+		._active & {
+			color: oklch(var(--text-primary));
+		}
+
+		@media (any-hover: hover) {
+			&:hover,
+			&:focus-visible {
+				color: oklch(var(--text-secondary));
+			}
+		}
+	}
+}
