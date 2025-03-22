@@ -1,25 +1,21 @@
 import { defineConfig } from "vite";
-import { resolve } from "path";
+import path from "path";
 import { globSync } from "fs";
+import html from "@rollup/plugin-html";
 
 import autoprefixer from "autoprefixer";
-import webpHtmlPlugin from "./config/plugins/vite-plugin-webp-html";
+import vitePluginWebp from "./config/plugins/vite-plugin-webp";
+import vitePluginPictureHtml from "./config/plugins/vite-plugin-webp-html";
 import scriptOptimization from "./config/plugins/vite-plugin-script-optimization";
-import copyAssets from "./config/plugins/vite-plugin-copy-assets";
 
-import { PathResolverOptions, createPathPlugin } from "./config/abstractions/path-resolver";
-
-// @ts-ignore
+// @ts-expect-error no-types
 import viteHTMLIncludes from "@kingkongdevs/vite-plugin-html-includes";
 
 // Build paths
 const SRC_FOLDER = "src";
 const BUILD_FOLDER = "website";
 
-// Configure Vite
-export default defineConfig(({ command, mode }) => {
-	const isBuild = command === "build";
-
+export default defineConfig(() => {
 	return {
 		root: SRC_FOLDER,
 		base: "./",
@@ -42,9 +38,8 @@ export default defineConfig(({ command, mode }) => {
 		build: {
 			outDir: `../${BUILD_FOLDER}`,
 			emptyOutDir: true,
-			assetsInclude: ["**/*.{png,jpg,jpeg,gif,svg,webp,avif}"],
 			rollupOptions: {
-				input: globSync(resolve(__dirname, "src", "**/*.html")),
+				input: globSync(path.resolve(__dirname, "src/**/*.html")),
 				output: {
 					entryFileNames: "js/[name].[hash].minify.js",
 					chunkFileNames: "js/[name].[hash].minify.js",
@@ -59,20 +54,6 @@ export default defineConfig(({ command, mode }) => {
 
 						const dirPath = srcPath.split("/").slice(0, -1).join("/");
 
-						if (/png|jpe?g|svg|gif|tiff|bmp|ico|webp|avif/i.test(extType)) {
-							if (dirPath.startsWith("img/")) {
-								return `${dirPath}/[name][extname]`;
-							}
-							return `img/[name][extname]`;
-						}
-
-						if (/woff2?|ttf|otf|eot/i.test(extType)) {
-							if (dirPath.startsWith("fonts/")) {
-								return `${dirPath}/[name][extname]`;
-							}
-							return `fonts/[name][extname]`;
-						}
-
 						if (/css/i.test(extType)) {
 							if (dirPath.startsWith("css/")) {
 								return `${dirPath}/[name].minify[extname]`;
@@ -80,9 +61,14 @@ export default defineConfig(({ command, mode }) => {
 							return `css/[name].[hash].minify[extname]`;
 						}
 
+						if (/html/i.test(extType)) {
+							return "[name][extname]";
+						}
+
 						if (dirPath) {
 							return `${dirPath}/[name][extname]`;
 						}
+
 						return `assets/[name][extname]`;
 					}
 				}
@@ -90,27 +76,6 @@ export default defineConfig(({ command, mode }) => {
 		},
 
 		plugins: [
-			// Copy Assets
-			copyAssets(true, BUILD_FOLDER),
-
-			// Images path handling
-			createPathPlugin({
-				name: "images",
-				prefix: "@img",
-				folder: "img/",
-				devRoot: "src",
-				prodRoot: BUILD_FOLDER
-			}),
-
-			// Fonts path plugin
-			createPathPlugin({
-				name: "fonts",
-				prefix: "@fonts",
-				folder: "fonts",
-				devRoot: "src",
-				prodRoot: BUILD_FOLDER
-			}),
-
 			// HTML includes
 			viteHTMLIncludes({
 				componentsPath: "/html/"
@@ -120,7 +85,8 @@ export default defineConfig(({ command, mode }) => {
 			scriptOptimization(),
 
 			// WebP HTML support
-			webpHtmlPlugin()
+			vitePluginWebp(),
+			vitePluginPictureHtml()
 		]
 	};
 });

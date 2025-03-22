@@ -9,12 +9,16 @@
 	&__breadcrumbs {
 		@include adaptiveValue("margin-block-end", 50, 24);
 	}
+
+	&__product {
+		@include adaptiveValue("margin-block-end", 32, 24);
+	}
 }
 
 .product {
 	&__layout {
 		display: grid;
-		gap: toRem(24);
+		@include adaptiveValue("gap", 24, 12);
 
 		@media (min-width: $mobile) {
 			grid-template-columns: minmax(toRem(450), 49.01%) 1fr;
@@ -85,12 +89,26 @@
 			}
 		}
 	}
+
+	&__pagination {
+		@media (min-width: $mobile) {
+			display: none;
+			visibility: hidden;
+		}
+	}
 }
 
 .body-product {
-	display: flex;
-	flex-direction: column;
 	container-type: inline-size;
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+
+		&:not(:last-child) {
+			@include adaptiveValue("margin-block-end", 24, 16);
+		}
+	}
 
 	&__title {
 		&:not(:last-child) {
@@ -124,9 +142,6 @@
 	}
 
 	&__submit {
-		&:not(:last-child) {
-			@include adaptiveValue("margin-block-end", 24, 16);
-		}
 	}
 
 	&__footer {

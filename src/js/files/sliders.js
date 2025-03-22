@@ -1,5 +1,13 @@
 import Swiper from "swiper";
-import { Autoplay, EffectFade, Keyboard, Navigation, Pagination, Thumbs } from "swiper/modules";
+import {
+	Autoplay,
+	EffectFade,
+	Keyboard,
+	Navigation,
+	Pagination,
+	Scrollbar,
+	Thumbs
+} from "swiper/modules";
 
 function makeSliderOptions(params) {
 	if (!params.paginationElement) throw "Pagination element not defined";
@@ -116,6 +124,7 @@ function initSliders() {
 		document.querySelector(".product__slider")
 	) {
 		const productThumbs = new Swiper(".product__thumbnails", {
+			modules: [Scrollbar],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 3,
@@ -123,6 +132,10 @@ function initSliders() {
 			direction: "vertical",
 			speed: 1000,
 			autoHeight: true,
+			scrollbar: {
+				el: ".product__scrollbar",
+				draggable: true
+			},
 			breakpoints: {
 				320: {
 					enabled: false

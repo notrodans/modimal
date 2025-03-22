@@ -14,7 +14,6 @@ export default function scriptOptimization() {
 						.replace(/\s+type="module"/g, "")
 						.replace(/<script /g, "<script defer ");
 				}
-				return html.replace(/\s+type="module"/g, "").replace(/<script /g, "<script defer ");
 			}
 		}
 	};

@@ -17,7 +17,7 @@
 			opacity: 0;
 			visibility: hidden;
 			overflow: auto;
-			padding: var(--header-height) toRem(15) toRem(30) toRem(15);
+			padding: calc(var(--header-height) + #{toRem(1)}) toRem(15) toRem(30) toRem(15);
 			transition:
 				visibility 0.3s,
 				opacity 0.3s;

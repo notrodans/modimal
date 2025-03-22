@@ -20,23 +20,6 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "src/*"
-      ],
-      "@js/*": [
-        "src/js/*"
-      ],
-      "@scss/*": [
-        "src/scss/*"
-      ],
-      "@img/*": [
-        "src/img/*"
-      ],
-      "@components/*": [
-        "src/components/*"
-      ]
-    }
   },
   "include": [
     "src/**/*.ts",

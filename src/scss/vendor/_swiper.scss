@@ -394,10 +394,10 @@ button.swiper-pagination-bullet {
 }
 .swiper-vertical > .swiper-scrollbar {
 	position: absolute;
-	right: 3px;
+	right: 0;
 	top: 1%;
 	z-index: 50;
-	width: 5px;
+	width: toRem(2);
 	height: 98%;
 }
 .swiper-scrollbar-drag {

@@ -59,7 +59,7 @@
 		&._spoller-active {
 			color: oklch(var(--text-secondary));
 
-			svg {
+			svg:not(.header-spollers__search) {
 				transform: rotate(180deg);
 			}
 		}

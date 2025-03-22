@@ -33,104 +33,112 @@
 								<div class="product__thumbnails swiper">
 									<div class="product__wrapper swiper-wrapper">
 										<div class="swiper-slide">
-											<img class="ibg" src="@img/product/product-1.png" alt="Product Image 1" />
+											<img class="ibg" src="/img/product/product-1.png" alt="Product Image 1" />
 										</div>
 										<div class="swiper-slide">
-											<img class="ibg" src="@img/product/product-2.png" alt="Product Image 2" />
+											<img class="ibg" src="/img/product/product-2.png" alt="Product Image 2" />
 										</div>
 										<div class="swiper-slide">
-											<img class="ibg" src="@img/product/product-3.png" alt="Product Image 3" />
+											<img class="ibg" src="/img/product/product-3.png" alt="Product Image 3" />
 										</div>
 										<div class="swiper-slide">
-											<img class="ibg" src="@img/product/product-4.png" alt="Product Image 4" />
+											<img class="ibg" src="/img/product/product-4.png" alt="Product Image 4" />
 										</div>
 									</div>
+									<div class="product__scrollbar swiper-scrollbar"></div>
 								</div>
 								<div class="product__slider swiper">
 									<div class="product__wrapper swiper-wrapper">
 										<div class="swiper-slide">
-											<img class="ibg" src="@img/product/product-1.png" alt="Product Image 1" />
+											<img class="ibg" src="/img/product/product-1.png" alt="Product Image 1" />
 										</div>
 										<div class="swiper-slide">
-											<img class="ibg" src="@img/product/product-2.png" alt="Product Image 2" />
+											<img class="ibg" src="/img/product/product-2.png" alt="Product Image 2" />
 										</div>
 										<div class="swiper-slide">
-											<img class="ibg" src="@img/product/product-3.png" alt="Product Image 3" />
+											<img class="ibg" src="/img/product/product-3.png" alt="Product Image 3" />
 										</div>
 										<div class="swiper-slide">
-											<img class="ibg" src="@img/product/product-4.png" alt="Product Image 4" />
+											<img class="ibg" src="/img/product/product-4.png" alt="Product Image 4" />
 										</div>
 									</div>
 								</div>
 								<div class="product__pagination swiper-pagination"></div>
 							</div>
-							<form method="POST" class="body-product__body body-product">
-								<h2 class="body-product__title title-header">Wrap Top</h2>
-								<p class="body-product__text">
-									Versatile and universally flattering, our wrap blouse can be tied, draped, snapped
-									and wrapped multiple ways.
-								</p>
-								<div class="body-product__picker color-picker">
-									<div class="color-picker__title">Colors</div>
-									<div class="color-picker__options">
-										<label class="color-picker__option">
-											<input
-												value="red"
-												type="radio"
-												name="color"
-												class="color-picker__input"
-												checked
-											/>
-											<span class="color-picker__circle">
-												<svg class="color-picker__fill" viewBox="0 0 24 24">
-													<circle
-														x="0.5"
-														y="0.5"
-														cx="12"
-														cy="12"
-														r="11"
-														fill="#CA2929"
-														stroke="#CA2929"
-													/>
-												</svg>
-											</span>
-										</label>
-										<label class="color-picker__option">
-											<input value="white" type="radio" name="color" class="color-picker__input" />
-											<span class="color-picker__circle">
-												<svg class="color-picker__fill" viewBox="0 0 24 24">
-													<circle
-														x="0.5"
-														y="0.5"
-														cx="12"
-														cy="12"
-														r="11"
-														fill="#ffffff"
-														stroke="#000"
-													/>
-												</svg>
-											</span>
-										</label>
+							<div class="body-product">
+								<form method="POST" class="body-product__form">
+									<h2 class="body-product__title title-header">Wrap Top</h2>
+									<p class="body-product__text">
+										Versatile and universally flattering, our wrap blouse can be tied, draped,
+										snapped and wrapped multiple ways.
+									</p>
+									<div class="body-product__picker color-picker">
+										<div class="color-picker__title">Colors</div>
+										<div class="color-picker__options">
+											<label class="color-picker__option">
+												<input
+													value="red"
+													type="radio"
+													name="color"
+													class="color-picker__input"
+													checked
+												/>
+												<span class="color-picker__circle">
+													<svg class="color-picker__fill" viewBox="0 0 24 24">
+														<circle
+															x="0.5"
+															y="0.5"
+															cx="12"
+															cy="12"
+															r="11"
+															fill="#CA2929"
+															stroke="#CA2929"
+														/>
+													</svg>
+												</span>
+											</label>
+											<label class="color-picker__option">
+												<input
+													value="white"
+													type="radio"
+													name="color"
+													class="color-picker__input"
+												/>
+												<span class="color-picker__circle">
+													<svg class="color-picker__fill" viewBox="0 0 24 24">
+														<circle
+															x="0.5"
+															y="0.5"
+															cx="12"
+															cy="12"
+															r="11"
+															fill="#ffffff"
+															stroke="#000"
+														/>
+													</svg>
+												</span>
+											</label>
+										</div>
 									</div>
-								</div>
-								<button
-									class="body-product__size-guide button button--disable"
-									type="button"
-									data-open-popup="size-guide"
-								>
-									<span>Size Guide</span>
-								</button>
-								<select name="size" data-show-selected data-class-modif="size">
-									<option value="xs">XS</option>
-									<option value="s">S</option>
-									<option value="m">M</option>
-								</select>
-								<button
-									type="submit"
-									class="body-product__submit button button--fw button--secondary"
-								>
-									<span>Add To Cart</span>
-								</button>
+									<button
+										class="body-product__size-guide button button--disable"
+										type="button"
+										data-open-popup="size-guide"
+									>
+										<span>Size Guide</span>
+									</button>
+									<select name="size" data-show-selected data-class-modif="size">
+										<option value="xs">XS</option>
+										<option value="s">S</option>
+										<option value="m">M</option>
+									</select>
+									<button
+										type="submit"
+										class="body-product__submit button button--fw button--secondary"
+									>
+										<span>Add To Cart</span>
+									</button>
+								</form>
 								<div class="body-product__footer">
 									<a href="#" class="body-product__return button button--disable">
 										<svg
@@ -164,9 +172,13 @@
 										<span>Add To Wish List</span>
 									</button>
 								</div>
-							</form>
+							</div>
 						</div>
 					</div>
+				</section>
+
+				<section class="page__specifications specification">
+					<div class="specification__container">Content</div>
 				</section>
 			</main>
 			<include src="footer.htm"></include>

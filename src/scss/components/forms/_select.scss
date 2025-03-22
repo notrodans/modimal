@@ -59,13 +59,10 @@
 		color: $textColor;
 		background-color: $backgroundColor;
 		position: absolute;
-		top: calc(100% + toRem(1));
-		border-radius: 0 0 toRem(4) toRem(4);
 		min-width: 100%;
 		left: 0;
 		border-top: 0;
 		border-top: 0;
-		padding: toRem(10) 0 toRem(5) 0;
 	}
 	&__scroll {
 		overflow-y: auto;
@@ -109,7 +106,6 @@
 	&--show-top {
 		.select__options {
 			top: auto;
-			bottom: calc(100% - toRem(1));
 			border: toRem(5) solid #d9d9d9;
 			border-bottom: 0;
 			border-radius: toRem(5) toRem(4) 0 0;
@@ -155,6 +151,21 @@
 			&::after {
 				transform: rotate(-180deg);
 			}
+		}
+	}
+
+	.select__options {
+		border: toRem(1) solid #dfdfdf;
+		border-block-start: none;
+	}
+
+	.select__option {
+		display: flex;
+		padding-block: toRem(10);
+		padding-inline: toRem(10);
+
+		&:not(:last-child) {
+			border-bottom: toRem(1) solid #dfdfdf;
 		}
 	}
 }
