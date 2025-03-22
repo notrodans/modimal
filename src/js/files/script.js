@@ -1,5 +1,3 @@
-import { isMobile } from "./functions.js";
-import { flsModules } from "./modules.js";
 import { Popup } from "../libs/popup.js";
 
 const header = document.querySelector(".header");

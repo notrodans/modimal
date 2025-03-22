@@ -1,12 +1,4 @@
-import {
-	isMobile,
-	bodyLockStatus,
-	bodyLock,
-	bodyUnlock,
-	bodyLockToggle,
-	FLS
-} from "../files/functions.js";
-import { flsModules } from "../files/modules.js";
+import { bodyLock, bodyUnlock } from "../files/functions.js";
 
 class Popup {
 	constructor(id, options = {}) {
