@@ -24,7 +24,7 @@
 		grid-template-columns: 1fr;
 
 		@media (min-width: $mobileSmall) {
-			grid-template-columns: repeat(auto-fit, minmax(toRem(193), 1fr));
+			grid-template-columns: repeat(auto-fit, minmax(toRem(191), 1fr));
 		}
 
 		justify-content: space-between;

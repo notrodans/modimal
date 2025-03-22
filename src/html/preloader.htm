@@ -1,6 +1,4 @@
-<!-- Документація: https://template.fls.guru/template-docs/modul-preloader.html -->
 <div id="fls-preloader">
-	<!-- Скріпт прелоадера -->
 	<script>
 		function preloader() {
 			const preloaderImages = document.querySelector("[data-preloader]")
@@ -16,7 +14,6 @@
 						border: 0px;
 						box-sizing: border-box;
 					}
-					/* Головний блок */
 					.fls-preloader{
 						pointer-events: none;
 						z-index: -1;
@@ -29,20 +26,16 @@
 						justify-content:center;
 						align-items: center;
 					}
-					/* Блок з елементами */
 					.fls-preloader__body{
 						padding: 0.93rem;
 						max-width: 31.25rem;
 						display: flex;
 						flex-direction: column;
 					}
-					/* Блок з лічильником */
 					.fls-preloader__counter{
 						font-size: 10rem;
 					}
-					/* Прогресбар */
 					.fls-preloader__line{}
-					/* Лінія прогресбару */
 					.fls-preloader__line span{
 						display: inline-block;
 						transition: width 0.2s ease;
