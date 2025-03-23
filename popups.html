@@ -10,8 +10,9 @@
 <link as="font" rel="preload" href="/fonts/Montserrat-SemiBold.woff2" type="font/woff2" crossorigin="anonymous">
 <link as="font" rel="preload" href="/fonts/GillSansC-Italic.woff2" type="font/woff2" crossorigin="anonymous">
 
-	<script type="module" crossorigin="" src="./js/app.B3zWf5Jr.minify.js"></script>
-	<link rel="stylesheet" crossorigin="" href="./css/app.CS4naQfs.minify.css">
+	<script type="module" crossorigin="" src="./js/popups.Tm8TstPN.minify.js"></script>
+	<link rel="modulepreload" crossorigin="" href="./js/app.SoVsoFlL.minify.js">
+	<link rel="stylesheet" crossorigin="" href="./css/app.5xJfqX3d.minify.css">
 	<link rel="stylesheet" crossorigin="" href="./css/popups.BEFvpRhG.minify.css">
 
 	</head><body>
@@ -27,6 +28,17 @@
 						<div class="popups__block">
 							<button class="button button--secondary" data-open-popup="verify-popup">
 								<span>Open verify popup</span>
+							</button>
+						</div>
+
+						<div class="popups__block">
+							<button class="button button--secondary" data-open-popup="cart-popup">
+								<span>Open cart popup empty state</span>
+							</button>
+						</div>
+						<div class="popups__block">
+							<button class="button button--secondary" data-open-popup="cart-popup-primary">
+								<span>Open cart popup primary state</span>
 							</button>
 						</div>
 					</div>
@@ -77,6 +89,182 @@
 							if you did not receive an email or would like to change the email address you
 							registered with
 						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div style="inset: 0; transform: none" id="cart-popup" aria-hidden="true" class="popup popup--cart cart-popup">
+			<div class="cart-popup__wrapper">
+				<div class="cart-popup__content">
+					<div class="cart-popup__header">
+						<button data-close-popup="cart-popup" type="button" class="cart-popup__close">
+							<svg width="0.875rem" height="0.875rem" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z" fill="currentColor"></path>
+							</svg>
+						</button>
+					</div>
+					<div class="cart-popup__body">
+						<div class="cart-popup__title">Your Shopping Bag is Empty</div>
+						<p class="cart-popup__text">
+							Discover Modimal <br>
+							And Add Products To Your Bag
+						</p>
+						<div class="cart-popup__buttons">
+							<a href="#" class="cart-popup__button button button--fw button--secondary">Collection</a>
+							<a href="#" class="cart-popup__button button button--fw button--secondary">New In</a>
+							<a href="#" class="cart-popup__button button button--fw button--secondary">Best Sellers</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div style="inset: 0; transform: none" id="cart-popup-primary" aria-hidden="true" class="popup popup--cart cart-popup cart-popup--primary">
+			<div class="cart-popup__wrapper">
+				<div class="cart-popup__content">
+					<div class="cart-popup__header">
+						<button data-close-popup="cart-popup-primary" type="button" class="cart-popup__close">
+							<svg width="0.875rem" height="0.875rem" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z" fill="currentColor"></path>
+							</svg>
+						</button>
+					</div>
+					<div class="cart-popup__body">
+						<div class="cart-popup__title">Your Cart</div>
+						<div class="cart-popup__items">
+							<div class="cart-popup__item item-cart-popup">
+								<div class="item-cart-popup__image">
+									<picture><source srcset="./img/product/product-1.webp" type="image/webp"><img class="ibg" alt="Image" src="./img/product/product-1.png"></picture>
+									<div class="item-cart-popup__label label">1</div>
+								</div>
+								<div class="item-cart-popup__body">
+									<div class="item-cart-popup__header">
+										<div class="item-cart-popup__title">Wrap Top</div>
+										<button class="item-cart-popup__remove">
+											<svg width="0.875rem" height="0.875rem" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z" fill="currentColor"></path>
+											</svg>
+										</button>
+									</div>
+
+									<ul class="item-cart-popup__properties">
+										<li class="item-cart-popup__property"><span>Size:</span> <span>S</span></li>
+										<li class="item-cart-popup__property">
+											<span>Color:</span> <span>White</span>
+										</li>
+									</ul>
+									<div class="item-cart-popup__footer">
+										<div data-quantity="" class="item-cart-popup__counter quantity">
+											<button data-quantity-minus="" type="button" class="quantity__button quantity__button--minus"></button>
+											<div class="quantity__input">
+												<input data-quantity-value="" autocomplete="off" type="text" name="quantity" value="1">
+											</div>
+											<button data-quantity-plus="" type="button" class="quantity__button quantity__button--plus"></button>
+										</div>
+										<div class="item-cart-popup__price">$160</div>
+									</div>
+								</div>
+							</div>
+							<div class="cart-popup__item item-cart-popup">
+								<div class="item-cart-popup__image">
+									<picture><source srcset="./img/product/product-1.webp" type="image/webp"><img class="ibg" alt="Image" src="./img/product/product-1.png"></picture>
+									<div class="item-cart-popup__label label">1</div>
+								</div>
+								<div class="item-cart-popup__body">
+									<div class="item-cart-popup__header">
+										<div class="item-cart-popup__title">Wrap Top</div>
+										<button class="item-cart-popup__remove">
+											<svg width="0.875rem" height="0.875rem" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z" fill="currentColor"></path>
+											</svg>
+										</button>
+									</div>
+
+									<ul class="item-cart-popup__properties">
+										<li class="item-cart-popup__property"><span>Size:</span> <span>S</span></li>
+										<li class="item-cart-popup__property">
+											<span>Color:</span> <span>White</span>
+										</li>
+									</ul>
+									<div class="item-cart-popup__footer">
+										<div data-quantity="" class="item-cart-popup__counter quantity">
+											<button data-quantity-minus="" type="button" class="quantity__button quantity__button--minus"></button>
+											<div class="quantity__input">
+												<input data-quantity-value="" autocomplete="off" type="text" name="quantity" value="1">
+											</div>
+											<button data-quantity-plus="" type="button" class="quantity__button quantity__button--plus"></button>
+										</div>
+										<div class="item-cart-popup__price">$160</div>
+									</div>
+								</div>
+							</div>
+							<div class="cart-popup__item item-cart-popup">
+								<div class="item-cart-popup__image">
+									<picture><source srcset="./img/product/product-1.webp" type="image/webp"><img class="ibg" alt="Image" src="./img/product/product-1.png"></picture>
+									<div class="item-cart-popup__label label">1</div>
+								</div>
+								<div class="item-cart-popup__body">
+									<div class="item-cart-popup__header">
+										<div class="item-cart-popup__title">Wrap Top</div>
+										<button class="item-cart-popup__remove">
+											<svg width="0.875rem" height="0.875rem" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z" fill="currentColor"></path>
+											</svg>
+										</button>
+									</div>
+
+									<ul class="item-cart-popup__properties">
+										<li class="item-cart-popup__property"><span>Size:</span> <span>S</span></li>
+										<li class="item-cart-popup__property">
+											<span>Color:</span> <span>White</span>
+										</li>
+									</ul>
+									<div class="item-cart-popup__footer">
+										<div data-quantity="" class="item-cart-popup__counter quantity">
+											<button data-quantity-minus="" type="button" class="quantity__button quantity__button--minus"></button>
+											<div class="quantity__input">
+												<input data-quantity-value="" autocomplete="off" type="text" name="quantity" value="1">
+											</div>
+											<button data-quantity-plus="" type="button" class="quantity__button quantity__button--plus"></button>
+										</div>
+										<div class="item-cart-popup__price">$160</div>
+									</div>
+								</div>
+							</div>
+							<div class="cart-popup__item item-cart-popup">
+								<div class="item-cart-popup__image">
+									<picture><source srcset="./img/product/product-1.webp" type="image/webp"><img class="ibg" alt="Image" src="./img/product/product-1.png"></picture>
+									<div class="item-cart-popup__label label">1</div>
+								</div>
+								<div class="item-cart-popup__body">
+									<div class="item-cart-popup__header">
+										<div class="item-cart-popup__title">Wrap Top</div>
+										<button class="item-cart-popup__remove">
+											<svg width="0.875rem" height="0.875rem" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z" fill="currentColor"></path>
+											</svg>
+										</button>
+									</div>
+
+									<ul class="item-cart-popup__properties">
+										<li class="item-cart-popup__property"><span>Size:</span> <span>S</span></li>
+										<li class="item-cart-popup__property">
+											<span>Color:</span> <span>White</span>
+										</li>
+									</ul>
+									<div class="item-cart-popup__footer">
+										<div data-quantity="" class="item-cart-popup__counter quantity">
+											<button data-quantity-minus="" type="button" class="quantity__button quantity__button--minus"></button>
+											<div class="quantity__input">
+												<input data-quantity-value="" autocomplete="off" type="text" name="quantity" value="1">
+											</div>
+											<button data-quantity-plus="" type="button" class="quantity__button quantity__button--plus"></button>
+										</div>
+										<div class="item-cart-popup__price">$160</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
