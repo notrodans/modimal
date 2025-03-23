@@ -1,7 +1,7 @@
-@use "../abstracts/mixins" as *;
-@use "../abstracts/base" as *;
-@use "../abstracts/breakpoints" as *;
-@use "../vendor/swiper" as *;
+@use "@/scss/abstracts/mixins" as *;
+@use "@/scss/abstracts/base" as *;
+@use "@/scss/abstracts/breakpoints" as *;
+@use "@/scss/vendor/swiper";
 
 .page {
 	@include adaptiveValue("padding-block", 32, 0);

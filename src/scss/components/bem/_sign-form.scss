@@ -1,8 +1,8 @@
 @use "sass:math";
-@use "../../abstracts/mixins" as *;
-@use "../../abstracts/mixins-settings" as *;
-@use "../../abstracts/breakpoints" as *;
-@use "../../abstracts/base" as *;
+@use "@/scss/abstracts/mixins" as *;
+@use "@/scss/abstracts/mixins-settings" as *;
+@use "@/scss/abstracts/breakpoints" as *;
+@use "@/scss/abstracts/base" as *;
 
 .sign {
 	&__container {

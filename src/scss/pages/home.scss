@@ -1,8 +1,8 @@
 @use "sass:math";
-@use "../abstracts/mixins" as *;
-@use "../vendor/swiper";
-@use "../abstracts/breakpoints" as *;
-@use "../abstracts/base" as *;
+@use "@/scss/abstracts/breakpoints" as *;
+@use "@/scss/abstracts/mixins" as *;
+@use "@/scss/abstracts/base" as *;
+@use "@/scss/vendor/swiper";
 
 .page {
 	&__hero {

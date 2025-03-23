@@ -1,8 +1,6 @@
-@use "../abstracts/mixins";
-
 @use "sass:math";
-@use "../abstracts/mixins-settings" as *;
-@use "../abstracts/mixins" as *;
+@use "@/scss/abstracts/mixins-settings" as *;
+@use "@/scss/abstracts/mixins" as *;
 
 @if ($responsiveType==1) {
 	[class*="__container"] {

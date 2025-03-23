@@ -1,6 +1,6 @@
 @use "sass:math";
-@use "../../abstracts/mixins" as *;
-@use "../../abstracts/base" as *;
+@use "@/scss/abstracts/mixins" as *;
+@use "@/scss/abstracts/base" as *;
 
 .button {
 	display: inline-flex;

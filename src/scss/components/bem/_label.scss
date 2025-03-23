@@ -1,5 +1,5 @@
 @use "sass:math";
-@use "../../abstracts/mixins" as *;
+@use "@/scss/abstracts/mixins" as *;
 
 .label {
 	font-size: toRem(14);

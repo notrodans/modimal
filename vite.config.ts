@@ -21,6 +21,12 @@ export default defineConfig(() => {
 		base: "./",
 		publicDir: "public",
 
+		resolve: {
+			alias: {
+				"@": path.resolve(__dirname, "./src")
+			}
+		},
+
 		server: {
 			port: 3000,
 			host: true,

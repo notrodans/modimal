@@ -1,5 +1,5 @@
-@use "../abstracts/mixins" as *;
-@use "../abstracts/breakpoints" as *;
+@use "@/scss/abstracts/mixins" as *;
+@use "@/scss/abstracts/breakpoints" as *;
 
 .page {
 	&__wishlist {

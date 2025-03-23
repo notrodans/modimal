@@ -10,8 +10,8 @@
  * Released on: October 27, 2021
  */
 
-@use "../abstracts/mixins" as *;
-@use "../abstracts/breakpoints" as *;
+@use "@/scss/abstracts/mixins" as *;
+@use "@/scss/abstracts/breakpoints" as *;
 
 @font-face {
 	font-family: swiper-icons;

@@ -1,6 +1,6 @@
-@use "../../abstracts/mixins" as *;
-@use "../../abstracts/mixins-settings" as *;
-@use "../../abstracts/variables" as *;
+@use "@/scss/abstracts/mixins" as *;
+@use "@/scss/abstracts/mixins-settings" as *;
+@use "@/scss/abstracts/variables" as *;
 
 .select {
 	min-width: 0;
