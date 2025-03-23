@@ -86,6 +86,12 @@ function initSliders() {
 		});
 	}
 
+	if (document.querySelector("#also-like")) {
+		new Swiper("#also-like", {
+			...makeSliderOptions({ paginationElement: ".recommendations__pagination" })
+		});
+	}
+
 	if (document.querySelector(".modiweek__slider")) {
 		new Swiper(".modiweek__slider", {
 			...makeSliderOptions({ paginationElement: ".modiweek__pagination" })

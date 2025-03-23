@@ -53,5 +53,5 @@ export default function webpHtmlPlugin() {
 }
 
 function replaceImageExtensions(srcset: string): string {
-	return srcset.replace(/\.(png|jpe?g|gif|bmp|tiff|webp|svg)/gi, ".webp");
+	return srcset.replace(/\.(png|jpe?g|gif|bmp|tiff)/gi, ".webp");
 }

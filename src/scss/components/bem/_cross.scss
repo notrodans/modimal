@@ -1,0 +1,32 @@
+@use "../../abstracts/mixins" as *;
+@use "../../abstracts/base" as *;
+
+.cross {
+	width: toRem(14);
+	height: toRem(14);
+	color: oklch(var(--text-tertiary));
+
+	span {
+		position: absolute;
+		display: inline-flex;
+		background-color: currentColor;
+		border-radius: toRem(5);
+		transition: transform 0.2s linear;
+		@extend .transition-colors;
+
+		&:first-child {
+			width: toRem(14);
+			height: toRem(2);
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+		}
+
+		&:last-child {
+			width: toRem(2);
+			height: toRem(14);
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+}

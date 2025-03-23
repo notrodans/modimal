@@ -9,7 +9,7 @@
 		display: grid;
 		@include adaptiveValue("gap", 128, 24, 0, $containerWidth, 495.98);
 
-		@media (min-width: $mobileSmall) {
+		@media (min-width: toEm(600)) {
 			grid-template-columns: 49.019% 1fr;
 		}
 	}
@@ -20,7 +20,7 @@
 			aspect-ratio: 600 / 837;
 		}
 
-		@media (max-width: $mobileSmall) {
+		@media (max-width: toEm(600)) {
 			margin-inline: toRem(-15);
 			aspect-ratio: 360 / 218;
 		}
