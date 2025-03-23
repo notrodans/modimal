@@ -2,27 +2,27 @@
 	cursor: none !important;
 }
 .fls-cursor {
+	position: fixed;
+	top: 0;
+	left: 0;
 	width: 100%;
 	height: 100%;
-	position: fixed;
-	left: 0;
-	top: 0;
 	pointer-events: none;
 	&__shadow {
-		will-change: transform;
-		transition: all 0.05s linear 0s;
 		position: fixed;
 		width: toRem(50);
 		height: toRem(50);
+		transition: all 0.05s linear 0s;
+		will-change: transform;
 		&::after {
-			content: "";
 			position: absolute;
-			width: 100%;
-			height: 100%;
 			top: 0;
 			left: 0;
+			width: 100%;
+			height: 100%;
 			border: 3px solid #000;
 			animation: rotate 5s infinite linear;
+			content: "";
 			@keyframes rotate {
 				0% {
 					transform: rotate(0deg);
@@ -35,20 +35,20 @@
 	}
 	&__pointer {
 		position: fixed;
-		width: toRem(3);
-		height: toRem(3);
 		top: 0;
 		left: 0;
+		width: toRem(3);
+		height: toRem(3);
 		&::after {
-			content: "";
 			position: absolute;
-			width: 100%;
-			height: 100%;
 			top: 0;
 			left: 0;
+			width: 100%;
+			height: 100%;
 			border: 3px solid #000;
-			transition: all 0.3s ease 0s;
 			border-radius: 50%;
+			transition: all 0.3s ease 0s;
+			content: "";
 		}
 	}
 	&._hover {
@@ -60,8 +60,8 @@
 	}
 	&._active {
 		.fls-cursor__pointer::after {
-			transition: all 0.05s ease 0s;
 			transform: scale(0.3);
+			transition: all 0.05s ease 0s;
 		}
 		.fls-cursor__shadow::after {
 		}

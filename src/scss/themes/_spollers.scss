@@ -43,7 +43,7 @@
 		line-height: 180%;
 		text-transform: capitalize;
 		cursor: pointer;
-		@extend .transition-colors;
+		@extend %transition-colors;
 
 		@media (any-hover: hover) {
 			&:hover,
@@ -81,26 +81,26 @@
 .body-spollers-header {
 	@media (min-width: $mobile) {
 		position: fixed;
-		width: 100%;
-		left: 0;
-		right: 0;
 		top: var(--header-height);
+		right: 0;
+		left: 0;
 		z-index: 1;
+		width: 100%;
 		max-height: calc(100% - var(--header-height));
-		background-color: oklch(var(--bg-tertiary));
 		overflow: auto;
+		background-color: oklch(var(--bg-tertiary));
 	}
 
 	&--form {
 		position: fixed;
-		width: 100%;
-		left: 0;
-		right: 0;
 		top: var(--header-height);
+		right: 0;
+		left: 0;
 		z-index: 1;
+		width: 100%;
 		max-height: calc(100% - var(--header-height));
-		background-color: oklch(var(--bg-tertiary));
 		overflow: auto;
+		background-color: oklch(var(--bg-tertiary));
 	}
 
 	&__content {
@@ -130,9 +130,9 @@
 
 	&__lists {
 		display: flex;
-		line-height: 180%;
 		flex-wrap: wrap;
 		gap: toRem(24);
+		line-height: 180%;
 
 		@include adaptiveValue("font-size", 18, 16);
 
@@ -163,7 +163,7 @@
 	}
 
 	&__link {
-		@extend .transition-colors;
+		@extend %transition-colors;
 		width: 100%;
 		color: #404040;
 		@media (any-hover: hover) {
@@ -205,7 +205,7 @@
 		}
 
 		p {
-			@extend .transition-colors;
+			@extend %transition-colors;
 		}
 	}
 }

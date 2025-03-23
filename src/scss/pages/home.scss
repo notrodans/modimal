@@ -82,8 +82,8 @@
 	}
 
 	&__image {
-		display: block;
 		position: relative;
+		display: block;
 		aspect-ratio: 600 / 837;
 
 		&:not(:last-child) {
@@ -111,9 +111,9 @@
 	&__name {
 		@media (min-width: toEm(600)) {
 			position: absolute;
-			max-width: toRem(185);
 			inset: toRem(16);
 			top: auto;
+			max-width: toRem(185);
 
 			&:not(&--right) {
 				margin-left: auto;
@@ -126,20 +126,6 @@
 }
 
 .modiweek {
-	&__header {
-		&:not(:last-child) {
-			margin-block-end: toRem(24);
-		}
-	}
-
-	&__slider {
-	}
-
-	&__wrapper {
-		&:not(:last-child) {
-			margin-block-end: toRem(34);
-		}
-	}
 }
 
 .sustainability {
@@ -158,12 +144,12 @@
 	}
 	&__text {
 		max-width: toRem(495);
-		text-transform: capitalize;
 		color: #272f25;
+		line-height: 180%;
 		text-align: start;
+		text-transform: capitalize;
 		margin-inline-start: auto;
 		@include adaptiveValue("font-size", 20, 16);
-		line-height: 180%;
 
 		&:not(:last-child) {
 			margin-block-end: toRem(12);

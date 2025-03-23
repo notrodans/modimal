@@ -12,20 +12,20 @@
 		background-color: currentColor;
 		border-radius: toRem(5);
 		transition: transform 0.2s linear;
-		@extend .transition-colors;
+		@extend %transition-colors;
 
 		&:first-child {
-			width: toRem(14);
-			height: toRem(2);
 			top: 50%;
 			left: 0;
+			width: toRem(14);
+			height: toRem(2);
 			transform: translateY(-50%);
 		}
 
 		&:last-child {
+			left: 50%;
 			width: toRem(2);
 			height: toRem(14);
-			left: 50%;
 			transform: translateX(-50%);
 		}
 	}

@@ -1,21 +1,21 @@
 @use "lg-variables";
 @use "lg-mixins";
 .lg-progress-bar {
-	background-color: lg-variables.$lg-progress-bar-bg;
-	height: lg-variables.$lg-progress-bar-height;
-	left: 0;
 	position: absolute;
 	top: 0;
-	width: 100%;
+	left: 0;
 	z-index: lg-variables.$zindex-progressbar;
+	width: 100%;
+	height: lg-variables.$lg-progress-bar-height;
+	background-color: lg-variables.$lg-progress-bar-bg;
 	opacity: 0;
 	will-change: opacity;
 	@include lg-mixins.transitionCustom(opacity 0.08s ease 0s);
 
 	.lg-progress {
-		background-color: lg-variables.$lg-progress-bar-active-bg;
-		height: lg-variables.$lg-progress-bar-height;
 		width: 0;
+		height: lg-variables.$lg-progress-bar-height;
+		background-color: lg-variables.$lg-progress-bar-active-bg;
 	}
 
 	&.lg-start {

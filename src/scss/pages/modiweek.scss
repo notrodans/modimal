@@ -1,0 +1,100 @@
+@use "@/scss/vendor/swiper";
+@use "@/scss/abstracts/mixins" as *;
+@use "@/scss/abstracts/mixins-settings" as *;
+@use "@/scss/abstracts/breakpoints" as *;
+
+.page {
+	@include adaptiveValue("padding-block", 32, 0);
+
+	&__breadcrumbs {
+		@include adaptiveValue("margin-block-end", 50, 24);
+	}
+
+	&__hero {
+		margin-block-end: toRem(48);
+	}
+}
+
+.hero {
+	@include adaptiveValue("--margin", 24, 16);
+	&__layout {
+		display: flex;
+		@media (max-width: $mobile) {
+			gap: toRem(16);
+			flex-direction: column;
+		}
+	}
+
+	&__header {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-block-end", 24, 6);
+		}
+	}
+
+	.header-block {
+		&__title {
+			@include adaptiveValue("font-size", 32, 24);
+		}
+	}
+
+	&__body {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(toRem(180), 1fr));
+		gap: var(--margin);
+	}
+
+	&__subheader {
+		&:not(:last-child) {
+			margin-block-end: var(--margin);
+		}
+	}
+
+	&__block {
+		&:not(&--image) {
+			@include adaptiveValue("padding-inline-start", 128, 24, 2, $containerWidth, 767.98);
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+
+			@media (min-width: $mobile) {
+				align-self: center;
+			}
+		}
+	}
+
+	&__block--image {
+		aspect-ratio: 496 / 746;
+		flex: 0 1 percent(494, 1224);
+
+		@media (max-width: $mobile) {
+			margin-inline: toRem(-15);
+		}
+	}
+
+	.product-card {
+		&__header {
+			@include adaptiveValue("padding", 17.55, 12);
+		}
+		&__wishlist {
+			svg {
+				width: toRem(17.55);
+				height: toRem(17.55);
+			}
+		}
+		&__label {
+			padding-inline: toRem(25.05);
+			padding-block: toRem(2.7);
+			font-size: toRem(10.241);
+		}
+	}
+}
+
+.modiweek {
+}
+
+.subheader-hero {
+	&__title {
+		font-size: toRem(20);
+		line-height: 140%;
+	}
+}

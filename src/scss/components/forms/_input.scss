@@ -9,11 +9,11 @@ textarea {
 	appearance: none;
 }
 .input {
-	border-radius: 0 !important;
-	width: 100%;
 	display: block;
+	width: 100%;
 	padding: 0px 20px;
 	border: 1px solid #eee;
+	border-radius: 0 !important;
 	caret-color: inherit;
 	&._form-focus {
 	}
@@ -30,6 +30,6 @@ textarea {
 }
 
 textarea.input {
-	resize: none;
 	padding: 0px 0px;
+	resize: none;
 }

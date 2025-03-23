@@ -18,8 +18,8 @@
 
 	&__title {
 		@include adaptiveValue("font-size", 20, 16);
-		line-height: 140%;
 		font-weight: 700;
+		line-height: 140%;
 		&:not(:last-child) {
 			margin-block-end: toRem(16);
 		}

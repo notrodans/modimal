@@ -1,0 +1,18 @@
+@use "@/scss/abstracts/mixins" as *;
+
+.modiweek {
+	&__header {
+		&:not(:last-child) {
+			margin-block-end: toRem(24);
+		}
+	}
+
+	&__slider {
+	}
+
+	&__wrapper {
+		&:not(:last-child) {
+			margin-block-end: toRem(34);
+		}
+	}
+}

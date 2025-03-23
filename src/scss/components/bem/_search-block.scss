@@ -5,8 +5,8 @@
 	flex-direction: column;
 
 	&__label {
-		color: #adadad;
 		position: relative;
+		color: #adadad;
 		border-bottom: toRem(1) solid currentColor;
 
 		&:has(.search-block__input:focus) {
@@ -18,8 +18,8 @@
 			@include adaptiveValue("height", 24, 17.5);
 			position: absolute;
 			top: 50%;
-			transform: translateY(-50%);
 			left: toRem(19.25);
+			transform: translateY(-50%);
 		}
 	}
 

@@ -2,11 +2,11 @@
 @use "@/scss/abstracts/mixins" as *;
 
 .label {
-	font-size: toRem(14);
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: oklch(var(--tertiary));
-	line-height: math.div(24, 14);
 	padding: toRem(8);
+	font-size: toRem(14);
+	line-height: math.div(24, 14);
+	background-color: oklch(var(--tertiary));
 }

@@ -6,6 +6,8 @@ class Popup {
 		this.popup = document.querySelector(`#${id}`);
 		if (!this.popup) return;
 
+		this.lockBody = options.lockBody ?? true;
+
 		this.isOpen = false;
 
 		this.classes = {
@@ -18,12 +20,22 @@ class Popup {
 			...options.classes
 		};
 
+		this.popupOpenButton = document.querySelector(`[data-open-popup="${this.id}"]`);
+		this.popupCloseButton = document.querySelector(`[data-close-popup="${this.id}"]`);
 		this.popupWrapper = this.popup.querySelector(`.${this.classes.wrapper}`);
 		this.popupContainer = this.popup.querySelector(`.${this.classes.container}`);
 		this.popupContent = this.popup.querySelector(`.${this.classes.content}`);
 
+		if (!this.popupOpenButton) {
+			throw Error("Doesn't have open button", { cause: `Popup with id: ${this.id}` });
+		}
+
+		if (!this.popupCloseButton) {
+			throw Error("Doesn't have close button", { cause: `Popup with id: ${this.id}` });
+		}
+
 		this.focusableElements =
-			'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+			'button,[href],input,select,textarea,summary,[tabindex]:not([tabindex="-1"])';
 		this.firstFocusableElement = null;
 		this.lastFocusableElement = null;
 
@@ -34,18 +46,18 @@ class Popup {
 		if (!this.popup) return;
 
 		this.setupEventListeners();
-		this.setupOpenCloseButtons();
-		this.setupFocusTrap();
+		this.setupButtons();
+		this.setupFocusableElement();
 		this.setupHashHandler();
 	}
 
 	setupEventListeners() {
-		this.popup.addEventListener("click", e => this.handleClickOutside(e));
+		document.addEventListener("click", e => this.handleClickOutside(e));
 		document.addEventListener("keydown", e => this.handleEscapeKey(e));
 	}
 
 	handleClickOutside(e) {
-		if (e.target === this.popup || !e.target.closest(`.${this.classes.content}`)) {
+		if (e.target !== this.popupOpenButton && !e.target.closest(`.${this.classes.content}`)) {
 			this.close();
 		}
 	}
@@ -56,30 +68,9 @@ class Popup {
 		}
 	}
 
-	setupOpenCloseButtons() {
-		this.setupButtons(`[data-open-popup="${this.id}"]`, () => this.open());
-		this.setupButtons(`[data-close-popup="${this.id}"]`, () => this.close());
-	}
-
-	setupButtons(selector, handler) {
-		const buttons = document.querySelectorAll(selector);
-		if (buttons.length === 0) return;
-
-		for (const button of buttons) {
-			button.addEventListener("click", handler);
-		}
-	}
-
-	setupFocusTrap() {
-		if (!this.popupContent) return;
-
-		const focusableElements = this.popupContent.querySelectorAll(this.focusableElements);
-		if (focusableElements.length === 0) return;
-
-		this.firstFocusableElement = focusableElements[0];
-		this.lastFocusableElement = focusableElements[focusableElements.length - 1];
-
-		this.popupContent.addEventListener("keydown", e => this.handleTabKey(e));
+	setupButtons() {
+		this.popupOpenButton.addEventListener("click", () => this.toggle());
+		this.popupCloseButton.addEventListener("click", () => this.close());
 	}
 
 	handleTabKey(e) {
@@ -94,10 +85,15 @@ class Popup {
 		}
 	}
 
+	setupFocusableElement() {
+		if (!this.popupContent) return;
+
+		const focusableElements = this.popupContent.querySelector(this.focusableElements);
+		this.firstFocusableElement = focusableElements;
+	}
+
 	disableFocusOutsidePopup() {
-		const focusableElementsOutside = document.querySelectorAll(
-			`body *:not(#${this.id}):not(#${this.id} *)`
-		);
+		const focusableElementsOutside = document.querySelectorAll(`body *:not(#${this.id} *)`);
 
 		for (const element of focusableElementsOutside) {
 			if (!element.matches(this.focusableElements)) continue;
@@ -112,15 +108,12 @@ class Popup {
 	}
 
 	enableFocusOutsidePopup() {
-		const focusableElementsOutside = document.querySelectorAll(
-			`body *:not(#${this.id}):not(#${this.id} *)`
-		);
+		const focusableElementsOutside = document.querySelectorAll(`body *:not(#${this.id} *)`);
 
 		for (const element of focusableElementsOutside) {
 			if (!element.matches(this.focusableElements)) continue;
 
 			const originalTabIndex = element.getAttribute("data-original-tabindex");
-			if (originalTabIndex === null) continue;
 
 			if (originalTabIndex === "") {
 				element.removeAttribute("tabindex");
@@ -146,19 +139,23 @@ class Popup {
 
 	open() {
 		if (!this.popup || this.isOpen) return;
+		document.documentElement.classList.remove("menu-open");
+		this.isOpen = true;
+		this.popup.setAttribute("aria-hidden", "false");
 
 		document.body.classList.add(this.classes.showBody);
 		this.popup.classList.add(this.classes.showPopup);
 		document.documentElement.classList.add(this.classes.showBody);
-		bodyLock();
-		this.isOpen = true;
+
+		if (this.lockBody) {
+			bodyLock(150);
+		}
 
 		if (this.firstFocusableElement) {
 			this.firstFocusableElement.focus();
 		}
 
 		this.disableFocusOutsidePopup();
-		this.popup.setAttribute("aria-hidden", "false");
 
 		const url = new URL(window.location);
 		url.hash = this.id;
@@ -167,22 +164,27 @@ class Popup {
 
 	close() {
 		if (!this.popup || !this.isOpen) return;
+		this.isOpen = false;
+		this.popup.setAttribute("aria-hidden", "true");
 
 		document.body.classList.remove(this.classes.showBody);
 		this.popup.classList.remove(this.classes.showPopup);
 		document.documentElement.classList.remove(this.classes.showBody);
-		bodyUnlock();
-		this.isOpen = false;
+		if (this.lockBody) {
+			bodyUnlock(150);
+		}
 
 		this.enableFocusOutsidePopup();
-		this.popup.setAttribute("aria-hidden", "true");
 
 		if (window.location.hash === `#${this.id}`) {
 			const url = new URL(window.location);
 			url.hash = "";
 			history.replaceState(null, null, url);
 		}
+
+		this.popupOpenButton.focus();
 	}
+
 	toggle() {
 		if (this.isOpen) {
 			this.close();

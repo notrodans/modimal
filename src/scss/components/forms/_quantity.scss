@@ -1,26 +1,26 @@
 //<QUANTITY>
 // Сніппет (HTML): qa
 .quantity {
+	display: flex;
 	width: 88px;
 	height: 40px;
-	display: flex;
-	border: 1px solid rgba(166, 166, 166, 0.45);
+	border: 1px solid oklch(var(--secondary));
 	// .quantity__button
 	&__button {
-		flex: 0 0 30px;
 		position: relative;
+		flex: 0 0 30px;
 		cursor: pointer;
 		&::before,
 		&::after {
-			content: "";
 			position: absolute;
 			top: 50%;
 			left: 50%;
-			transition: all 0.3s ease 0s;
-			margin: 0px 0px 0px -4.5px;
-			background-color: #a6a6a6;
 			width: 9px;
 			height: 1px;
+			margin: 0px 0px 0px -4.5px;
+			background-color: oklch(var(--bg-secondary) / 90%);
+			transition: all 0.3s ease 0s;
+			content: "";
 		}
 		@media (any-hover: hover) {
 			&:hover {
@@ -44,10 +44,10 @@
 	&__input {
 		flex: 1 1 auto;
 		input {
-			height: 100%;
-			color: #a6a6a6;
-			font-size: 12px;
 			width: 100%;
+			height: 100%;
+			color: oklch(var(--text-secondary));
+			font-size: 12px;
 			text-align: center;
 		}
 	}

@@ -20,23 +20,23 @@
 // default theme
 .lg-next,
 .lg-prev {
-	background-color: lg-variables.$lg-next-prev-bg;
-	border-radius: lg-variables.$lg-border-radius-base;
-	color: lg-variables.$lg-next-prev-color;
-	cursor: pointer;
-	display: block;
-	font-size: 22px;
-	margin-top: -10px;
-	padding: 8px 10px 9px;
 	position: absolute;
 	top: 50%;
 	z-index: lg-variables.$zindex-controls;
-	outline: none;
+	display: block;
+	margin-top: -10px;
+	padding: 8px 10px 9px;
+	color: lg-variables.$lg-next-prev-color;
+	font-size: 22px;
+	background-color: lg-variables.$lg-next-prev-bg;
 	border: none;
+	border-radius: lg-variables.$lg-border-radius-base;
+	outline: none;
+	cursor: pointer;
 
 	&.disabled {
-		opacity: 0 !important;
 		cursor: default;
+		opacity: 0 !important;
 	}
 
 	&:hover:not(.disabled) {
@@ -109,32 +109,32 @@
 
 // lg toolbar
 .lg-toolbar {
-	z-index: lg-variables.$zindex-toolbar;
-	left: 0;
 	position: absolute;
 	top: 0;
+	left: 0;
+	z-index: lg-variables.$zindex-toolbar;
 	width: 100%;
 	.lg-media-overlap & {
 		background-image: lg-variables.$lg-toolbar-bg;
 	}
 
 	.lg-icon {
-		color: lg-variables.$lg-toolbar-icon-color;
-		cursor: pointer;
 		float: right;
-		font-size: 24px;
-		height: 47px;
-		line-height: 27px;
-		padding: 10px 0;
-		text-align: center;
 		width: 50px;
+		height: 47px;
+		padding: 10px 0;
+		color: lg-variables.$lg-toolbar-icon-color;
+		font-size: 24px;
+		line-height: 27px;
+		text-align: center;
 		text-decoration: none !important;
-		outline: medium none;
-		will-change: color;
-		@include lg-mixins.transition(color 0.2s linear);
 		background: none;
 		border: none;
+		outline: medium none;
 		box-shadow: none;
+		cursor: pointer;
+		will-change: color;
+		@include lg-mixins.transition(color 0.2s linear);
 		&.lg-icon-18 {
 			font-size: 18px;
 		}
@@ -164,23 +164,23 @@
 
 // lightGallery title
 .lg-sub-html {
+	z-index: lg-variables.$zindex-subhtml;
+	padding: 10px 40px;
 	color: lg-variables.$lg-sub-html-color;
 	font-size: 16px;
-	padding: 10px 40px;
 	text-align: center;
-	z-index: lg-variables.$zindex-subhtml;
 	opacity: 0;
 	@include lg-mixins.transition(opacity 0.2s ease-out 0s);
 
 	h4 {
 		margin: 0;
-		font-size: 13px;
 		font-weight: bold;
+		font-size: 13px;
 	}
 
 	p {
-		font-size: 12px;
 		margin: 5px 0 0;
+		font-size: 12px;
 	}
 	a {
 		color: inherit;
@@ -193,25 +193,25 @@
 	}
 	.lg-item & {
 		position: absolute;
-		bottom: 0;
 		right: 0;
+		bottom: 0;
 		left: 0;
 	}
 }
 
 .lg-error-msg {
-	font-size: 14px;
 	color: #999;
+	font-size: 14px;
 }
 
 // lg image counter
 .lg-counter {
-	color: lg-variables.$lg-icon-color;
 	display: inline-block;
-	font-size: lg-variables.$lg-counter-font-size;
-	padding-left: 20px;
-	padding-top: 12px;
 	height: 47px;
+	padding-top: 12px;
+	padding-left: 20px;
+	color: lg-variables.$lg-icon-color;
+	font-size: lg-variables.$lg-counter-font-size;
 	vertical-align: middle;
 }
 

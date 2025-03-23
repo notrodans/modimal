@@ -2,16 +2,16 @@
 @use "lg-mixins";
 .lg-outer {
 	.lg-dropdown-overlay {
-		background-color: rgba(0, 0, 0, 0.25);
-		bottom: 0;
-		cursor: default;
-		left: 0;
 		position: absolute;
-		right: 0;
 		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
 		z-index: lg-variables.$zindex-toolbar - 1;
-		opacity: 0;
+		background-color: rgba(0, 0, 0, 0.25);
 		visibility: hidden;
+		cursor: default;
+		opacity: 0;
 		will-change: visibility, opacity;
 		@include lg-mixins.transition(visibility 0s linear 0.18s, opacity 0.18s linear 0s);
 	}
@@ -20,28 +20,28 @@
 		.lg-dropdown-overlay {
 			@include lg-mixins.transition-delay(0s);
 			@include lg-mixins.transform(translate3d(0, 0px, 0));
-			opacity: 1;
 			visibility: visible;
+			opacity: 1;
 		}
 		.lg-share {
 			color: #fff;
 		}
 	}
 	.lg-dropdown {
-		background-color: #fff;
-		border-radius: 2px;
-		font-size: 14px;
-		list-style-type: none;
+		position: absolute;
+		top: 50px;
+		right: 0;
 		margin: 0;
 		padding: 10px 0;
-		position: absolute;
-		right: 0;
+		font-size: 14px;
 		text-align: left;
-		top: 50px;
-		opacity: 0;
+		list-style-type: none;
+		background-color: #fff;
+		border-radius: 2px;
 		visibility: hidden;
-		@include lg-mixins.transform(translate3d(0, 5px, 0));
+		opacity: 0;
 		will-change: visibility, opacity, transform;
+		@include lg-mixins.transform(translate3d(0, 5px, 0));
 		@include lg-mixins.transitionCustom(
 			transform 0.18s linear 0s,
 			visibility 0s linear 0.5s,
@@ -49,15 +49,15 @@
 		);
 
 		&:after {
-			content: "";
-			display: block;
-			height: 0;
-			width: 0;
 			position: absolute;
+			top: -16px;
+			right: 16px;
+			display: block;
+			width: 0;
+			height: 0;
 			border: 8px solid transparent;
 			border-bottom-color: #fff;
-			right: 16px;
-			top: -16px;
+			content: "";
 		}
 		> li {
 			&:last-child {
@@ -70,33 +70,33 @@
 			}
 		}
 		a {
-			color: #333;
 			display: block;
-			white-space: pre;
 			padding: 4px 12px;
-			font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+			color: #333;
 			font-size: 12px;
+			font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+			white-space: pre;
 			&:hover {
 				background-color: rgba(0, 0, 0, 0.07);
 			}
 		}
 		.lg-dropdown-text {
 			display: inline-block;
-			line-height: 1;
 			margin-top: -3px;
+			line-height: 1;
 			vertical-align: middle;
 		}
 		.lg-icon {
-			color: #333;
 			display: inline-block;
 			float: none;
-			font-size: 20px;
+			width: auto;
 			height: auto;
-			line-height: 1;
 			margin-right: 8px;
 			padding: 0;
+			color: #333;
+			font-size: 20px;
+			line-height: 1;
 			vertical-align: middle;
-			width: auto;
 		}
 	}
 	.lg-share {

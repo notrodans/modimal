@@ -13,7 +13,7 @@ function makeSliderOptions(params) {
 	if (!params.paginationElement) throw "Pagination element not defined";
 
 	return {
-		modules: [Navigation, Autoplay, EffectFade, Pagination],
+		modules: [Keyboard, Navigation, Autoplay, EffectFade, Pagination],
 		observer: true,
 		observeParents: true,
 		slidesPerView: 3,
@@ -30,6 +30,10 @@ function makeSliderOptions(params) {
 		pagination: {
 			el: params.paginationElement,
 			clickable: true
+		},
+
+		keyboard: {
+			enabled: true
 		},
 
 		//effect: 'fade',
@@ -55,7 +59,6 @@ function makeSliderOptions(params) {
 		breakpoints: {
 			320: {
 				slidesPerView: 1,
-				spaceBetween: 0,
 				spaceBetween: 16,
 				autoHeight: true
 			},
@@ -100,7 +103,7 @@ function initSliders() {
 
 	if (document.querySelector("#product-hero-slider")) {
 		new Swiper("#product-hero-slider", {
-			modules: [Autoplay, EffectFade, Pagination],
+			modules: [Keyboard, Autoplay, EffectFade, Pagination],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 1,
@@ -110,6 +113,10 @@ function initSliders() {
 			effect: "fade",
 			fadeEffect: {
 				crossFade: true
+			},
+
+			keyboard: {
+				enabled: true
 			},
 
 			pagination: {

@@ -2,10 +2,10 @@
 @use "lg-mixins";
 .lg-outer {
 	.lg-video-cont {
-		text-align: center;
-		display: inline-block;
-		vertical-align: middle;
 		position: relative;
+		display: inline-block;
+		text-align: center;
+		vertical-align: middle;
 		.lg-object {
 			width: 100% !important;
 			height: 100% !important;
@@ -20,13 +20,13 @@
 	}
 	.lg-video-object {
 		position: absolute;
-		left: 0;
+		top: 0;
 		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 3;
 		width: 100%;
 		height: 100%;
-		top: 0;
-		bottom: 0;
-		z-index: 3;
 	}
 	.lg-video-poster {
 		z-index: 1;
@@ -77,14 +77,14 @@
 }
 
 .lg-video-play-button {
-	width: 18%;
-	max-width: 140px;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	z-index: 2;
-	cursor: pointer;
+	width: 18%;
+	max-width: 140px;
 	transform: translate(-50%, -50%) scale(1);
+	cursor: pointer;
 	will-change: opacity, transform;
 	@include lg-mixins.transitionCustom(
 		transform 0.25s cubic-bezier(0.17, 0.88, 0.32, 1.28),
@@ -98,22 +98,22 @@
 	}
 }
 .lg-video-play-icon-bg {
-	fill: none;
-	stroke-width: 3%;
-	stroke: #fcfcfc;
 	opacity: 0.6;
 	will-change: opacity;
+	fill: none;
+	stroke: #fcfcfc;
+	stroke-width: 3%;
 	@include lg-mixins.transition(opacity 0.12s ease-in);
 }
 .lg-video-play-icon-circle {
 	position: absolute;
 	top: 0;
-	left: 0;
-	bottom: 0;
 	right: 0;
+	bottom: 0;
+	left: 0;
 	fill: none;
-	stroke-width: 3%;
 	stroke: rgba(30, 30, 30, 0.9);
+	stroke-width: 3%;
 	stroke-opacity: 1;
 	stroke-linecap: round;
 	stroke-dasharray: 200;
@@ -122,10 +122,10 @@
 
 .lg-video-play-icon {
 	position: absolute;
+	top: 50%;
+	left: 50%;
 	width: 25%;
 	max-width: 120px;
-	left: 50%;
-	top: 50%;
 	transform: translate3d(-50%, -50%, 0);
 	opacity: 0.6;
 	will-change: opacity;
@@ -144,7 +144,7 @@
 }
 .lg-video-loaded {
 	.lg-video-play-button {
-		opacity: 0;
 		transform: translate(-50%, -50%) scale(0.7);
+		opacity: 0;
 	}
 }

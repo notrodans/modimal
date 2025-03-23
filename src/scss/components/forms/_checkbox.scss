@@ -18,17 +18,17 @@
 	}
 	// .checkbox__label
 	&__label {
-		cursor: pointer;
-		display: inline-flex;
 		position: relative;
+		display: inline-flex;
 		gap: 10px;
+		cursor: pointer;
 		&:before {
-			content: "";
-			align-self: flex-start;
 			flex: 0 0 20px;
+			align-self: flex-start;
 			width: 20px;
 			height: 20px;
 			border: 1px solid #a7a9ac;
+			content: "";
 		}
 	}
 	// .checkbox__text

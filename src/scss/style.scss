@@ -17,6 +17,13 @@ body {
 		overscroll-behavior: none;
 	}
 }
+
+*[data-open-popup] {
+	> * {
+		pointer-events: none;
+	}
+}
+
 html:not(.loaded) {
 	* {
 		transition: none;
@@ -24,13 +31,13 @@ html:not(.loaded) {
 }
 
 .visibility-hidden {
-	border: 0;
-	clip: rect(0 0 0 0);
-	height: auto;
-	margin: 0;
-	overflow: hidden;
-	padding: 0;
 	position: absolute;
 	width: 1px;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
 	white-space: nowrap;
+	border: 0;
+	clip: rect(0 0 0 0);
 }

@@ -9,14 +9,14 @@
 
 @mixin font($font_name, $file_name, $weight, $style) {
 	@font-face {
+		font-weight: #{$weight};
 		font-family: $font_name;
-		font-display: swap;
+		font-style: #{$style};
 		src:
 			url("/fonts/#{$file_name}.woff2") format("woff2"),
 			url("/fonts/#{$file_name}.woff") format("woff"),
 			url("/fonts/#{$file_name}.ttf") format("truetype");
-		font-weight: #{$weight};
-		font-style: #{$style};
+		font-display: swap;
 	}
 }
 //Percent
@@ -45,8 +45,8 @@
 // Grids
 @mixin gridCards($type: fit, $min: 280px, $max: 1fr, $gap: 30px) {
 	display: grid;
-	gap: $gap;
 	grid-template-columns: repeat(auto-#{$type}, minmax($min, $max));
+	gap: $gap;
 }
 
 @mixin adaptiveValue(
@@ -125,10 +125,10 @@
 	$paddingEnd: math.div($containerPadding, 2)
 ) {
 	display: grid;
-	min-width: 0;
 	grid-template-columns: toRem($paddingStart) 1fr minmax(auto, toRem($container)) 1fr toRem(
 			$paddingEnd
 		);
+	min-width: 0;
 	> * {
 		min-width: 0;
 		@if $type==1 {

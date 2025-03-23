@@ -1,10 +1,10 @@
 %ic {
-	font-family: "icons";
-	font-style: normal;
 	font-weight: normal;
+	font-family: "icons", sans-serif;
+	font-style: normal;
 	font-variant: normal;
-	text-transform: none;
 	line-height: 1;
+	text-transform: none;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -41,20 +41,20 @@
 	li {
 		position: relative;
 		&:before {
-			counter-increment: item;
-			content: counter(item);
 			position: absolute;
-			left: 0;
 			top: 0;
+			left: 0;
+			content: counter(item);
+			counter-increment: item;
 		}
 	}
 }
 // Адаптивне відео
 %responsiveVideo {
 	position: relative;
-	overflow: hidden;
 	height: 0;
 	padding-bottom: 56.25%;
+	overflow: hidden;
 	video,
 	iframe,
 	object,
@@ -75,13 +75,13 @@
 		position: fixed;
 		top: 50%;
 		left: 50%;
-		min-width: 100%;
-		min-height: 100%;
-		width: auto;
-		height: auto;
 		z-index: -100;
-		transform: translateX(-50%) translateY(-50%);
+		width: auto;
+		min-width: 100%;
+		height: auto;
+		min-height: 100%;
 		background-size: cover;
+		transform: translateX(-50%) translateY(-50%);
 	}
 }
 // Сірий фільтр
@@ -112,8 +112,8 @@
 	}
 }
 
-.transition-colors {
-	transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+%transition-colors {
 	transition-timing-function: var(--default-transition-timing-function);
 	transition-duration: 150ms;
+	transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
 }

@@ -23,8 +23,8 @@
 	}
 
 	&__counter {
-		text-align: center;
 		line-height: 180%;
+		text-align: center;
 
 		&:not(:last-child) {
 			@include adaptiveValue("margin-block-end", 32, 24);
@@ -66,27 +66,27 @@
 		padding-block: toRem(8);
 		padding-inline: toRem(16);
 
-		@extend .transition-colors;
+		@extend %transition-colors;
 
 		&--reset {
 			color: oklch(var(--text-secondary));
 
 			@media (any-hover: hover) {
 				&:hover {
-					background-color: oklch(var(--bg-secondary));
 					color: oklch(var(--text-tertiary));
+					background-color: oklch(var(--bg-secondary));
 				}
 			}
 		}
 
 		&--submit {
-			background-color: oklch(var(--bg-secondary));
 			color: oklch(var(--text-tertiary));
+			background-color: oklch(var(--bg-secondary));
 
 			@media (any-hover: hover) {
 				&:hover {
-					background-color: transparent;
 					color: oklch(var(--text-secondary));
+					background-color: transparent;
 				}
 			}
 		}
@@ -109,30 +109,30 @@
 	&__title {
 		position: relative;
 		display: flex;
-		cursor: pointer;
+		color: oklch(var(--text-tertiary));
 		font-weight: 700;
 		line-height: 140%;
 		text-transform: capitalize;
+		background-color: oklch(var(--bg-secondary));
+		cursor: pointer;
 		padding-block: toRem(10);
 		padding-inline: toRem(16);
-		background-color: oklch(var(--bg-secondary));
-		color: oklch(var(--text-tertiary));
-		@extend .transition-colors;
+		@extend %transition-colors;
 
 		&._spoller-active {
-			background-color: transparent;
 			color: oklch(var(--text-secondary));
+			background-color: transparent;
 		}
 	}
 
 	&__icon {
-		width: toRem(14);
-		height: toRem(14);
 		position: absolute;
 		top: 50%;
-		transform: translateY(-50%);
 		right: toRem(16);
+		width: toRem(14);
+		height: toRem(14);
 		color: oklch(var(--text-tertiary));
+		transform: translateY(-50%);
 
 		._spoller-active & {
 			color: oklch(var(--text-secondary));
@@ -143,21 +143,21 @@
 			display: inline-flex;
 			background-color: currentColor;
 			border-radius: toRem(5);
-			@extend .transition-colors;
 			transition: transform 0.2s linear;
+			@extend %transition-colors;
 
 			&:first-child {
-				width: toRem(14);
-				height: toRem(2);
 				top: 50%;
 				left: 0;
+				width: toRem(14);
+				height: toRem(2);
 				transform: translateY(-50%);
 			}
 
 			&:last-child {
+				left: 50%;
 				width: toRem(2);
 				height: toRem(14);
-				left: 50%;
 				transform: translateX(-50%);
 
 				._spoller-active & {
@@ -180,8 +180,8 @@
 
 	&__label {
 		display: flex;
-		align-items: center;
 		gap: toRem(8);
+		align-items: center;
 		user-select: none;
 
 		@media (any-hover: hover) {
@@ -198,14 +198,14 @@
 	}
 
 	&__input {
-		appearance: none;
-		width: toRem(16);
-		height: toRem(16);
-		border: toRem(1) solid #a2b39f;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		@extend .transition-colors;
+		width: toRem(16);
+		height: toRem(16);
+		border: toRem(1) solid #a2b39f;
+		appearance: none;
+		@extend %transition-colors;
 
 		&:checked {
 			background-color: #5a6d57;

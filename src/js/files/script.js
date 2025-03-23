@@ -62,3 +62,13 @@ const sizePopup = new Popup("size-guide", {
 		content: "size-popup__content"
 	}
 });
+
+const cartPopup = new Popup("cart-popup", {
+	lockBody: false,
+	classes: {
+		popup: "cart-popup",
+		wrapper: "cart-popup__wrapper",
+		container: "cart-popup__container",
+		content: "cart-popup__content"
+	}
+});

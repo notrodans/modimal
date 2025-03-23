@@ -54,9 +54,9 @@
 	}
 
 	&__text {
-		text-align: center;
 		font-size: toRem(12);
 		line-height: 140%;
+		text-align: center;
 		&:not(:last-child) {
 			margin-block-end: toRem(27);
 		}
@@ -98,7 +98,7 @@
 			margin-block-end: toRem(16);
 		}
 
-		@extend .transition-colors;
+		@extend %transition-colors;
 
 		@media (any-hover: hover) {
 			&:hover,
@@ -116,8 +116,8 @@
 
 .providers-sign {
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
 	column-gap: toRem(17);
-	flex-wrap: wrap;
 }

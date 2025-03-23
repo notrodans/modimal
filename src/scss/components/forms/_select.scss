@@ -3,35 +3,35 @@
 @use "@/scss/abstracts/variables" as *;
 
 .select {
-	min-width: 0;
 	position: relative;
+	min-width: 0;
 
 	&__body {
 		position: relative;
 	}
 
 	&__title {
+		width: 100%;
 		color: inherit;
 		text-align: left;
 		cursor: pointer;
-		width: 100%;
 	}
 	&__value {
 		display: flex;
-		min-width: 0;
-		align-items: center;
 		gap: toRem(10);
+		align-items: center;
+		min-width: 0;
 
 		> * {
 			flex: 1 1 auto;
 		}
 
 		&:after {
-			content: "";
-			align-self: stretch;
 			display: flex;
-			justify-content: center;
 			align-items: center;
+			align-self: stretch;
+			justify-content: center;
+			content: "";
 		}
 		&._select-pseudo-label {
 			&::before {
@@ -42,32 +42,31 @@
 	&__content {
 		flex: 1 1 auto;
 		overflow: hidden;
-		text-overflow: ellipsis;
 		white-space: nowrap;
+		text-overflow: ellipsis;
 	}
 	&__text {
 		flex: 1 1 auto;
 		overflow: hidden;
-		text-overflow: ellipsis;
 		white-space: nowrap;
+		text-overflow: ellipsis;
 	}
 	&__input {
 		width: 100%;
 		height: 100%;
 	}
 	&__options {
+		position: absolute;
+		left: 0;
+		min-width: 100%;
 		color: $textColor;
 		background-color: $backgroundColor;
-		position: absolute;
-		min-width: 100%;
-		left: 0;
-		border-top: 0;
 		border-top: 0;
 	}
 	&__scroll {
-		overflow-y: auto;
-		overflow-x: hidden;
 		max-height: toRem(200);
+		overflow-x: hidden;
+		overflow-y: auto;
 
 		.simplebar-scrollbar {
 			&::before {
@@ -76,11 +75,11 @@
 	}
 	&__option {
 		width: 100%;
-		text-align: left;
-		cursor: pointer;
 		padding: toRem(5) toRem(15);
 		color: inherit;
+		text-align: left;
 		outline: none;
+		cursor: pointer;
 
 		&._select-selected {
 			background-color: #eee;
@@ -106,10 +105,10 @@
 	&--show-top {
 		.select__options {
 			top: auto;
+			padding: toRem(5) 0 toRem(10) 0;
 			border: toRem(5) solid #d9d9d9;
 			border-bottom: 0;
 			border-radius: toRem(5) toRem(4) 0 0;
-			padding: toRem(5) 0 toRem(10) 0;
 		}
 	}
 
@@ -134,8 +133,8 @@
 		padding-inline: toRem(16);
 	}
 	.select__value {
-		line-height: 140%;
 		font-weight: 700;
+		line-height: 140%;
 
 		&::after {
 			flex: 0 0 toRem(10);

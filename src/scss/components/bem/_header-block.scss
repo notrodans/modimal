@@ -4,16 +4,16 @@
 
 .header-block {
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
+	justify-content: space-between;
 	column-gap: toRem(16);
 
 	&__link {
-		font-size: toRem(14);
 		color: #5a6d57;
+		font-size: toRem(14);
 		line-height: math.div(24, 14);
 
-		@extend .transition-colors;
+		@extend %transition-colors;
 
 		@media (any-hover: hover) {
 			&:hover,

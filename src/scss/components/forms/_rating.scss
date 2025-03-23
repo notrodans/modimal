@@ -14,8 +14,8 @@ $starHeight: toRem(20);
 	// .rating__items
 	&__items {
 		display: inline-flex;
-		align-items: flex-start;
 		gap: $starGap;
+		align-items: flex-start;
 		[data-rating="set"] & {
 			@media (any-hover: hover) {
 				&:hover {
@@ -28,10 +28,10 @@ $starHeight: toRem(20);
 	}
 	// .rating__item
 	&__item {
+		position: relative;
 		flex: 0 0 $starWidth;
 		width: $starWidth;
 		height: $starHeight;
-		position: relative;
 		background: url($star) 0 0 / $starWidth no-repeat;
 		transition: all 0.3s;
 		&--active {
@@ -47,13 +47,13 @@ $starHeight: toRem(20);
 		}
 		&:not(:last-child) {
 			&::after {
-				content: "";
 				position: absolute;
-				right: 0;
 				top: 0;
-				height: 100%;
+				right: 0;
 				width: $starGap;
+				height: 100%;
 				transform: translateX(100%);
+				content: "";
 				[data-rating="set"] & {
 					cursor: pointer;
 				}
@@ -74,10 +74,10 @@ $starHeight: toRem(20);
 	}
 	// .rating__input
 	&__input {
+		display: block;
 		width: 100%;
 		height: 100%;
 		opacity: 0;
-		display: block;
 		[data-rating="set"] & {
 			cursor: pointer;
 		}

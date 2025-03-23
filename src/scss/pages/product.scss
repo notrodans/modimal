@@ -150,8 +150,8 @@
 
 	&__footer {
 		display: flex;
-		justify-content: space-between;
 		gap: toRem(12);
+		justify-content: space-between;
 	}
 
 	@container (max-width: #{toEm(390)}) {
@@ -177,16 +177,16 @@
 	&__title {
 		position: relative;
 		display: flex;
-		cursor: pointer;
+		color: oklch(var(--text-primary));
 		font-weight: 700;
 		line-height: 140%;
 		text-transform: capitalize;
+		background-color: #f0f2ef;
+		cursor: pointer;
 		@include adaptiveValue("font-size", 20, 14);
 		@include adaptiveValue("padding", 24, 12);
 		@include adaptiveValue("padding-inline-end", 48, 24);
-		background-color: #f0f2ef;
-		color: oklch(var(--text-primary));
-		@extend .transition-colors;
+		@extend %transition-colors;
 
 		&._spoller-active {
 			// background-color: transparent;
@@ -195,10 +195,10 @@
 	}
 
 	&__icon {
-		color: oklch(var(--text-primary));
 		position: absolute;
-		@include adaptiveValue("top", 32, 14);
 		right: toRem(16);
+		color: oklch(var(--text-primary));
+		@include adaptiveValue("top", 32, 14);
 
 		._spoller-active & {
 			color: oklch(var(--text-secondary));
@@ -225,7 +225,9 @@
 		@include adaptiveValue("padding-inline", 24, 12);
 		@include adaptiveValue("font-size", 16, 12);
 
-		line-height: 180%;
+		& {
+			line-height: 180%;
+		}
 	}
 }
 
@@ -240,9 +242,9 @@
 	&__block {
 		&--description {
 			@include adaptiveValue("padding", 24, 12);
-			border: toRem(1) solid #cbcbcb;
-			background-color: #f0f2ef;
 			color: oklch(var(--text-primary));
+			background-color: #f0f2ef;
+			border: toRem(1) solid #cbcbcb;
 		}
 	}
 

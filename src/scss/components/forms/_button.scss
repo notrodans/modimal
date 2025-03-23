@@ -6,14 +6,14 @@
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	column-gap: toRem(10);
-	padding-block: toRem(8);
-	padding-inline: toRem(27);
 	color: oklch(var(--text-primary));
+	column-gap: toRem(10);
 	background-color: oklch(var(--bg-tertiary));
 	border: toRem(1) solid transparent;
+	padding-block: toRem(8);
+	padding-inline: toRem(27);
 
-	@extend .transition-colors;
+	@extend %transition-colors;
 
 	span {
 		font-size: toRem(14);
