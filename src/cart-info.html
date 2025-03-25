@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+	<include src="head.htm" locals='{"title": "Cart Info Page"}'></include>
+	<script type="module" defer src="js/app.js"></script>
+	<script type="module" defer>
+		import "./scss/pages/cart-info.scss";
+	</script>
+	<body>
+		<div class="wrapper">
+			<include src="cart-header.htm"></include>
+			<main class="page">
+				<nav class="page__breadcrumbs breadcrumbs" aria-label="Breadcrumb">
+					<div class="breadcrumbs__container">
+						<ul class="breadcrumbs__list">
+							<li class="breadcrumbs__item">
+								<a href="home.html" class="breadcrumbs__link">Cart</a>
+								<span>/</span>
+							</li>
+							<li class="breadcrumbs__item _active">
+								<a href="category.html" class="breadcrumbs__link" aria-current="page">Shop All</a>
+							</li>
+							<li class="breadcrumbs__item">
+								<a href="category.html" class="breadcrumbs__link">Shipping</a>
+							</li>
+							<li class="breadcrumbs__item">
+								<a href="category.html" class="breadcrumbs__link">Payment</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+				<div class="page__cart cart"></div>
+			</main>
+		</div>
+	</body>
+</html>

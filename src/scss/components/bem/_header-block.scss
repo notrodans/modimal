@@ -9,17 +9,5 @@
 	column-gap: toRem(16);
 
 	&__link {
-		color: #5a6d57;
-		font-size: toRem(14);
-		line-height: math.div(24, 14);
-
-		@extend %transition-colors;
-
-		@media (any-hover: hover) {
-			&:hover,
-			&:focus-visible {
-				color: #242b22;
-			}
-		}
 	}
 }

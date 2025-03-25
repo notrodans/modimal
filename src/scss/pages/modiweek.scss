@@ -20,8 +20,8 @@
 	&__layout {
 		display: flex;
 		@media (max-width: $mobile) {
-			gap: toRem(16);
 			flex-direction: column;
+			gap: toRem(16);
 		}
 	}
 
@@ -52,8 +52,8 @@
 	&__block {
 		&:not(&--image) {
 			@include adaptiveValue("padding-inline-start", 128, 24, 2, $containerWidth, 767.98);
-			flex: 1;
 			display: flex;
+			flex: 1;
 			flex-direction: column;
 
 			@media (min-width: $mobile) {

@@ -153,7 +153,7 @@ function initSliders() {
 				320: {
 					enabled: false
 				},
-				["767.98"]: {
+				["600"]: {
 					enabled: true
 				}
 			}
@@ -183,7 +183,7 @@ function initSliders() {
 						clickable: true
 					}
 				},
-				["767.98"]: {}
+				["600"]: {}
 			}
 		});
 	}

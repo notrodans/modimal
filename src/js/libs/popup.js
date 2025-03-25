@@ -139,8 +139,11 @@ class Popup {
 
 	open() {
 		if (!this.popup || this.isOpen) return;
-		document.documentElement.classList.remove("menu-open");
 		this.isOpen = true;
+		if (document.documentElement.classList.contains("menu-open")) {
+			document.documentElement.classList.remove("menu-open");
+			bodyUnlock(150);
+		}
 		this.popup.setAttribute("aria-hidden", "false");
 
 		document.body.classList.add(this.classes.showBody);

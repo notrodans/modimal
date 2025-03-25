@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+	<include src="head.htm" locals='{"title": "Cart Page"}'></include>
+	<script type="module" defer src="js/app.js"></script>
+	<script type="module" defer>
+		import "./scss/pages/cart.scss";
+	</script>
+	<body>
+		<div class="wrapper">
+			<include src="cart-header.htm"></include>
+			<main class="page">
+				<div class="page__cart cart">
+					<div class="cart__container">
+						<div class="cart__header header-cart">
+							<div class="header-cart__start">
+								<a href="#" class="header-block__link link">Back</a>
+								<h1 class="header-cart__title title-header">Your Cart</h1>
+							</div>
+							<div class="header-cart__end">
+								<a href="#" class="header-block__link link">Continue Shopping</a>
+							</div>
+						</div>
+						<div class="cart__subheader subheader-cart">
+							<div class="subheader-cart__title">Order Summary</div>
+						</div>
+						<div class="cart__layout">
+							<div class="cart__body">
+								<div class="cart__item item-cart">
+									<div class="item-cart__image">
+										<img class="ibg" src="/img/product/product-1.png" alt="Image" />
+										<div class="item-cart__label label">1</div>
+									</div>
+									<div class="item-cart__body">
+										<div class="item-cart__header">
+											<div class="item-cart__title">Wrap Top</div>
+											<button class="item-cart__remove">
+												<svg
+													width="0.875rem"
+													height="0.875rem"
+													viewBox="0 0 14 14"
+													fill="none"
+													xmlns="http://www.w3.org/2000/svg"
+												>
+													<path
+														d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z"
+														fill="currentColor"
+													/>
+												</svg>
+											</button>
+										</div>
+
+										<ul class="item-cart__properties">
+											<li class="item-cart__property"><span>Size:</span> <span>S</span></li>
+											<li class="item-cart__property"><span>Color:</span> <span>White</span></li>
+										</ul>
+										<div class="item-cart__footer">
+											<div data-quantity class="item-cart__counter quantity">
+												<button
+													data-quantity-minus
+													type="button"
+													class="quantity__button quantity__button--minus"
+												></button>
+												<div class="quantity__input">
+													<input
+														data-quantity-value
+														autocomplete="off"
+														type="text"
+														name="quantity"
+														value="1"
+													/>
+												</div>
+												<button
+													data-quantity-plus
+													type="button"
+													class="quantity__button quantity__button--plus"
+												></button>
+											</div>
+											<div class="item-cart__price">$160</div>
+										</div>
+									</div>
+								</div>
+								<div class="cart__item item-cart">
+									<div class="item-cart__image">
+										<img class="ibg" src="/img/product/product-1.png" alt="Image" />
+										<div class="item-cart__label label">1</div>
+									</div>
+									<div class="item-cart__body">
+										<div class="item-cart__header">
+											<div class="item-cart__title">Wrap Top</div>
+											<button class="item-cart__remove">
+												<svg
+													width="0.875rem"
+													height="0.875rem"
+													viewBox="0 0 14 14"
+													fill="none"
+													xmlns="http://www.w3.org/2000/svg"
+												>
+													<path
+														d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z"
+														fill="currentColor"
+													/>
+												</svg>
+											</button>
+										</div>
+
+										<ul class="item-cart__properties">
+											<li class="item-cart__property"><span>Size:</span> <span>S</span></li>
+											<li class="item-cart__property"><span>Color:</span> <span>White</span></li>
+										</ul>
+										<div class="item-cart__footer">
+											<div data-quantity class="item-cart__counter quantity">
+												<button
+													data-quantity-minus
+													type="button"
+													class="quantity__button quantity__button--minus"
+												></button>
+												<div class="quantity__input">
+													<input
+														data-quantity-value
+														autocomplete="off"
+														type="text"
+														name="quantity"
+														value="1"
+													/>
+												</div>
+												<button
+													data-quantity-plus
+													type="button"
+													class="quantity__button quantity__button--plus"
+												></button>
+											</div>
+											<div class="item-cart__price">$160</div>
+										</div>
+									</div>
+								</div>
+								<div class="cart__item item-cart">
+									<div class="item-cart__image">
+										<img class="ibg" src="/img/product/product-1.png" alt="Image" />
+										<div class="item-cart__label label">1</div>
+									</div>
+									<div class="item-cart__body">
+										<div class="item-cart__header">
+											<div class="item-cart__title">Wrap Top</div>
+											<button class="item-cart__remove">
+												<svg
+													width="0.875rem"
+													height="0.875rem"
+													viewBox="0 0 14 14"
+													fill="none"
+													xmlns="http://www.w3.org/2000/svg"
+												>
+													<path
+														d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z"
+														fill="currentColor"
+													/>
+												</svg>
+											</button>
+										</div>
+
+										<ul class="item-cart__properties">
+											<li class="item-cart__property"><span>Size:</span> <span>S</span></li>
+											<li class="item-cart__property"><span>Color:</span> <span>White</span></li>
+										</ul>
+										<div class="item-cart__footer">
+											<div data-quantity class="item-cart__counter quantity">
+												<button
+													data-quantity-minus
+													type="button"
+													class="quantity__button quantity__button--minus"
+												></button>
+												<div class="quantity__input">
+													<input
+														data-quantity-value
+														autocomplete="off"
+														type="text"
+														name="quantity"
+														value="1"
+													/>
+												</div>
+												<button
+													data-quantity-plus
+													type="button"
+													class="quantity__button quantity__button--plus"
+												></button>
+											</div>
+											<div class="item-cart__price">$160</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="cart__summarizing summarizing-cart">
+								<div class="summarizing-cart__counters">
+									<div class="summarizing-cart__title">Price</div>
+									<div class="summarizing-cart__title">Quantity</div>
+									<div class="summarizing-cart__title">Total</div>
+									<div class="summarizing-cart__price">$160.00</div>
+									<div data-quantity class="summarizing-cart__counter quantity">
+										<button
+											data-quantity-minus
+											type="button"
+											class="quantity__button quantity__button--minus"
+										></button>
+										<div class="quantity__input">
+											<input
+												data-quantity-value
+												autocomplete="off"
+												type="text"
+												name="quantity"
+												value="1"
+											/>
+										</div>
+										<button
+											data-quantity-plus
+											type="button"
+											class="quantity__button quantity__button--plus"
+										></button>
+									</div>
+									<div class="summarizing-cart__total">$160.00</div>
+
+									<div class="summarizing-cart__price">$160.00</div>
+									<div data-quantity class="summarizing-cart__counter quantity">
+										<button
+											data-quantity-minus
+											type="button"
+											class="quantity__button quantity__button--minus"
+										></button>
+										<div class="quantity__input">
+											<input
+												data-quantity-value
+												autocomplete="off"
+												type="text"
+												name="quantity"
+												value="1"
+											/>
+										</div>
+										<button
+											data-quantity-plus
+											type="button"
+											class="quantity__button quantity__button--plus"
+										></button>
+									</div>
+									<div class="summarizing-cart__total">$160.00</div>
+
+									<div class="summarizing-cart__price">$160.00</div>
+									<div data-quantity class="summarizing-cart__counter quantity">
+										<button
+											data-quantity-minus
+											type="button"
+											class="quantity__button quantity__button--minus"
+										></button>
+										<div class="quantity__input">
+											<input
+												data-quantity-value
+												autocomplete="off"
+												type="text"
+												name="quantity"
+												value="1"
+											/>
+										</div>
+										<button
+											data-quantity-plus
+											type="button"
+											class="quantity__button quantity__button--plus"
+										></button>
+									</div>
+									<div class="summarizing-cart__total">$160.00</div>
+								</div>
+								<div class="summarizing-cart__subtotal subtotal-summarizing-cart">
+									<div class="subtotal-summarizing-cart__blocks">
+										<div class="subtotal-summarizing-cart__block">
+											<span>Subtotal</span>
+											<span>$485.00</span>
+										</div>
+										<div class="subtotal-summarizing-cart__block">
+											<span>Tax</span>
+											<span>$38.80</span>
+										</div>
+										<div class="subtotal-summarizing-cart__block">
+											<span>Shipping</span>
+											<span>Free</span>
+										</div>
+										<div class="subtotal-summarizing-cart__block">
+											<span>Total Orders:</span>
+											<span>$523.80</span>
+										</div>
+									</div>
+									<div class="subtotal-summarizing-cart__text">
+										The total amount you pay includes all applicable customs duties & taxes. We
+										guarantee no additional charges on delivery
+									</div>
+									<a
+										href="#"
+										class="subtotal-summarizing-cart__button button button--fw button--secondary"
+									>
+										<span>Next</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,81 @@
+@use "@/scss/abstracts/mixins" as *;
+@use "@/scss/abstracts/breakpoints" as *;
+@use "@/scss/abstracts/variables" as *;
+@use "@/scss/abstracts/base" as *;
+
+.item-cart {
+	display: flex;
+	gap: toRem(8);
+
+	&__image {
+		position: relative;
+		aspect-ratio: 142 / 163;
+		max-width: toRem(142);
+	}
+
+	&__label {
+		position: absolute;
+		width: toRem(40);
+		height: toRem(32);
+		inset: toRem(8) toRem(8) auto auto;
+	}
+
+	&__body {
+		display: flex;
+		flex: 1;
+		flex-direction: column;
+	}
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		column-gap: toRem(12);
+
+		&:not(:last-child) {
+			margin-block-end: toRem(16);
+		}
+	}
+
+	&__title {
+		font-weight: 700;
+		line-height: 140%;
+		@include adaptiveValue("font-size", 16, 12);
+	}
+
+	&__properties {
+		display: flex;
+		flex-direction: column;
+		row-gap: toRem(8);
+
+		&:not(:last-child) {
+			margin-block-end: toRem(8);
+		}
+	}
+
+	&__property {
+		line-height: 180%;
+	}
+
+	&__footer {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		column-gap: toRem(16);
+	}
+
+	&__price {
+		font-weight: 700;
+		line-height: 140%;
+		@include adaptiveValue("font-size", 16, 12);
+	}
+
+	&__remove {
+		@media (any-hover: hover) {
+			&:hover,
+			&:focus-visible {
+				color: oklch(var(--text-secondary));
+			}
+		}
+		@extend %transition-colors;
+	}
+}
