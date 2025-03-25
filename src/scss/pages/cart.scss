@@ -85,12 +85,13 @@
 	}
 	&__counters {
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(3, auto);
 		gap: toRem(24) toRem(48);
 		align-items: center;
 		padding-block-end: toRem(60);
 		margin-block-start: toRem(-65);
 		border-block-end: toRem(1) solid #dfdfdf;
+		justify-content: space-between;
 
 		@media (max-width: $mobile) {
 			display: none;
@@ -100,15 +101,6 @@
 	&__counters {
 		&:not(:last-child) {
 			margin-block-end: toRem(24);
-		}
-
-		> *:nth-child(3n + 3) {
-			text-align: right;
-		}
-
-		> *:nth-child(3n + 2) {
-			text-align: center;
-			justify-self: center;
 		}
 	}
 
